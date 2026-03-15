@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>YaIndex</title>
+  <meta name="description" content="Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais."/>
+  <style>
+    :root{
+      --bg:#0f0f13;--bg2:#16161d;--bg3:#1e1e2a;--border:#2a2a3a;
+      --text:#e2e2f0;--muted:#8888aa;--accent:#6366f1;--accent2:#a78bfa;
+      --green:#10b981;--red:#ef4444;--yellow:#f59e0b;
+      --radius:10px;--shadow:0 4px 24px rgba(0,0,0,.4);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+    a{color:inherit;text-decoration:none}
+    header{background:linear-gradient(135deg,#0f0f18 0%,#1a1a2e 50%,#16213e 100%);
+      border-bottom:1px solid var(--border);padding:2rem 1.5rem;text-align:center;position:relative}
+    .header-glow{position:absolute;top:0;left:50%;transform:translateX(-50%);
+      width:400px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent)}
+    header h1{font-size:2.2rem;font-weight:800;letter-spacing:-1px;
+      background:linear-gradient(135deg,#a78bfa,#6366f1,#38bdf8);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    header p{color:var(--muted);margin-top:.5rem;font-size:.95rem}
+    .header-meta{display:flex;justify-content:center;gap:1.5rem;margin-top:1rem;flex-wrap:wrap}
+    .badge{background:var(--bg3);border:1px solid var(--border);border-radius:99px;
+      padding:.3rem .9rem;font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:.4rem}
+    .badge span{color:var(--accent2);font-weight:700}
+    #last-updated{color:var(--green)}
+    .search-bar{max-width:700px;margin:1.5rem auto;padding:0 1rem;position:relative}
+    #search{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:99px;
+      padding:.8rem 1.4rem .8rem 3rem;color:var(--text);font-size:1rem;outline:none;transition:.2s}
+    #search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,102,241,.2)}
+    .search-icon{position:absolute;left:1.9rem;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:1.1rem}
+    #search-count{text-align:center;color:var(--muted);font-size:.85rem;margin-top:.5rem;padding:0 1rem}
+    .filter-bar{display:flex;gap:.5rem;padding:.5rem 1rem 1rem;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto}
+    .filter-bar::-webkit-scrollbar{display:none}
+    .filter-btn{background:var(--bg3);border:1px solid var(--border);border-radius:99px;
+      padding:.4rem 1rem;font-size:.82rem;color:var(--muted);cursor:pointer;white-space:nowrap;transition:.2s}
+    .filter-btn:hover,.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+    main{max-width:1200px;margin:0 auto;padding:0 1rem 3rem}
+    .categories-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem}
+    .category{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:.2s}
+    .category:hover{border-color:rgba(99,102,241,.4);transform:translateY(-2px);box-shadow:var(--shadow)}
+    .category-header{padding:1rem 1.2rem .8rem;display:flex;align-items:center;gap:.7rem;
+      border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
+    .cat-icon{font-size:1.4rem}
+    .cat-title{font-weight:700;font-size:1rem;flex:1}
+    .cat-count{background:var(--bg3);border:1px solid var(--border);border-radius:99px;
+      padding:.15rem .6rem;font-size:.75rem;color:var(--muted)}
+    .cat-toggle{color:var(--muted);font-size:.9rem;transition:.3s}
+    .category.collapsed .cat-toggle{transform:rotate(-90deg)}
+    .category.collapsed .items-list{display:none}
+    .items-list{padding:.6rem 0}
+    .item{display:flex;align-items:center;gap:.7rem;padding:.5rem 1.2rem;border-radius:6px;transition:.15s;cursor:pointer}
+    .item:hover{background:var(--bg3)}
+    .item-rank{font-size:.7rem;color:var(--muted);width:1.5rem;text-align:right;flex-shrink:0;font-weight:600}
+    .item-rank.top3{color:var(--yellow);font-weight:800}
+    .item-name{font-size:.9rem;font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .item-status{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+    .status-online{background:var(--green)}
+    .status-warning{background:var(--yellow)}
+    .status-offline{background:var(--red)}
+    .item-tags{display:flex;gap:.3rem;flex-wrap:wrap}
+    .tag{background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);
+      border-radius:4px;padding:.1rem .4rem;font-size:.65rem;color:var(--accent2);white-space:nowrap}
+    .item.hidden{display:none}
+    .show-more-btn{width:100%;background:none;border:none;border-top:1px solid var(--border);
+      padding:.6rem;color:var(--muted);font-size:.82rem;cursor:pointer;transition:.2s;text-align:center}
+    .show-more-btn:hover{color:var(--accent);background:var(--bg3)}
+    #no-results{display:none;text-align:center;padding:3rem;color:var(--muted)}
+    #no-results p{font-size:2rem}
+    footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;color:var(--muted);font-size:.8rem}
+    footer a{color:var(--accent2)}
+    @media(max-width:600px){
+      header h1{font-size:1.5rem}
+      .categories-grid{grid-template-columns:1fr}
+      .item-tags{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-glow"></div>
+  <h1>YaIndex</h1>
+  <p>Índice otaku curado &amp; auto-atualizado</p>
+  <div class="header-meta">
+    <div class="badge">📦 <span id="total-items">—</span> recursos</div>
+    <div class="badge">🗂️ <span id="total-cats">—</span> categorias</div>
+    <div class="badge">🔄 Atualizado <span id="last-updated">—</span></div>
+  </div>
+</header>
+
+<div class="search-bar">
+  <span class="search-icon">🔍</span>
+  <input id="search" type="text" placeholder="Buscar site, tag, categoria..." autocomplete="off"/>
+  <div id="search-count"></div>
+</div>
+
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-cat="all">✨ Todos</button>
+</div>
+
+<main>
+  <div id="no-results"><p>🔎</p><br>Nenhum resultado encontrado.</div>
+  <div class="categories-grid" id="categories-grid"></div>
+</main>
+
+<footer>
+  <p>
+    <a href="https://yaindex.seusomelier.com.br/" target="_blank" rel="noopener">YaIndex</a>
+    — Índice otaku auto-atualizado.<br/>
+  </p>
+</footer>
+
+<script>
+const DATA_URL = './data.json';
+let allData = null;
+let activeFilter = 'all';
+let searchQuery = '';
+
+async function loadData() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    allData = await res.json();
+    renderAll();
+  } catch(e) {
+    document.getElementById('categories-grid').innerHTML =
+      '<p style="color:#ef4444;padding:2rem">Erro ao carregar data.json: ' + e.message + '</p>';
+  }
+}
+
+function renderAll() {
+  const meta = allData.meta;
+  document.getElementById('total-items').textContent =
+    allData.categories.reduce((s,c) => s + c.items.length, 0);
+  document.getElementById('total-cats').textContent = allData.categories.length;
+  document.getElementById('last-updated').textContent = meta.last_updated;
+  document.title = meta.title || 'YaIndex';
+
+  const filterBar = document.getElementById('filter-bar');
+  allData.categories.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.cat = cat.id;
+    btn.textContent = cat.icon + ' ' + cat.label;
+    btn.onclick = () => setFilter(cat.id, btn);
+    filterBar.appendChild(btn);
+  });
+  renderCategories();
+}
+
+function setFilter(catId, btn) {
+  activeFilter = catId;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCategories();
+}
+
+function renderCategories() {
+  const grid = document.getElementById('categories-grid');
+  grid.innerHTML = '';
+  const q = searchQuery.toLowerCase().trim();
+  let totalVisible = 0;
+
+  const cats = activeFilter === 'all' ? allData.categories
+    : allData.categories.filter(c => c.id === activeFilter);
+
+  cats.forEach(cat => {
+    let matchItems = cat.items.filter(item => {
+      if (!q) return true;
+      return item.name.toLowerCase().includes(q) ||
+             item.tags.some(t => t.toLowerCase().includes(q)) ||
+             cat.label.toLowerCase().includes(q);
+    });
+    if (!matchItems.length && q) return;
+
+    const card = document.createElement('div');
+    card.className = 'category';
+
+    const headerEl = document.createElement('div');
+    headerEl.className = 'category-header';
+    headerEl.style.borderLeft = '3px solid ' + cat.color;
+    headerEl.innerHTML = `
+      <span class="cat-icon">${cat.icon}</span>
+      <span class="cat-title">${cat.label}</span>
+      <span class="cat-count">${matchItems.length}</span>
+      <span class="cat-toggle">▾</span>`;
+    headerEl.onclick = () => card.classList.toggle('collapsed');
+
+    const list = document.createElement('div');
+    list.className = 'items-list';
+
+    const LIMIT = 8;
+    matchItems.forEach((item, idx) => {
+      const row = document.createElement('a');
+      row.className = 'item' + (idx >= LIMIT ? ' hidden extra' : '');
+      row.href = item.url;
+      row.target = '_blank';
+      row.rel = 'noopener';
+      const rankCls = idx < 3 ? 'item-rank top3' : 'item-rank';
+      const statusCls = 'item-status status-' + (item.status || 'online');
+      const tagsHtml = (item.tags || []).slice(0,3).map(t => `<span class="tag">${t}</span>`).join('');
+      row.innerHTML = `
+        <span class="${rankCls}">${idx+1}</span>
+        <span class="${statusCls}" title="${item.status}"></span>
+        <span class="item-name">${item.name}</span>
+        <span class="item-tags">${tagsHtml}</span>`;
+      list.appendChild(row);
+    });
+
+    if (matchItems.length > LIMIT) {
+      const btn = document.createElement('button');
+      btn.className = 'show-more-btn';
+      btn.textContent = `Ver mais ${matchItems.length - LIMIT} →`;
+      btn.onclick = () => {
+        list.querySelectorAll('.extra').forEach(el => el.classList.remove('hidden','extra'));
+        btn.remove();
+      };
+      list.appendChild(btn);
+    }
+
+    card.appendChild(headerEl);
+    card.appendChild(list);
+    grid.appendChild(card);
+    totalVisible += matchItems.length;
+  });
+
+  document.getElementById('no-results').style.display =
+    (totalVisible === 0 && q) ? 'block' : 'none';
+  document.getElementById('search-count').textContent =
+    q ? `${totalVisible} resultado(s) para "${searchQuery}"` : '';
+}
+
+document.getElementById('search').addEventListener('input', e => {
+  searchQuery = e.target.value;
+  renderCategories();
+});
+
+loadData();
+setInterval(() => loadData(), 6 * 60 * 60 * 1000);
+</script>
+</body>
+</html>
