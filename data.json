@@ -96,7 +96,7 @@
             "Fast CDN"
           ],
           "rank": 8,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Anime Nexus",
@@ -711,7 +711,7 @@
             "Large Library"
           ],
           "rank": 5,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Wuxia Box",
@@ -761,7 +761,7 @@
             "Multi-Lang"
           ],
           "rank": 10,
-          "status": "offline"
+          "status": "warning"
         },
         {
           "name": "Baka-Tsuki",
@@ -869,7 +869,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "SeaDex",
@@ -1403,7 +1403,7 @@
             "Multi-Lang"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "AnimeThemes",
@@ -1891,7 +1891,7 @@
             "News"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "MyAnimeList Forum",
@@ -2223,7 +2223,7 @@
             "Legal"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "JAST USA",
@@ -2432,7 +2432,7 @@
             "No Logs"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Mullvad",
