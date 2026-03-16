@@ -17,10 +17,14 @@
     a{color:var(--accent2);text-decoration:none}
 
     .topbar{background:var(--bg2);border-bottom:1px solid var(--border);
-      padding:.9rem 1.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-    .topbar h1{font-size:1.2rem;font-weight:800;
+      padding:.9rem 1.5rem;display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;
+      position:sticky;top:0;z-index:50}
+    .topbar h1{font-size:1.15rem;font-weight:800;
       background:linear-gradient(135deg,#a78bfa,#6366f1);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex:1}
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;flex:1;min-width:120px}
+    .topbar-version{font-size:.75rem;color:var(--muted);background:var(--bg3);
+      border:1px solid var(--border);border-radius:99px;padding:.2rem .7rem}
     .btn{padding:.5rem 1.1rem;border-radius:8px;border:none;cursor:pointer;
       font-size:.85rem;font-weight:600;transition:.2s;display:inline-flex;align-items:center;gap:.4rem}
     .btn-primary{background:var(--accent);color:#fff}
@@ -31,13 +35,22 @@
     .btn-danger:hover{background:#dc2626}
     .btn-ghost{background:var(--bg3);color:var(--muted);border:1px solid var(--border)}
     .btn-ghost:hover{border-color:var(--accent);color:var(--accent2)}
-    .btn-sm{padding:.3rem .7rem;font-size:.75rem}
+    .btn-sm{padding:.28rem .65rem;font-size:.73rem}
     .btn-warn{background:var(--yellow);color:#000}
     .btn-warn:hover{background:#d97706}
+    .btn-icon{padding:.28rem .5rem;font-size:.8rem}
+
+    .sync-banner{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.35);
+      border-radius:var(--radius);padding:.9rem 1.2rem;margin:1rem 1.5rem 0;
+      display:none;align-items:center;gap:.8rem;flex-wrap:wrap;font-size:.85rem}
+    .sync-banner.show{display:flex}
+    .sync-banner strong{color:var(--yellow)}
+    .sync-actions{display:flex;gap:.5rem;margin-left:auto}
 
     .layout{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 57px)}
     .sidebar{background:var(--bg2);border-right:1px solid var(--border);
-      padding:1rem 0;overflow-y:auto;position:sticky;top:57px;height:calc(100vh - 57px)}
+      padding:1rem 0;overflow-y:auto;position:sticky;top:57px;
+      height:calc(100vh - 57px)}
     .sidebar-title{padding:.4rem 1.2rem;font-size:.7rem;color:var(--muted);
       text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-top:.5rem}
     .cat-item{display:flex;align-items:center;gap:.6rem;padding:.5rem 1.2rem;
@@ -48,33 +61,36 @@
       background:var(--bg4);padding:.1rem .5rem;border-radius:99px}
 
     .content{padding:1.5rem;overflow-y:auto}
-    .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap}
-    .section-header h2{font-size:1.1rem;font-weight:700;flex:1}
+    .section-header{display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem;flex-wrap:wrap}
+    .section-header h2{font-size:1.05rem;font-weight:700;flex:1}
 
     .table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)}
-    table{width:100%;border-collapse:collapse;font-size:.85rem}
-    th{background:var(--bg3);padding:.7rem 1rem;text-align:left;
-      color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;
-      letter-spacing:.05em;border-bottom:1px solid var(--border);white-space:nowrap}
-    td{padding:.65rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle}
+    table{width:100%;border-collapse:collapse;font-size:.84rem}
+    th{background:var(--bg3);padding:.65rem 1rem;text-align:left;color:var(--muted);
+      font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;
+      border-bottom:1px solid var(--border);white-space:nowrap}
+    td{padding:.6rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle}
     tr:last-child td{border-bottom:none}
     tr:hover td{background:rgba(99,102,241,.04)}
-    .td-name{font-weight:600;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .td-url{max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-      color:var(--muted);font-size:.8rem}
-    .td-actions{display:flex;gap:.4rem;white-space:nowrap}
+    .td-name{font-weight:600;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .td-url{max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+      color:var(--muted);font-size:.78rem}
+    .td-actions{display:flex;gap:.3rem;white-space:nowrap}
     .status-dot{display:inline-block;width:8px;height:8px;border-radius:50%}
     .s-online{background:var(--green)}
     .s-warning{background:var(--yellow)}
     .s-offline{background:var(--red)}
     .tag-pill{background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);
-      border-radius:4px;padding:.1rem .4rem;font-size:.7rem;color:var(--accent2);
-      display:inline-flex;align-items:center;gap:.3rem;margin:.1rem}
+      border-radius:4px;padding:.1rem .4rem;font-size:.68rem;color:var(--accent2);
+      display:inline-flex;align-items:center;gap:.25rem;margin:.1rem}
     .tag-pill button{background:none;border:none;cursor:pointer;color:var(--muted);
-      font-size:.75rem;padding:0;line-height:1}
+      font-size:.7rem;padding:0;line-height:1}
     .tag-pill button:hover{color:var(--red)}
+    .drag-row{cursor:grab}
+    .drag-row.dragging{opacity:.4;background:rgba(99,102,241,.1)}
+    .drag-row.drag-over{border-top:2px solid var(--accent)}
 
-    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);
       display:flex;align-items:center;justify-content:center;z-index:100;
       opacity:0;pointer-events:none;transition:.2s}
     .modal-overlay.open{opacity:1;pointer-events:all}
@@ -82,45 +98,53 @@
       padding:1.5rem;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;
       transform:translateY(20px);transition:.2s}
     .modal-overlay.open .modal{transform:translateY(0)}
-    .modal h3{font-size:1.1rem;margin-bottom:1.2rem;font-weight:700}
-    .form-group{margin-bottom:1rem}
-    .form-group label{display:block;font-size:.8rem;color:var(--muted);
-      margin-bottom:.4rem;font-weight:600}
+    .modal h3{font-size:1.05rem;margin-bottom:1.1rem;font-weight:700}
+    .form-group{margin-bottom:.9rem}
+    .form-group label{display:block;font-size:.78rem;color:var(--muted);
+      margin-bottom:.35rem;font-weight:600}
     .form-group input,.form-group select,.form-group textarea{
       width:100%;background:var(--bg3);border:1px solid var(--border);
-      border-radius:8px;padding:.6rem .9rem;color:var(--text);font-size:.9rem;outline:none;transition:.2s}
-    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+      border-radius:8px;padding:.55rem .85rem;color:var(--text);font-size:.88rem;
+      outline:none;transition:.2s}
+    .form-group input:focus,.form-group select:focus{
       border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,102,241,.15)}
     .form-group select option{background:var(--bg3)}
-    .modal-actions{display:flex;gap:.7rem;justify-content:flex-end;margin-top:1.2rem}
+    .modal-actions{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1.1rem;flex-wrap:wrap}
     .tag-input-row{display:flex;gap:.5rem;margin-bottom:.5rem}
     .tag-input-row input{flex:1}
-    #current-tags{display:flex;flex-wrap:wrap;gap:.3rem;min-height:30px;
+    #current-tags{display:flex;flex-wrap:wrap;gap:.3rem;min-height:32px;
       padding:.4rem;background:var(--bg3);border-radius:8px;border:1px solid var(--border)}
 
     .toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--bg2);
       border:1px solid var(--border);border-radius:10px;padding:.8rem 1.2rem;
-      font-size:.85rem;z-index:200;transform:translateY(80px);transition:.3s;
-      display:flex;align-items:center;gap:.6rem;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+      font-size:.85rem;z-index:300;transform:translateY(80px);transition:.3s;
+      display:flex;align-items:center;gap:.6rem;box-shadow:0 8px 32px rgba(0,0,0,.4);
+      max-width:320px}
     .toast.show{transform:translateY(0)}
     .toast.t-success{border-left:3px solid var(--green)}
     .toast.t-error{border-left:3px solid var(--red)}
+    .toast.t-info{border-left:3px solid var(--accent)}
 
-    .export-area{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);
-      padding:1.2rem;margin-top:1.5rem}
-    .export-area h3{margin-bottom:.8rem;font-size:.95rem}
-    .export-area p{color:var(--muted);font-size:.83rem;margin-bottom:.8rem;line-height:1.5}
+    .export-area{background:var(--bg3);border:1px solid var(--border);
+      border-radius:var(--radius);padding:1.2rem;margin-top:1.5rem}
+    .export-area h3{margin-bottom:.6rem;font-size:.9rem}
+    .export-area p{color:var(--muted);font-size:.82rem;margin-bottom:.8rem;line-height:1.5}
     .export-row{display:flex;gap:.7rem;flex-wrap:wrap}
 
     .new-cat-form{background:var(--bg3);border:1px solid var(--border);
       border-radius:var(--radius);padding:1rem;margin-bottom:1.2rem;display:none}
     .new-cat-form.open{display:block}
-    .new-cat-form h4{margin-bottom:.8rem;font-size:.9rem;color:var(--accent2)}
-    .new-cat-grid{display:grid;grid-template-columns:1fr 1fr 80px;gap:.7rem}
+    .new-cat-form h4{margin-bottom:.8rem;font-size:.88rem;color:var(--accent2)}
+    .new-cat-grid{display:grid;grid-template-columns:1fr 1fr 70px;gap:.6rem}
+
+    .unsaved-dot{width:8px;height:8px;background:var(--orange);border-radius:50%;
+      display:inline-block;margin-right:.3rem;animation:pulse 1.5s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
     @media(max-width:700px){
       .layout{grid-template-columns:1fr}
-      .sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--border)}
+      .sidebar{position:static;height:auto;border-right:none;
+        border-bottom:1px solid var(--border)}
     }
   </style>
 </head>
@@ -128,23 +152,32 @@
 
 <div class="topbar">
   <h1>⚙️ YaIndex Admin</h1>
-  <a href="index.html" class="btn btn-ghost">← Voltar ao Index</a>
-  <button class="btn btn-success" onclick="exportJSON()">⬇️ Exportar data.json</button>
-  <button class="btn btn-warn" onclick="importJSON()">⬆️ Importar data.json</button>
+  <span class="topbar-version" id="topbar-ver">v—</span>
+  <a href="index.html" class="btn btn-ghost btn-sm">← Index</a>
+  <button class="btn btn-success btn-sm" onclick="exportJSON()">⬇️ Exportar</button>
+  <button class="btn btn-warn btn-sm" onclick="importJSON()">⬆️ Importar</button>
   <input type="file" id="import-file" accept=".json" style="display:none" onchange="handleImport(event)"/>
+</div>
+<div class="sync-banner" id="sync-banner">
+  <span>⚠️ <strong>Atenção:</strong> o <code>data.json</code> do servidor é mais recente que suas alterações locais.</span>
+  <div class="sync-actions">
+    <button class="btn btn-success btn-sm" onclick="useServerData()">Usar dados do servidor</button>
+    <button class="btn btn-ghost btn-sm" onclick="dismissBanner()">Manter locais</button>
+  </div>
 </div>
 
 <div class="layout">
   <div class="sidebar">
     <div class="sidebar-title">Categorias</div>
     <div id="sidebar-cats"></div>
-    <div style="padding:.5rem 1.2rem;margin-top:.5rem">
-      <button class="btn btn-primary" style="width:100%;justify-content:center"
+    <div style="padding:.6rem 1.2rem;margin-top:.4rem">
+      <button class="btn btn-primary btn-sm" style="width:100%;justify-content:center"
         onclick="toggleNewCatForm()">+ Nova Categoria</button>
     </div>
   </div>
 
   <div class="content">
+
     <div class="new-cat-form" id="new-cat-form">
       <h4>➕ Nova Categoria</h4>
       <div class="new-cat-grid">
@@ -161,9 +194,10 @@
           <input id="nc-icon" placeholder="🦸" style="text-align:center"/>
         </div>
       </div>
-      <div style="display:flex;gap:.7rem;margin-top:.8rem">
-        <input id="nc-color" type="color" value="#6366f1" style="width:50px;height:36px;border:none;background:none;cursor:pointer;border-radius:6px"/>
-        <button class="btn btn-success btn-sm" onclick="addCategory()">Criar Categoria</button>
+      <div style="display:flex;gap:.7rem;margin-top:.7rem;align-items:center">
+        <input id="nc-color" type="color" value="#6366f1"
+          style="width:44px;height:34px;border:none;background:none;cursor:pointer;border-radius:6px;padding:2px"/>
+        <button class="btn btn-success btn-sm" onclick="addCategory()">Criar</button>
         <button class="btn btn-ghost btn-sm" onclick="toggleNewCatForm()">Cancelar</button>
       </div>
     </div>
@@ -176,16 +210,16 @@
 
     <div class="export-area">
       <h3>📦 Salvar alterações</h3>
-      <p>As edições ficam salvas no navegador (localStorage). Para aplicar no site, exporte o <code>data.json</code> e substitua o arquivo no seu projeto, depois faça <code>git push</code>.</p>
+      <p>Edições ficam no <strong>localStorage</strong> até você exportar. Exporte o <code>data.json</code>, substitua no projeto e faça <code>git push</code>. O admin sempre verifica se o servidor tem dados mais novos ao carregar.</p>
       <div class="export-row">
         <button class="btn btn-success" onclick="exportJSON()">⬇️ Exportar data.json</button>
-        <button class="btn btn-ghost" onclick="resetToOriginal()">🔄 Resetar alterações locais</button>
+        <button class="btn btn-ghost" onclick="resetToOriginal()">🔄 Descartar alterações locais</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
   <div class="modal">
     <h3 id="modal-title">Editar Site</h3>
     <div class="form-group">
@@ -211,7 +245,7 @@
     <div class="form-group">
       <label>Tags</label>
       <div class="tag-input-row">
-        <input id="tag-input" placeholder="Digite uma tag e pressione Enter ou +"
+        <input id="tag-input" placeholder="Digite uma tag e pressione Enter"
           onkeydown="if(event.key==='Enter'){event.preventDefault();addTag()}"/>
         <button class="btn btn-ghost btn-sm" onclick="addTag()">+</button>
       </div>
@@ -222,7 +256,7 @@
       <input id="f-note" placeholder="Ex: domínio instável"/>
     </div>
     <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeModalDirect()">Cancelar</button>
+      <button class="btn btn-ghost btn-sm" onclick="closeModalDirect()">Cancelar</button>
       <button class="btn btn-danger btn-sm" id="btn-delete" onclick="deleteItem()">🗑 Excluir</button>
       <button class="btn btn-primary" onclick="saveItem()">💾 Salvar</button>
     </div>
@@ -234,37 +268,97 @@
 <script>
 const DATA_URL = './data.json';
 let data = null;
+let serverData = null;
 let activeCatId = null;
 let editingCatIdx = null;
 let editingItemIdx = null;
 let editingTags = [];
+let hasUnsaved = false;
+
+function parseVersion(v) {
+  if (!v) return [0,0,0];
+  return String(v).split('.').map(Number);
+}
+function bumpPatch(v) {
+  const parts = parseVersion(v);
+  parts[2] = (parts[2]||0) + 1;
+  return parts.join('.');
+}
+function versionGt(a, b) {
+  const pa = parseVersion(a), pb = parseVersion(b);
+  for (let i=0;i<3;i++) {
+    if (pa[i] > pb[i]) return true;
+    if (pa[i] < pb[i]) return false;
+  }
+  return false;
+}
 
 async function loadData() {
-  const saved = localStorage.getItem('yaindex_data');
-  if (saved) {
-    data = JSON.parse(saved);
-    toast('Dados locais carregados', 'success');
-  } else {
-    try {
-      const res = await fetch(DATA_URL + '?t=' + Date.now());
-      data = await res.json();
-    } catch(e) {
-      toast('Erro ao carregar data.json: ' + e.message, 'error');
-      return;
-    }
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    serverData = await res.json();
+  } catch(e) {
+    toast('Erro ao carregar data.json: ' + e.message, 'error');
+    serverData = null;
   }
+
+  const savedRaw = localStorage.getItem('yaindex_data');
+  const localData = savedRaw ? JSON.parse(savedRaw) : null;
+
+  if (localData && serverData) {
+    const localVer  = localData.meta?.version  || '0.0.0';
+    const serverVer = serverData.meta?.version || '0.0.0';
+
+    if (versionGt(serverVer, localVer)) {
+      data = localData;
+      document.getElementById('sync-banner').classList.add('show');
+      toast('🔄 Servidor tem dados mais novos (v' + serverVer + ')', 'info');
+    } else {
+      data = localData;
+      if (localVer !== serverVer) {
+        toast('📝 Usando alterações locais (v' + localVer + ')', 'info');
+      }
+    }
+  } else if (localData) {
+    data = localData;
+    toast('📝 Usando dados locais', 'info');
+  } else if (serverData) {
+    data = JSON.parse(JSON.stringify(serverData));
+    toast('✅ Dados carregados do servidor', 'success');
+  } else {
+    return;
+  }
+
+  document.getElementById('topbar-ver').textContent = 'v' + (data.meta?.version || '1.0.0');
   renderSidebar();
 }
 
-function save() {
-  data.meta.last_updated = new Date().toISOString().split('T')[0];
+function useServerData() {
+  data = JSON.parse(JSON.stringify(serverData));
   localStorage.setItem('yaindex_data', JSON.stringify(data));
+  document.getElementById('sync-banner').classList.remove('show');
+  document.getElementById('topbar-ver').textContent = 'v' + (data.meta?.version || '1.0.0');
+  activeCatId = null;
+  renderSidebar();
+  document.getElementById('cat-content').innerHTML =
+    '<p style="color:var(--muted);margin-top:2rem;text-align:center">✅ Dados do servidor carregados. Selecione uma categoria.</p>';
+  toast('✅ Dados do servidor aplicados', 'success');
+}
+
+function dismissBanner() {
+  document.getElementById('sync-banner').classList.remove('show');
+}
+
+function save() {
+  document.getElementById('topbar-ver').textContent = 'v' + (data.meta?.version || '1.0.0');
+  localStorage.setItem('yaindex_data', JSON.stringify(data));
+  hasUnsaved = true;
 }
 
 function renderSidebar() {
   const el = document.getElementById('sidebar-cats');
   el.innerHTML = '';
-  data.categories.forEach((cat, idx) => {
+  data.categories.forEach(cat => {
     const div = document.createElement('div');
     div.className = 'cat-item' + (cat.id === activeCatId ? ' active' : '');
     div.style.borderLeftColor = cat.id === activeCatId ? cat.color : 'transparent';
@@ -286,19 +380,21 @@ function selectCat(catId) {
 function renderCatContent() {
   const cat = data.categories.find(c => c.id === activeCatId);
   if (!cat) return;
-
   const el = document.getElementById('cat-content');
   el.innerHTML = `
     <div class="section-header">
-      <h2>${cat.icon} ${cat.label} <span style="color:var(--muted);font-size:.85rem">(${cat.items.length} sites)</span></h2>
-      <button class="btn btn-primary btn-sm" onclick="openAddModal()">+ Adicionar Site</button>
-      <button class="btn btn-danger btn-sm" onclick="deleteCategory()">🗑 Excluir Categoria</button>
+      <h2>${cat.icon} ${cat.label}
+        <span style="color:var(--muted);font-size:.82rem">(${cat.items.length} sites)</span>
+      </h2>
+      <button class="btn btn-primary btn-sm" onclick="openAddModal()">+ Adicionar</button>
+      <button class="btn btn-danger btn-sm" onclick="deleteCategory()">🗑 Excluir Cat.</button>
     </div>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>#</th>
+            <th style="width:40px">Ord.</th>
+            <th style="width:30px"></th>
             <th>Status</th>
             <th>Nome</th>
             <th>URL</th>
@@ -310,22 +406,80 @@ function renderCatContent() {
       </table>
     </div>`;
 
+  renderItemsTable(cat);
+}
+
+function renderItemsTable(cat) {
   const tbody = document.getElementById('items-tbody');
+  if (!tbody) return;
+  tbody.innerHTML = '';
   cat.items.forEach((item, idx) => {
     const tr = document.createElement('tr');
+    tr.className = 'drag-row';
+    tr.draggable = true;
+    tr.dataset.idx = idx;
     const tagsHtml = (item.tags||[]).map(t=>`<span class="tag-pill">${t}</span>`).join('');
     tr.innerHTML = `
-      <td style="color:var(--muted);font-size:.75rem">${idx+1}</td>
-      <td><span class="status-dot s-${item.status||'online'}" title="${item.status}"></span></td>
+      <td style="color:var(--muted);font-size:.75rem;text-align:center">${idx+1}</td>
+      <td>
+        <div style="display:flex;flex-direction:column;gap:1px">
+          <button class="btn btn-ghost btn-icon" title="Mover para cima"
+            onclick="moveItem(${idx},-1)" ${idx===0?'disabled style="opacity:.3"':''}>▲</button>
+          <button class="btn btn-ghost btn-icon" title="Mover para baixo"
+            onclick="moveItem(${idx},1)" ${idx===cat.items.length-1?'disabled style="opacity:.3"':''}>▼</button>
+        </div>
+      </td>
+      <td><span class="status-dot s-${item.status||'online'}" title="${item.status||'online'}"></span></td>
       <td class="td-name" title="${item.name}">${item.name}</td>
       <td class="td-url"><a href="${item.url}" target="_blank" title="${item.url}">${item.url}</a></td>
-      <td style="max-width:200px">${tagsHtml}</td>
+      <td style="max-width:190px">${tagsHtml}</td>
       <td class="td-actions">
         <button class="btn btn-ghost btn-sm" onclick="openEditModal(${idx})">✏️</button>
         <button class="btn btn-danger btn-sm" onclick="quickDelete(${idx})">🗑</button>
       </td>`;
+
+    tr.addEventListener('dragstart', e => {
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', idx);
+      tr.classList.add('dragging');
+    });
+    tr.addEventListener('dragend', () => tr.classList.remove('dragging'));
+    tr.addEventListener('dragover', e => {
+      e.preventDefault();
+      document.querySelectorAll('.drag-row').forEach(r => r.classList.remove('drag-over'));
+      tr.classList.add('drag-over');
+    });
+    tr.addEventListener('drop', e => {
+      e.preventDefault();
+      const fromIdx = parseInt(e.dataTransfer.getData('text/plain'));
+      const toIdx = parseInt(tr.dataset.idx);
+      if (fromIdx !== toIdx) {
+        const catRef = data.categories.find(c => c.id === activeCatId);
+        const moved = catRef.items.splice(fromIdx, 1)[0];
+        catRef.items.splice(toIdx, 0, moved);
+        catRef.items.forEach((it,i) => it.rank = i+1);
+        save();
+        renderSidebar();
+        renderItemsTable(catRef);
+        toast('↕️ Ordem atualizada', 'success');
+      }
+    });
+
     tbody.appendChild(tr);
   });
+}
+
+function moveItem(idx, dir) {
+  const cat = data.categories.find(c => c.id === activeCatId);
+  const newIdx = idx + dir;
+  if (newIdx < 0 || newIdx >= cat.items.length) return;
+  const tmp = cat.items[idx];
+  cat.items[idx] = cat.items[newIdx];
+  cat.items[newIdx] = tmp;
+  cat.items.forEach((it,i) => it.rank = i+1);
+  save();
+  renderItemsTable(cat);
+  toast('↕️ Ordem atualizada', 'success');
 }
 
 function populateCatSelect(selectedId) {
@@ -341,7 +495,6 @@ function openEditModal(itemIdx) {
   editingCatIdx = data.categories.indexOf(cat);
   editingItemIdx = itemIdx;
   editingTags = [...(item.tags||[])];
-
   document.getElementById('modal-title').textContent = '✏️ Editar Site';
   document.getElementById('f-name').value = item.name;
   document.getElementById('f-url').value = item.url;
@@ -368,7 +521,7 @@ function openAddModal() {
   document.getElementById('modal-overlay').classList.add('open');
 }
 
-function closeModal(e) {
+function closeModalOutside(e) {
   if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
 }
 function closeModalDirect() {
@@ -381,22 +534,13 @@ function renderTags() {
     `<span class="tag-pill">${t}<button onclick="removeTag(${i})">×</button></span>`
   ).join('');
 }
-
 function addTag() {
   const inp = document.getElementById('tag-input');
   const val = inp.value.trim();
-  if (val && !editingTags.includes(val)) {
-    editingTags.push(val);
-    renderTags();
-  }
-  inp.value = '';
-  inp.focus();
+  if (val && !editingTags.includes(val)) { editingTags.push(val); renderTags(); }
+  inp.value = ''; inp.focus();
 }
-
-function removeTag(i) {
-  editingTags.splice(i, 1);
-  renderTags();
-}
+function removeTag(i) { editingTags.splice(i,1); renderTags(); }
 
 function saveItem() {
   const name   = document.getElementById('f-name').value.trim();
@@ -404,19 +548,14 @@ function saveItem() {
   const status = document.getElementById('f-status').value;
   const note   = document.getElementById('f-note').value.trim();
   const catId  = document.getElementById('f-cat').value;
-
   if (!name || !url) { toast('Nome e URL são obrigatórios', 'error'); return; }
-
-  const newItem = { name, url, tags: [...editingTags], status, rank: 0 };
+  const newItem = { name, url, tags:[...editingTags], status, rank:0 };
   if (note) newItem.note = note;
-
   const targetCatIdx = data.categories.findIndex(c => c.id === catId);
 
   if (editingItemIdx !== null) {
-    const oldCatIdx = editingCatIdx;
-    if (oldCatIdx !== targetCatIdx) {
-      data.categories[oldCatIdx].items.splice(editingItemIdx, 1);
-      newItem.rank = data.categories[targetCatIdx].items.length + 1;
+    if (editingCatIdx !== targetCatIdx) {
+      data.categories[editingCatIdx].items.splice(editingItemIdx,1);
       data.categories[targetCatIdx].items.push(newItem);
     } else {
       newItem.rank = data.categories[targetCatIdx].items[editingItemIdx].rank;
@@ -426,80 +565,63 @@ function saveItem() {
     newItem.rank = data.categories[targetCatIdx].items.length + 1;
     data.categories[targetCatIdx].items.push(newItem);
   }
-
-  save();
-  closeModalDirect();
-  activeCatId = catId;
-  renderSidebar();
-  renderCatContent();
+  data.categories.forEach(c => c.items.forEach((it,i) => it.rank = i+1));
+  save(); closeModalDirect(); activeCatId = catId;
+  renderSidebar(); renderCatContent();
   toast('✅ Site salvo!', 'success');
 }
 
 function deleteItem() {
   if (!confirm('Excluir este site?')) return;
-  data.categories[editingCatIdx].items.splice(editingItemIdx, 1);
-  save();
-  closeModalDirect();
-  renderSidebar();
-  renderCatContent();
+  data.categories[editingCatIdx].items.splice(editingItemIdx,1);
+  save(); closeModalDirect(); renderSidebar(); renderCatContent();
   toast('🗑 Site excluído', 'success');
 }
-
 function quickDelete(idx) {
   if (!confirm('Excluir este site?')) return;
   const cat = data.categories.find(c => c.id === activeCatId);
-  cat.items.splice(idx, 1);
-  save();
-  renderSidebar();
-  renderCatContent();
+  cat.items.splice(idx,1);
+  save(); renderSidebar(); renderCatContent();
   toast('🗑 Site excluído', 'success');
 }
 
 function toggleNewCatForm() {
-  const f = document.getElementById('new-cat-form');
-  f.classList.toggle('open');
+  document.getElementById('new-cat-form').classList.toggle('open');
 }
-
 function addCategory() {
   const id    = document.getElementById('nc-id').value.trim().replace(/\s+/g,'-').toLowerCase();
   const label = document.getElementById('nc-label').value.trim();
   const icon  = document.getElementById('nc-icon').value.trim() || '📁';
   const color = document.getElementById('nc-color').value;
-  if (!id || !label) { toast('ID e Label são obrigatórios', 'error'); return; }
-  if (data.categories.find(c => c.id === id)) { toast('ID já existe', 'error'); return; }
-  data.categories.push({ id, label, icon, color, items: [] });
-  save();
-  toggleNewCatForm();
-  renderSidebar();
-  selectCat(id);
-  toast('✅ Categoria criada!', 'success');
+  if (!id || !label) { toast('ID e Label são obrigatórios','error'); return; }
+  if (data.categories.find(c=>c.id===id)) { toast('ID já existe','error'); return; }
+  data.categories.push({id,label,icon,color,items:[]});
+  save(); toggleNewCatForm(); renderSidebar(); selectCat(id);
+  toast('✅ Categoria criada!','success');
 }
-
 function deleteCategory() {
-  const cat = data.categories.find(c => c.id === activeCatId);
-  if (!confirm(`Excluir a categoria "${cat.label}" e seus ${cat.items.length} sites?`)) return;
-  data.categories = data.categories.filter(c => c.id !== activeCatId);
-  activeCatId = null;
-  save();
-  renderSidebar();
+  const cat = data.categories.find(c=>c.id===activeCatId);
+  if (!confirm(`Excluir "${cat.label}" e seus ${cat.items.length} sites?`)) return;
+  data.categories = data.categories.filter(c=>c.id!==activeCatId);
+  activeCatId = null; save(); renderSidebar();
   document.getElementById('cat-content').innerHTML =
     '<p style="color:var(--muted);margin-top:2rem;text-align:center">👈 Selecione uma categoria</p>';
-  toast('🗑 Categoria excluída', 'success');
+  toast('🗑 Categoria excluída','success');
 }
 
 function exportJSON() {
-  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  data.meta.version = bumpPatch(data.meta.version || '1.0.0');
+  data.meta.last_updated = new Date().toISOString().split('T')[0];
+  save();
+  document.getElementById('topbar-ver').textContent = 'v' + data.meta.version;
+  const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = 'data.json';
   a.click();
-  toast('⬇️ data.json exportado!', 'success');
+  toast('⬇️ data.json v' + data.meta.version + ' exportado!', 'success');
 }
-
-function importJSON() {
-  document.getElementById('import-file').click();
-}
-
+function importJSON() { document.getElementById('import-file').click(); }
 function handleImport(e) {
   const file = e.target.files[0];
   if (!file) return;
@@ -508,31 +630,29 @@ function handleImport(e) {
     try {
       data = JSON.parse(ev.target.result);
       localStorage.setItem('yaindex_data', JSON.stringify(data));
+      document.getElementById('topbar-ver').textContent = 'v' + (data.meta?.version||'1.0.0');
       activeCatId = null;
+      document.getElementById('sync-banner').classList.remove('show');
       renderSidebar();
       document.getElementById('cat-content').innerHTML =
-        '<p style="color:var(--muted);margin-top:2rem;text-align:center">✅ Arquivo importado! Selecione uma categoria.</p>';
-      toast('✅ data.json importado!', 'success');
-    } catch {
-      toast('❌ JSON inválido', 'error');
-    }
+        '<p style="color:var(--muted);margin-top:2rem;text-align:center">✅ Importado! Selecione uma categoria.</p>';
+      toast('✅ data.json importado (v'+(data.meta?.version||'?')+')', 'success');
+    } catch { toast('❌ JSON inválido','error'); }
   };
   reader.readAsText(file);
   e.target.value = '';
 }
-
 function resetToOriginal() {
-  if (!confirm('Remover alterações locais e recarregar do data.json original?')) return;
+  if (!confirm('Descartar alterações locais e recarregar do servidor?')) return;
   localStorage.removeItem('yaindex_data');
   location.reload();
 }
-
 function toast(msg, type='success') {
   const el = document.getElementById('toast');
   el.textContent = msg;
   el.className = `toast t-${type} show`;
   clearTimeout(el._t);
-  el._t = setTimeout(() => el.classList.remove('show'), 3000);
+  el._t = setTimeout(() => el.classList.remove('show'), 3200);
 }
 
 loadData();

@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-15",
-    "version": "1.0.0"
+    "last_updated": "2026-03-16",
+    "version": "1.0.1"
   },
   "categories": [
     {
@@ -358,13 +358,35 @@
           "status": "online"
         },
         {
+          "name": "Nexus Toons",
+          "url": "https://nexustoons.com/",
+          "tags": [
+            "Manga",
+            "Hub",
+            "Portuguese"
+          ],
+          "status": "online",
+          "rank": 3
+        },
+        {
+          "name": "Yomu",
+          "url": "https://yomu.com.br/",
+          "tags": [
+            "Manga",
+            "Hub",
+            "Fast"
+          ],
+          "status": "online",
+          "rank": 4
+        },
+        {
           "name": "Mangaball",
           "url": "https://mangaball.net",
           "tags": [
             "Hub",
             "Manga"
           ],
-          "rank": 3,
+          "rank": 5,
           "status": "online"
         },
         {
@@ -375,7 +397,7 @@
             "Curated"
           ],
           "status": "online",
-          "rank": 4
+          "rank": 6
         },
         {
           "name": "Weeb Central",
@@ -384,7 +406,7 @@
             "Manga",
             "No Ads"
           ],
-          "rank": 5,
+          "rank": 7,
           "status": "online"
         },
         {
@@ -394,7 +416,7 @@
             "Manga",
             "Community"
           ],
-          "rank": 6,
+          "rank": 8,
           "status": "online"
         },
         {
@@ -404,7 +426,7 @@
             "Manga",
             "Fast"
           ],
-          "rank": 7,
+          "rank": 9,
           "status": "online"
         },
         {
@@ -415,7 +437,7 @@
             "Manga"
           ],
           "status": "online",
-          "rank": 8
+          "rank": 10
         },
         {
           "name": "Bookwalker",
@@ -426,7 +448,7 @@
             "Novels",
             "Purchase"
           ],
-          "rank": 9,
+          "rank": 11,
           "status": "online"
         },
         {
@@ -437,7 +459,7 @@
             "Manga",
             "Purchase"
           ],
-          "rank": 10,
+          "rank": 12,
           "status": "online"
         },
         {
@@ -447,7 +469,7 @@
             "Manga",
             "Raw"
           ],
-          "rank": 11,
+          "rank": 13,
           "status": "online"
         },
         {
@@ -456,7 +478,7 @@
           "tags": [
             "Manga"
           ],
-          "rank": 12,
+          "rank": 14,
           "status": "offline"
         },
         {
@@ -466,7 +488,7 @@
             "Manga",
             "Large Library"
           ],
-          "rank": 13,
+          "rank": 15,
           "status": "online"
         },
         {
@@ -476,7 +498,7 @@
             "Proxy",
             "Multi-Lang"
           ],
-          "rank": 14,
+          "rank": 16,
           "status": "online"
         },
         {
@@ -486,7 +508,7 @@
             "Scanlation",
             "Manga"
           ],
-          "rank": 15,
+          "rank": 17,
           "status": "online"
         },
         {
@@ -497,7 +519,7 @@
             "Manhwa",
             "Large Library"
           ],
-          "rank": 16,
+          "rank": 18,
           "status": "online"
         },
         {
@@ -507,7 +529,7 @@
             "Manga",
             "Fast UI"
           ],
-          "rank": 17,
+          "rank": 19,
           "status": "online"
         },
         {
@@ -519,7 +541,7 @@
             "Multi-Lang",
             "API"
           ],
-          "rank": 18,
+          "rank": 20,
           "status": "online"
         },
         {
@@ -528,7 +550,7 @@
           "tags": [
             "Manga"
           ],
-          "rank": 19,
+          "rank": 21,
           "status": "online"
         },
         {
@@ -539,19 +561,8 @@
             "Manga",
             "Hub"
           ],
-          "rank": 20,
+          "rank": 22,
           "status": "online"
-        },
-        {
-          "name": "Nexus Toons",
-          "url": "https://nexustoons.com/",
-          "tags": [
-            "Manga",
-            "Hub",
-            "Portuguese"
-          ],
-          "status": "online",
-          "rank": 21
         }
       ]
     },
