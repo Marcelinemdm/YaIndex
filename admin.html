@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>YaIndex — Admin</title>
+  <style>
+    :root{
+      --bg:#0f0f13;--bg2:#16161d;--bg3:#1e1e2a;--bg4:#252535;
+      --border:#2a2a3a;--text:#e2e2f0;--muted:#8888aa;
+      --accent:#6366f1;--accent2:#a78bfa;
+      --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--orange:#f97316;
+      --radius:10px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+    a{color:var(--accent2);text-decoration:none}
+
+    .topbar{background:var(--bg2);border-bottom:1px solid var(--border);
+      padding:.9rem 1.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+    .topbar h1{font-size:1.2rem;font-weight:800;
+      background:linear-gradient(135deg,#a78bfa,#6366f1);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex:1}
+    .btn{padding:.5rem 1.1rem;border-radius:8px;border:none;cursor:pointer;
+      font-size:.85rem;font-weight:600;transition:.2s;display:inline-flex;align-items:center;gap:.4rem}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:#4f52d9}
+    .btn-success{background:var(--green);color:#fff}
+    .btn-success:hover{background:#0ea572}
+    .btn-danger{background:var(--red);color:#fff}
+    .btn-danger:hover{background:#dc2626}
+    .btn-ghost{background:var(--bg3);color:var(--muted);border:1px solid var(--border)}
+    .btn-ghost:hover{border-color:var(--accent);color:var(--accent2)}
+    .btn-sm{padding:.3rem .7rem;font-size:.75rem}
+    .btn-warn{background:var(--yellow);color:#000}
+    .btn-warn:hover{background:#d97706}
+
+    .layout{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 57px)}
+    .sidebar{background:var(--bg2);border-right:1px solid var(--border);
+      padding:1rem 0;overflow-y:auto;position:sticky;top:57px;height:calc(100vh - 57px)}
+    .sidebar-title{padding:.4rem 1.2rem;font-size:.7rem;color:var(--muted);
+      text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-top:.5rem}
+    .cat-item{display:flex;align-items:center;gap:.6rem;padding:.5rem 1.2rem;
+      cursor:pointer;transition:.15s;font-size:.88rem;border-left:3px solid transparent}
+    .cat-item:hover{background:var(--bg3)}
+    .cat-item.active{background:var(--bg3);border-left-color:var(--accent);color:var(--accent2)}
+    .cat-item .ci-count{margin-left:auto;font-size:.7rem;color:var(--muted);
+      background:var(--bg4);padding:.1rem .5rem;border-radius:99px}
+
+    .content{padding:1.5rem;overflow-y:auto}
+    .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap}
+    .section-header h2{font-size:1.1rem;font-weight:700;flex:1}
+
+    .table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)}
+    table{width:100%;border-collapse:collapse;font-size:.85rem}
+    th{background:var(--bg3);padding:.7rem 1rem;text-align:left;
+      color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;
+      letter-spacing:.05em;border-bottom:1px solid var(--border);white-space:nowrap}
+    td{padding:.65rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:rgba(99,102,241,.04)}
+    .td-name{font-weight:600;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .td-url{max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+      color:var(--muted);font-size:.8rem}
+    .td-actions{display:flex;gap:.4rem;white-space:nowrap}
+    .status-dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+    .s-online{background:var(--green)}
+    .s-warning{background:var(--yellow)}
+    .s-offline{background:var(--red)}
+    .tag-pill{background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);
+      border-radius:4px;padding:.1rem .4rem;font-size:.7rem;color:var(--accent2);
+      display:inline-flex;align-items:center;gap:.3rem;margin:.1rem}
+    .tag-pill button{background:none;border:none;cursor:pointer;color:var(--muted);
+      font-size:.75rem;padding:0;line-height:1}
+    .tag-pill button:hover{color:var(--red)}
+
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);
+      display:flex;align-items:center;justify-content:center;z-index:100;
+      opacity:0;pointer-events:none;transition:.2s}
+    .modal-overlay.open{opacity:1;pointer-events:all}
+    .modal{background:var(--bg2);border:1px solid var(--border);border-radius:14px;
+      padding:1.5rem;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;
+      transform:translateY(20px);transition:.2s}
+    .modal-overlay.open .modal{transform:translateY(0)}
+    .modal h3{font-size:1.1rem;margin-bottom:1.2rem;font-weight:700}
+    .form-group{margin-bottom:1rem}
+    .form-group label{display:block;font-size:.8rem;color:var(--muted);
+      margin-bottom:.4rem;font-weight:600}
+    .form-group input,.form-group select,.form-group textarea{
+      width:100%;background:var(--bg3);border:1px solid var(--border);
+      border-radius:8px;padding:.6rem .9rem;color:var(--text);font-size:.9rem;outline:none;transition:.2s}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+      border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,102,241,.15)}
+    .form-group select option{background:var(--bg3)}
+    .modal-actions{display:flex;gap:.7rem;justify-content:flex-end;margin-top:1.2rem}
+    .tag-input-row{display:flex;gap:.5rem;margin-bottom:.5rem}
+    .tag-input-row input{flex:1}
+    #current-tags{display:flex;flex-wrap:wrap;gap:.3rem;min-height:30px;
+      padding:.4rem;background:var(--bg3);border-radius:8px;border:1px solid var(--border)}
+
+    .toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--bg2);
+      border:1px solid var(--border);border-radius:10px;padding:.8rem 1.2rem;
+      font-size:.85rem;z-index:200;transform:translateY(80px);transition:.3s;
+      display:flex;align-items:center;gap:.6rem;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+    .toast.show{transform:translateY(0)}
+    .toast.t-success{border-left:3px solid var(--green)}
+    .toast.t-error{border-left:3px solid var(--red)}
+
+    .export-area{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);
+      padding:1.2rem;margin-top:1.5rem}
+    .export-area h3{margin-bottom:.8rem;font-size:.95rem}
+    .export-area p{color:var(--muted);font-size:.83rem;margin-bottom:.8rem;line-height:1.5}
+    .export-row{display:flex;gap:.7rem;flex-wrap:wrap}
+
+    .new-cat-form{background:var(--bg3);border:1px solid var(--border);
+      border-radius:var(--radius);padding:1rem;margin-bottom:1.2rem;display:none}
+    .new-cat-form.open{display:block}
+    .new-cat-form h4{margin-bottom:.8rem;font-size:.9rem;color:var(--accent2)}
+    .new-cat-grid{display:grid;grid-template-columns:1fr 1fr 80px;gap:.7rem}
+
+    @media(max-width:700px){
+      .layout{grid-template-columns:1fr}
+      .sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--border)}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>⚙️ YaIndex Admin</h1>
+  <a href="index.html" class="btn btn-ghost">← Voltar ao Index</a>
+  <button class="btn btn-success" onclick="exportJSON()">⬇️ Exportar data.json</button>
+  <button class="btn btn-warn" onclick="importJSON()">⬆️ Importar data.json</button>
+  <input type="file" id="import-file" accept=".json" style="display:none" onchange="handleImport(event)"/>
+</div>
+
+<div class="layout">
+  <div class="sidebar">
+    <div class="sidebar-title">Categorias</div>
+    <div id="sidebar-cats"></div>
+    <div style="padding:.5rem 1.2rem;margin-top:.5rem">
+      <button class="btn btn-primary" style="width:100%;justify-content:center"
+        onclick="toggleNewCatForm()">+ Nova Categoria</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="new-cat-form" id="new-cat-form">
+      <h4>➕ Nova Categoria</h4>
+      <div class="new-cat-grid">
+        <div class="form-group" style="margin:0">
+          <label>ID (sem espaços)</label>
+          <input id="nc-id" placeholder="ex: tokusatsu"/>
+        </div>
+        <div class="form-group" style="margin:0">
+          <label>Label</label>
+          <input id="nc-label" placeholder="ex: Tokusatsu"/>
+        </div>
+        <div class="form-group" style="margin:0">
+          <label>Ícone</label>
+          <input id="nc-icon" placeholder="🦸" style="text-align:center"/>
+        </div>
+      </div>
+      <div style="display:flex;gap:.7rem;margin-top:.8rem">
+        <input id="nc-color" type="color" value="#6366f1" style="width:50px;height:36px;border:none;background:none;cursor:pointer;border-radius:6px"/>
+        <button class="btn btn-success btn-sm" onclick="addCategory()">Criar Categoria</button>
+        <button class="btn btn-ghost btn-sm" onclick="toggleNewCatForm()">Cancelar</button>
+      </div>
+    </div>
+
+    <div id="cat-content">
+      <p style="color:var(--muted);margin-top:2rem;text-align:center">
+        👈 Selecione uma categoria na barra lateral
+      </p>
+    </div>
+
+    <div class="export-area">
+      <h3>📦 Salvar alterações</h3>
+      <p>As edições ficam salvas no navegador (localStorage). Para aplicar no site, exporte o <code>data.json</code> e substitua o arquivo no seu projeto, depois faça <code>git push</code>.</p>
+      <div class="export-row">
+        <button class="btn btn-success" onclick="exportJSON()">⬇️ Exportar data.json</button>
+        <button class="btn btn-ghost" onclick="resetToOriginal()">🔄 Resetar alterações locais</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal">
+    <h3 id="modal-title">Editar Site</h3>
+    <div class="form-group">
+      <label>Nome</label>
+      <input id="f-name" placeholder="Nome do site"/>
+    </div>
+    <div class="form-group">
+      <label>URL</label>
+      <input id="f-url" placeholder="https://..." type="url"/>
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <select id="f-status">
+        <option value="online">🟢 Online</option>
+        <option value="warning">🟡 Aviso</option>
+        <option value="offline">🔴 Offline</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Categoria</label>
+      <select id="f-cat"></select>
+    </div>
+    <div class="form-group">
+      <label>Tags</label>
+      <div class="tag-input-row">
+        <input id="tag-input" placeholder="Digite uma tag e pressione Enter ou +"
+          onkeydown="if(event.key==='Enter'){event.preventDefault();addTag()}"/>
+        <button class="btn btn-ghost btn-sm" onclick="addTag()">+</button>
+      </div>
+      <div id="current-tags"></div>
+    </div>
+    <div class="form-group">
+      <label>Nota (opcional)</label>
+      <input id="f-note" placeholder="Ex: domínio instável"/>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModalDirect()">Cancelar</button>
+      <button class="btn btn-danger btn-sm" id="btn-delete" onclick="deleteItem()">🗑 Excluir</button>
+      <button class="btn btn-primary" onclick="saveItem()">💾 Salvar</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const DATA_URL = './data.json';
+let data = null;
+let activeCatId = null;
+let editingCatIdx = null;
+let editingItemIdx = null;
+let editingTags = [];
+
+async function loadData() {
+  const saved = localStorage.getItem('yaindex_data');
+  if (saved) {
+    data = JSON.parse(saved);
+    toast('Dados locais carregados', 'success');
+  } else {
+    try {
+      const res = await fetch(DATA_URL + '?t=' + Date.now());
+      data = await res.json();
+    } catch(e) {
+      toast('Erro ao carregar data.json: ' + e.message, 'error');
+      return;
+    }
+  }
+  renderSidebar();
+}
+
+function save() {
+  data.meta.last_updated = new Date().toISOString().split('T')[0];
+  localStorage.setItem('yaindex_data', JSON.stringify(data));
+}
+
+function renderSidebar() {
+  const el = document.getElementById('sidebar-cats');
+  el.innerHTML = '';
+  data.categories.forEach((cat, idx) => {
+    const div = document.createElement('div');
+    div.className = 'cat-item' + (cat.id === activeCatId ? ' active' : '');
+    div.style.borderLeftColor = cat.id === activeCatId ? cat.color : 'transparent';
+    div.innerHTML = `
+      <span>${cat.icon}</span>
+      <span style="flex:1">${cat.label}</span>
+      <span class="ci-count">${cat.items.length}</span>`;
+    div.onclick = () => selectCat(cat.id);
+    el.appendChild(div);
+  });
+}
+
+function selectCat(catId) {
+  activeCatId = catId;
+  renderSidebar();
+  renderCatContent();
+}
+
+function renderCatContent() {
+  const cat = data.categories.find(c => c.id === activeCatId);
+  if (!cat) return;
+
+  const el = document.getElementById('cat-content');
+  el.innerHTML = `
+    <div class="section-header">
+      <h2>${cat.icon} ${cat.label} <span style="color:var(--muted);font-size:.85rem">(${cat.items.length} sites)</span></h2>
+      <button class="btn btn-primary btn-sm" onclick="openAddModal()">+ Adicionar Site</button>
+      <button class="btn btn-danger btn-sm" onclick="deleteCategory()">🗑 Excluir Categoria</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Status</th>
+            <th>Nome</th>
+            <th>URL</th>
+            <th>Tags</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="items-tbody"></tbody>
+      </table>
+    </div>`;
+
+  const tbody = document.getElementById('items-tbody');
+  cat.items.forEach((item, idx) => {
+    const tr = document.createElement('tr');
+    const tagsHtml = (item.tags||[]).map(t=>`<span class="tag-pill">${t}</span>`).join('');
+    tr.innerHTML = `
+      <td style="color:var(--muted);font-size:.75rem">${idx+1}</td>
+      <td><span class="status-dot s-${item.status||'online'}" title="${item.status}"></span></td>
+      <td class="td-name" title="${item.name}">${item.name}</td>
+      <td class="td-url"><a href="${item.url}" target="_blank" title="${item.url}">${item.url}</a></td>
+      <td style="max-width:200px">${tagsHtml}</td>
+      <td class="td-actions">
+        <button class="btn btn-ghost btn-sm" onclick="openEditModal(${idx})">✏️</button>
+        <button class="btn btn-danger btn-sm" onclick="quickDelete(${idx})">🗑</button>
+      </td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function populateCatSelect(selectedId) {
+  const sel = document.getElementById('f-cat');
+  sel.innerHTML = data.categories.map(c =>
+    `<option value="${c.id}" ${c.id===selectedId?'selected':''}>${c.icon} ${c.label}</option>`
+  ).join('');
+}
+
+function openEditModal(itemIdx) {
+  const cat = data.categories.find(c => c.id === activeCatId);
+  const item = cat.items[itemIdx];
+  editingCatIdx = data.categories.indexOf(cat);
+  editingItemIdx = itemIdx;
+  editingTags = [...(item.tags||[])];
+
+  document.getElementById('modal-title').textContent = '✏️ Editar Site';
+  document.getElementById('f-name').value = item.name;
+  document.getElementById('f-url').value = item.url;
+  document.getElementById('f-status').value = item.status || 'online';
+  document.getElementById('f-note').value = item.note || '';
+  document.getElementById('btn-delete').style.display = 'inline-flex';
+  populateCatSelect(activeCatId);
+  renderTags();
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function openAddModal() {
+  editingCatIdx = null;
+  editingItemIdx = null;
+  editingTags = [];
+  document.getElementById('modal-title').textContent = '➕ Novo Site';
+  document.getElementById('f-name').value = '';
+  document.getElementById('f-url').value = '';
+  document.getElementById('f-status').value = 'online';
+  document.getElementById('f-note').value = '';
+  document.getElementById('btn-delete').style.display = 'none';
+  populateCatSelect(activeCatId);
+  renderTags();
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+function renderTags() {
+  const el = document.getElementById('current-tags');
+  el.innerHTML = editingTags.map((t,i) =>
+    `<span class="tag-pill">${t}<button onclick="removeTag(${i})">×</button></span>`
+  ).join('');
+}
+
+function addTag() {
+  const inp = document.getElementById('tag-input');
+  const val = inp.value.trim();
+  if (val && !editingTags.includes(val)) {
+    editingTags.push(val);
+    renderTags();
+  }
+  inp.value = '';
+  inp.focus();
+}
+
+function removeTag(i) {
+  editingTags.splice(i, 1);
+  renderTags();
+}
+
+function saveItem() {
+  const name   = document.getElementById('f-name').value.trim();
+  const url    = document.getElementById('f-url').value.trim();
+  const status = document.getElementById('f-status').value;
+  const note   = document.getElementById('f-note').value.trim();
+  const catId  = document.getElementById('f-cat').value;
+
+  if (!name || !url) { toast('Nome e URL são obrigatórios', 'error'); return; }
+
+  const newItem = { name, url, tags: [...editingTags], status, rank: 0 };
+  if (note) newItem.note = note;
+
+  const targetCatIdx = data.categories.findIndex(c => c.id === catId);
+
+  if (editingItemIdx !== null) {
+    const oldCatIdx = editingCatIdx;
+    if (oldCatIdx !== targetCatIdx) {
+      data.categories[oldCatIdx].items.splice(editingItemIdx, 1);
+      newItem.rank = data.categories[targetCatIdx].items.length + 1;
+      data.categories[targetCatIdx].items.push(newItem);
+    } else {
+      newItem.rank = data.categories[targetCatIdx].items[editingItemIdx].rank;
+      data.categories[targetCatIdx].items[editingItemIdx] = newItem;
+    }
+  } else {
+    newItem.rank = data.categories[targetCatIdx].items.length + 1;
+    data.categories[targetCatIdx].items.push(newItem);
+  }
+
+  save();
+  closeModalDirect();
+  activeCatId = catId;
+  renderSidebar();
+  renderCatContent();
+  toast('✅ Site salvo!', 'success');
+}
+
+function deleteItem() {
+  if (!confirm('Excluir este site?')) return;
+  data.categories[editingCatIdx].items.splice(editingItemIdx, 1);
+  save();
+  closeModalDirect();
+  renderSidebar();
+  renderCatContent();
+  toast('🗑 Site excluído', 'success');
+}
+
+function quickDelete(idx) {
+  if (!confirm('Excluir este site?')) return;
+  const cat = data.categories.find(c => c.id === activeCatId);
+  cat.items.splice(idx, 1);
+  save();
+  renderSidebar();
+  renderCatContent();
+  toast('🗑 Site excluído', 'success');
+}
+
+function toggleNewCatForm() {
+  const f = document.getElementById('new-cat-form');
+  f.classList.toggle('open');
+}
+
+function addCategory() {
+  const id    = document.getElementById('nc-id').value.trim().replace(/\s+/g,'-').toLowerCase();
+  const label = document.getElementById('nc-label').value.trim();
+  const icon  = document.getElementById('nc-icon').value.trim() || '📁';
+  const color = document.getElementById('nc-color').value;
+  if (!id || !label) { toast('ID e Label são obrigatórios', 'error'); return; }
+  if (data.categories.find(c => c.id === id)) { toast('ID já existe', 'error'); return; }
+  data.categories.push({ id, label, icon, color, items: [] });
+  save();
+  toggleNewCatForm();
+  renderSidebar();
+  selectCat(id);
+  toast('✅ Categoria criada!', 'success');
+}
+
+function deleteCategory() {
+  const cat = data.categories.find(c => c.id === activeCatId);
+  if (!confirm(`Excluir a categoria "${cat.label}" e seus ${cat.items.length} sites?`)) return;
+  data.categories = data.categories.filter(c => c.id !== activeCatId);
+  activeCatId = null;
+  save();
+  renderSidebar();
+  document.getElementById('cat-content').innerHTML =
+    '<p style="color:var(--muted);margin-top:2rem;text-align:center">👈 Selecione uma categoria</p>';
+  toast('🗑 Categoria excluída', 'success');
+}
+
+function exportJSON() {
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'data.json';
+  a.click();
+  toast('⬇️ data.json exportado!', 'success');
+}
+
+function importJSON() {
+  document.getElementById('import-file').click();
+}
+
+function handleImport(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      data = JSON.parse(ev.target.result);
+      localStorage.setItem('yaindex_data', JSON.stringify(data));
+      activeCatId = null;
+      renderSidebar();
+      document.getElementById('cat-content').innerHTML =
+        '<p style="color:var(--muted);margin-top:2rem;text-align:center">✅ Arquivo importado! Selecione uma categoria.</p>';
+      toast('✅ data.json importado!', 'success');
+    } catch {
+      toast('❌ JSON inválido', 'error');
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+}
+
+function resetToOriginal() {
+  if (!confirm('Remover alterações locais e recarregar do data.json original?')) return;
+  localStorage.removeItem('yaindex_data');
+  location.reload();
+}
+
+function toast(msg, type='success') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = `toast t-${type} show`;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.classList.remove('show'), 3000);
+}
+
+loadData();
+</script>
+</body>
+</html>

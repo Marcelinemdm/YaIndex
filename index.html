@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>YaIndex</title>
-  <meta name="description" content="Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais."/>
+  <meta name="description" content="Índice otaku curado e auto-atualizado de +200 recursos."/>
   <style>
     :root{
       --bg:#0f0f13;--bg2:#16161d;--bg3:#1e1e2a;--border:#2a2a3a;
@@ -19,9 +19,15 @@
       border-bottom:1px solid var(--border);padding:2rem 1.5rem;text-align:center;position:relative}
     .header-glow{position:absolute;top:0;left:50%;transform:translateX(-50%);
       width:400px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent)}
-    header h1{font-size:2.2rem;font-weight:800;letter-spacing:-1px;
-      background:linear-gradient(135deg,#a78bfa,#6366f1,#38bdf8);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    header h1 .titulo-texto {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #a78bfa, #6366f1,     #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
     header p{color:var(--muted);margin-top:.5rem;font-size:.95rem}
     .header-meta{display:flex;justify-content:center;gap:1.5rem;margin-top:1rem;flex-wrap:wrap}
     .badge{background:var(--bg3);border:1px solid var(--border);border-radius:99px;
@@ -32,16 +38,20 @@
     #search{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:99px;
       padding:.8rem 1.4rem .8rem 3rem;color:var(--text);font-size:1rem;outline:none;transition:.2s}
     #search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(99,102,241,.2)}
-    .search-icon{position:absolute;left:1.9rem;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:1.1rem}
+    .search-icon{position:absolute;left:1.9rem;top:50%;transform:translateY(-50%);
+      color:var(--muted);pointer-events:none;font-size:1.1rem}
     #search-count{text-align:center;color:var(--muted);font-size:.85rem;margin-top:.5rem;padding:0 1rem}
-    .filter-bar{display:flex;gap:.5rem;padding:.5rem 1rem 1rem;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto}
+    .filter-bar{display:flex;gap:.5rem;padding:.5rem 1rem 1rem;overflow-x:auto;
+      scrollbar-width:none;max-width:1200px;margin:0 auto}
     .filter-bar::-webkit-scrollbar{display:none}
     .filter-btn{background:var(--bg3);border:1px solid var(--border);border-radius:99px;
-      padding:.4rem 1rem;font-size:.82rem;color:var(--muted);cursor:pointer;white-space:nowrap;transition:.2s}
+      padding:.4rem 1rem;font-size:.82rem;color:var(--muted);cursor:pointer;
+      white-space:nowrap;transition:.2s;flex-shrink:0}
     .filter-btn:hover,.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
     main{max-width:1200px;margin:0 auto;padding:0 1rem 3rem}
     .categories-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem}
-    .category{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:.2s}
+    .category{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
+      overflow:hidden;transition:.2s}
     .category:hover{border-color:rgba(99,102,241,.4);transform:translateY(-2px);box-shadow:var(--shadow)}
     .category-header{padding:1rem 1.2rem .8rem;display:flex;align-items:center;gap:.7rem;
       border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
@@ -53,7 +63,8 @@
     .category.collapsed .cat-toggle{transform:rotate(-90deg)}
     .category.collapsed .items-list{display:none}
     .items-list{padding:.6rem 0}
-    .item{display:flex;align-items:center;gap:.7rem;padding:.5rem 1.2rem;border-radius:6px;transition:.15s;cursor:pointer}
+    .item{display:flex;align-items:center;gap:.7rem;padding:.5rem 1.2rem;
+      border-radius:6px;transition:.15s}
     .item:hover{background:var(--bg3)}
     .item-rank{font-size:.7rem;color:var(--muted);width:1.5rem;text-align:right;flex-shrink:0;font-weight:600}
     .item-rank.top3{color:var(--yellow);font-weight:800}
@@ -71,8 +82,12 @@
     .show-more-btn:hover{color:var(--accent);background:var(--bg3)}
     #no-results{display:none;text-align:center;padding:3rem;color:var(--muted)}
     #no-results p{font-size:2rem}
-    footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;color:var(--muted);font-size:.8rem}
+    footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;
+      color:var(--muted);font-size:.8rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap}
     footer a{color:var(--accent2)}
+    .admin-link{background:var(--bg3);border:1px solid var(--border);border-radius:99px;
+      padding:.35rem .9rem;font-size:.8rem;color:var(--accent2);transition:.2s}
+    .admin-link:hover{border-color:var(--accent);background:var(--accent);color:#fff}
     @media(max-width:600px){
       header h1{font-size:1.5rem}
       .categories-grid{grid-template-columns:1fr}
@@ -81,15 +96,15 @@
   </style>
 </head>
 <body>
-
 <header>
   <div class="header-glow"></div>
-  <h1>YaIndex</h1>
-  <p>Índice otaku curado &amp; auto-atualizado</p>
+  <h1>🌸 <span class="titulo-texto">YaIndex</span></h1>
+  <p>Índice otaku &amp; auto atualizado</p>
   <div class="header-meta">
     <div class="badge">📦 <span id="total-items">—</span> recursos</div>
     <div class="badge">🗂️ <span id="total-cats">—</span> categorias</div>
     <div class="badge">🔄 Atualizado <span id="last-updated">—</span></div>
+    <div class="badge"><a href="https://github.com/Marcelinemdm/YaIndex" target="_blank" rel="noopener" style="color:var(--accent2)">⭐ GitHub</a></div>
   </div>
 </header>
 
@@ -99,9 +114,7 @@
   <div id="search-count"></div>
 </div>
 
-<div class="filter-bar" id="filter-bar">
-  <button class="filter-btn active" data-cat="all">✨ Todos</button>
-</div>
+<div class="filter-bar" id="filter-bar"></div>
 
 <main>
   <div id="no-results"><p>🔎</p><br>Nenhum resultado encontrado.</div>
@@ -109,10 +122,8 @@
 </main>
 
 <footer>
-  <p>
-    <a href="https://yaindex.seusomelier.com.br/" target="_blank" rel="noopener">YaIndex</a>
-    — Índice otaku auto-atualizado.<br/>
-  </p>
+  <span>🌸 <a href="https://github.com/Marcelinemdm/YaIndex" target="_blank" rel="noopener">YaIndex</a> — auto-atualizado via GitHub Actions</span>
+  <a class="admin-link" href="admin.html">⚙️ Painel Admin</a>
 </footer>
 
 <script>
@@ -141,14 +152,22 @@ function renderAll() {
   document.title = meta.title || 'YaIndex';
 
   const filterBar = document.getElementById('filter-bar');
+  filterBar.innerHTML = '';
+
+  const todosBtn = document.createElement('button');
+  todosBtn.className = 'filter-btn active';
+  todosBtn.textContent = '✨ Todos';
+  todosBtn.onclick = () => setFilter('all', todosBtn);
+  filterBar.appendChild(todosBtn);
+
   allData.categories.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = 'filter-btn';
-    btn.dataset.cat = cat.id;
     btn.textContent = cat.icon + ' ' + cat.label;
     btn.onclick = () => setFilter(cat.id, btn);
     filterBar.appendChild(btn);
   });
+
   renderCategories();
 }
 
@@ -165,14 +184,15 @@ function renderCategories() {
   const q = searchQuery.toLowerCase().trim();
   let totalVisible = 0;
 
-  const cats = activeFilter === 'all' ? allData.categories
+  const cats = activeFilter === 'all'
+    ? allData.categories
     : allData.categories.filter(c => c.id === activeFilter);
 
   cats.forEach(cat => {
-    let matchItems = cat.items.filter(item => {
+    const matchItems = cat.items.filter(item => {
       if (!q) return true;
       return item.name.toLowerCase().includes(q) ||
-             item.tags.some(t => t.toLowerCase().includes(q)) ||
+             (item.tags||[]).some(t => t.toLowerCase().includes(q)) ||
              cat.label.toLowerCase().includes(q);
     });
     if (!matchItems.length && q) return;
@@ -192,8 +212,8 @@ function renderCategories() {
 
     const list = document.createElement('div');
     list.className = 'items-list';
-
     const LIMIT = 8;
+
     matchItems.forEach((item, idx) => {
       const row = document.createElement('a');
       row.className = 'item' + (idx >= LIMIT ? ' hidden extra' : '');
@@ -201,11 +221,11 @@ function renderCategories() {
       row.target = '_blank';
       row.rel = 'noopener';
       const rankCls = idx < 3 ? 'item-rank top3' : 'item-rank';
-      const statusCls = 'item-status status-' + (item.status || 'online');
-      const tagsHtml = (item.tags || []).slice(0,3).map(t => `<span class="tag">${t}</span>`).join('');
+      const stCls = 'item-status status-' + (item.status||'online');
+      const tagsHtml = (item.tags||[]).slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('');
       row.innerHTML = `
         <span class="${rankCls}">${idx+1}</span>
-        <span class="${statusCls}" title="${item.status}"></span>
+        <span class="${stCls}" title="${item.status||'online'}"></span>
         <span class="item-name">${item.name}</span>
         <span class="item-tags">${tagsHtml}</span>`;
       list.appendChild(row);
