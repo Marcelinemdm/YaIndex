@@ -365,7 +365,7 @@
             "Hub",
             "Portuguese"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 3
         },
         {
@@ -387,7 +387,7 @@
             "Manga"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Atsumaru",
@@ -460,7 +460,7 @@
             "Purchase"
           ],
           "rank": 12,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "MangaTaro",
@@ -733,7 +733,7 @@
             "Large Library"
           ],
           "rank": 5,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Wuxia Box",
@@ -783,7 +783,7 @@
             "Multi-Lang"
           ],
           "rank": 10,
-          "status": "offline"
+          "status": "warning"
         },
         {
           "name": "Baka-Tsuki",
@@ -1425,7 +1425,7 @@
             "Multi-Lang"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "AnimeThemes",
@@ -1913,7 +1913,7 @@
             "News"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "MyAnimeList Forum",
@@ -2245,7 +2245,7 @@
             "Legal"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "JAST USA",
