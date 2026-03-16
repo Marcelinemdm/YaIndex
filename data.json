@@ -25,14 +25,14 @@
         },
         {
           "name": "animepahe",
-          "url": "https://animepahe.ru",
+          "url": "https://animepahe.si/",
           "tags": [
             "No Ads",
             "DL",
             "480p-1080p"
           ],
-          "rank": 2,
-          "status": "offline"
+          "status": "online",
+          "rank": 2
         },
         {
           "name": "HiAnime",
@@ -89,14 +89,14 @@
         },
         {
           "name": "KickAssAnime",
-          "url": "https://kickassanime.mx",
+          "url": "https://kickassanime.com.es/",
           "tags": [
             "Sub",
             "Dub",
             "Fast CDN"
           ],
-          "rank": 8,
-          "status": "offline"
+          "status": "online",
+          "rank": 8
         },
         {
           "name": "Anime Nexus",
@@ -112,21 +112,21 @@
         },
         {
           "name": "Anikoto",
-          "url": "https://anikoto.to",
+          "url": "https://anikoto.cz/",
           "tags": [
             "Multi-Lang"
           ],
-          "rank": 10,
-          "status": "offline"
+          "status": "online",
+          "rank": 10
         },
         {
           "name": "Animetsu",
-          "url": "https://animetsu.to",
+          "url": "https://animetsu.net/",
           "tags": [
             "Multi-Lang"
           ],
-          "rank": 11,
-          "status": "offline"
+          "status": "online",
+          "rank": 11
         },
         {
           "name": "Miruro",
@@ -152,12 +152,12 @@
         },
         {
           "name": "AnimeStream",
-          "url": "https://animestream.cc",
+          "url": "https://animixstream.com/",
           "tags": [
             "Sub"
           ],
-          "rank": 14,
-          "status": "offline"
+          "status": "online",
+          "rank": 14
         },
         {
           "name": "Bilibili",
@@ -193,13 +193,13 @@
         },
         {
           "name": "Senshi",
-          "url": "https://senshi.moe",
+          "url": "https://senshi.live/",
           "tags": [
             "No Ads",
             "Sub"
           ],
-          "rank": 18,
-          "status": "offline"
+          "status": "online",
+          "rank": 18
         },
         {
           "name": "AnimeOnsen",
@@ -338,13 +338,13 @@
       "items": [
         {
           "name": "Comix",
-          "url": "https://comix.moe",
+          "url": "https://comix.to",
           "tags": [
             "Manga",
             "Clean UI"
           ],
-          "rank": 1,
-          "status": "offline"
+          "status": "online",
+          "rank": 1
         },
         {
           "name": "MangaFire",
@@ -369,13 +369,13 @@
         },
         {
           "name": "Atsumaru",
-          "url": "https://atsu.maru.moe",
+          "url": "https://atsu.moe/",
           "tags": [
             "Manga",
             "Curated"
           ],
-          "rank": 4,
-          "status": "offline"
+          "status": "online",
+          "rank": 4
         },
         {
           "name": "Weeb Central",
@@ -409,13 +409,13 @@
         },
         {
           "name": "WeebDex",
-          "url": "https://weebdex.com",
+          "url": "https://weebdex.org",
           "tags": [
             "Hub",
             "Manga"
           ],
-          "rank": 8,
-          "status": "offline"
+          "status": "online",
+          "rank": 8
         },
         {
           "name": "Bookwalker",
@@ -438,7 +438,7 @@
             "Purchase"
           ],
           "rank": 10,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "MangaTaro",
@@ -541,6 +541,17 @@
           ],
           "rank": 20,
           "status": "online"
+        },
+        {
+          "name": "Nexus Toons",
+          "url": "https://nexustoons.com/",
+          "tags": [
+            "Manga",
+            "Hub",
+            "Portuguese"
+          ],
+          "status": "online",
+          "rank": 21
         }
       ]
     },
@@ -711,7 +722,7 @@
             "Large Library"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Wuxia Box",
@@ -761,7 +772,7 @@
             "Multi-Lang"
           ],
           "rank": 10,
-          "status": "warning"
+          "status": "offline"
         },
         {
           "name": "Baka-Tsuki",
@@ -1403,7 +1414,7 @@
             "Multi-Lang"
           ],
           "rank": 3,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "AnimeThemes",
@@ -1891,7 +1902,7 @@
             "News"
           ],
           "rank": 1,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "MyAnimeList Forum",
@@ -2223,7 +2234,7 @@
             "Legal"
           ],
           "rank": 6,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "JAST USA",
