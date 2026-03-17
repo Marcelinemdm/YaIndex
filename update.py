@@ -10,9 +10,8 @@ DATA_FILE = "data.json"
 TIMEOUT = 8
 
 def check_status(url: str) -> str:
-    """Verifica se um site responde."""
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 YaIndex-Bot/1.0"})
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 MoeIndex-Bot/1.0"})
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
             return "online" if r.status < 400 else "warning"
     except Exception as e:
@@ -40,7 +39,7 @@ def update_all():
             results[(cat_idx, item_idx)] = status
             done[0] += 1
             pct = done[0] * 100 // total
-            bar = "█" * (pct // 5) + "░" * (20 - pct // 5)
+            bar = "\u2588" * (pct // 5) + "\u2591" * (20 - pct // 5)
             print(f"\r[{bar}] {done[0]}/{total} — {item['name'][:30]:<30}", end="", flush=True)
 
     threads = []
@@ -48,14 +47,13 @@ def update_all():
         t = threading.Thread(target=worker, args=args, daemon=True)
         t.start()
         threads.append(t)
-        # Limita concorrência a 20 threads simultâneas
         while sum(1 for th in threads if th.is_alive()) >= 20:
             time.sleep(0.05)
 
     for t in threads:
         t.join()
 
-    print()  # newline após barra
+    print()
 
     changed = 0
     for (cat_idx, item_idx), status in results.items():
@@ -64,19 +62,28 @@ def update_all():
             data["categories"][cat_idx]["items"][item_idx]["status"] = status
             changed += 1
 
-    data["meta"]["last_updated"] = datetime.date.today().isoformat()
+    now = datetime.datetime.utcnow()
+    data["meta"]["last_updated"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    ver = data["meta"].get("version", "1.0.0")
+    parts = [int(x) for x in str(ver).split(".")]
+    while len(parts) < 3:
+        parts.append(0)
+    parts[2] += 1
+    data["meta"]["version"] = ".".join(str(x) for x in parts)
 
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    online  = sum(1 for _,s in results.items() if s=="online")
-    warning = sum(1 for _,s in results.items() if s=="warning")
-    offline = sum(1 for _,s in results.items() if s=="offline")
-    print(f"\n✅ Concluído  |  🟢 {online} online  🟡 {warning} aviso  🔴 {offline} offline")
-    print(f"📝 {changed} status alterados  |  data.json salvo ({data['meta']['last_updated']})")
+    online  = sum(1 for s in results.values() if s == "online")
+    warning = sum(1 for s in results.values() if s == "warning")
+    offline = sum(1 for s in results.values() if s == "offline")
+    print(f"\n✅ Concluído | 🟢 {online} online 🟡 {warning} aviso 🔴 {offline} offline")
+    print(f"📝 {changed} status alterados | v{data['meta']['version']} | {data['meta']['last_updated']}")
 
 if __name__ == "__main__":
-    print(f"🔄 YaIndex Updater — verificando {sum(len(c['items']) for c in json.load(open(DATA_FILE))['categories'])} recursos...\n")
+    total_sites = sum(len(c["items"]) for c in json.load(open(DATA_FILE, encoding="utf-8"))["categories"])
+    print(f"🔄 YaIndex Updater — verificando {total_sites} recursos...\n")
     t0 = time.time()
     update_all()
-    print(f"⏱  Tempo total: {time.time()-t0:.1f}s")
+    print(f"⏱ Tempo total: {time.time()-t0:.1f}s")
