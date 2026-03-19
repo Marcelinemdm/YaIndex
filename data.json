@@ -2,7 +2,7 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-18",
+    "last_updated": "2026-03-19",
     "version": "1.0.1"
   },
   "categories": [
@@ -258,7 +258,7 @@
             "Donghua"
           ],
           "rank": 3,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Myanime.live",
