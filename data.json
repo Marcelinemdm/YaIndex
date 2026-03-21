@@ -2,13 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-<<<<<<< HEAD
-    "last_updated": "2026-03-21T06:33:42Z",
-    "version": "1.0.3"
-=======
     "last_updated": "2026-03-21T18:26:07.126Z",
     "version": "1.0.4"
->>>>>>> 2418a18 (update data.json)
   },
   "categories": [
     {
