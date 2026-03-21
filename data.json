@@ -2,8 +2,13 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
+<<<<<<< HEAD
     "last_updated": "2026-03-21T06:33:42Z",
     "version": "1.0.3"
+=======
+    "last_updated": "2026-03-21T18:26:07.126Z",
+    "version": "1.0.4"
+>>>>>>> 2418a18 (update data.json)
   },
   "categories": [
     {
@@ -281,13 +286,13 @@
         },
         {
           "name": "NarulDonghua",
-          "url": "https://naruld.com",
+          "url": "https://naruldonghua.com/",
           "tags": [
             "Donghua",
             "DDL"
           ],
-          "rank": 6,
-          "status": "offline"
+          "status": "online",
+          "rank": 6
         },
         {
           "name": "Top Chinese Anime",
@@ -301,12 +306,12 @@
         },
         {
           "name": "Anime Cube",
-          "url": "https://animecube.me",
+          "url": "https://animecube.live/",
           "tags": [
             "Donghua"
           ],
-          "rank": 8,
-          "status": "offline"
+          "status": "online",
+          "rank": 8
         },
         {
           "name": "LuciferDonghua",
@@ -320,13 +325,13 @@
         },
         {
           "name": "Anoboy",
-          "url": "https://anoboy.app",
+          "url": "https://anoboy.gg/",
           "tags": [
             "Donghua",
             "Multi-Lang"
           ],
-          "rank": 10,
-          "status": "offline"
+          "status": "online",
+          "rank": 10
         }
       ]
     },
@@ -365,7 +370,7 @@
             "Hub",
             "Portuguese"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 3
         },
         {
@@ -474,12 +479,12 @@
         },
         {
           "name": "MangaCloud",
-          "url": "https://mangacloud.cc",
+          "url": "https://mangacloud.org/",
           "tags": [
             "Manga"
           ],
-          "rank": 14,
-          "status": "offline"
+          "status": "online",
+          "rank": 14
         },
         {
           "name": "MangaKatana",
@@ -574,13 +579,13 @@
       "items": [
         {
           "name": "Kagane",
-          "url": "https://kagane.to",
+          "url": "https://kagane.org/",
           "tags": [
             "Manhwa",
             "No Ads"
           ],
-          "rank": 1,
-          "status": "offline"
+          "status": "online",
+          "rank": 1
         },
         {
           "name": "QToon",
@@ -757,12 +762,12 @@
         },
         {
           "name": "WuxiaClick",
-          "url": "https://wuxiaclick.com",
+          "url": "https://wuxiaclick.life",
           "tags": [
             "CN Novel"
           ],
-          "rank": 8,
-          "status": "offline"
+          "status": "online",
+          "rank": 8
         },
         {
           "name": "FreeWebNovel",
@@ -798,15 +803,15 @@
         },
         {
           "name": "Anna's Archive",
-          "url": "https://annas-archive.org",
+          "url": "https://annas-archive.gl",
           "tags": [
             "DDL",
             "Library",
             "Books",
             "LN"
           ],
-          "rank": 12,
-          "status": "offline"
+          "status": "online",
+          "rank": 12
         },
         {
           "name": "Chrysanthemum Garden",
@@ -821,14 +826,14 @@
         },
         {
           "name": "LnCrawler",
-          "url": "https://lncrawler.github.io",
+          "url": "https://lncrawler.monster/",
           "tags": [
             "Aggregator",
             "Tool",
             "LN"
           ],
-          "rank": 14,
-          "status": "offline"
+          "status": "online",
+          "rank": 14
         }
       ]
     },
@@ -948,24 +953,24 @@
         },
         {
           "name": "nekoBT",
-          "url": "https://nekobt.com",
+          "url": "https://nekobt.to/",
           "tags": [
             "Torrent",
             "Anime"
           ],
-          "rank": 11,
-          "status": "offline"
+          "status": "online",
+          "rank": 11
         },
         {
           "name": "AV1EnCodes",
-          "url": "https://av1.mobi",
+          "url": "https://av1please.com/",
           "tags": [
             "DDL",
             "AV1",
             "Efficient Size"
           ],
-          "rank": 12,
-          "status": "offline"
+          "status": "online",
+          "rank": 12
         },
         {
           "name": "KayoAnime",
@@ -990,14 +995,14 @@
         },
         {
           "name": "Panda Backup",
-          "url": "https://panda.backup",
+          "url": "https://panda.chaika.moe",
           "tags": [
             "DDL",
             "Manga",
             "Backup"
           ],
-          "rank": 15,
-          "status": "offline"
+          "status": "online",
+          "rank": 15
         }
       ]
     },
@@ -1368,13 +1373,13 @@
         },
         {
           "name": "MangaBaka",
-          "url": "https://mangabaka.net",
+          "url": "https://mangabaka.org/",
           "tags": [
             "Manga",
             "Database"
           ],
-          "rank": 14,
-          "status": "offline"
+          "status": "online",
+          "rank": 14
         },
         {
           "name": "Kenmei",
@@ -1397,14 +1402,14 @@
       "items": [
         {
           "name": "Karaoke Mugen",
-          "url": "https://karaoke-mugen.fr",
+          "url": "https://mugen.karaokes.moe/",
           "tags": [
             "Karaoke",
             "Anime Songs",
             "App"
           ],
-          "rank": 1,
-          "status": "offline"
+          "status": "online",
+          "rank": 1
         },
         {
           "name": "Anime Song Lyrics",
@@ -1484,14 +1489,14 @@
         },
         {
           "name": "OkamimiOST",
-          "url": "https://okamimi.pro",
+          "url": "https://okamimiost.com",
           "tags": [
             "DDL",
             "OST",
             "Anime"
           ],
-          "rank": 9,
-          "status": "offline"
+          "status": "online",
+          "rank": 9
         },
         {
           "name": "YumeOST",
@@ -1500,8 +1505,8 @@
             "DDL",
             "OST"
           ],
-          "rank": 10,
-          "status": "offline"
+          "status": "online",
+          "rank": 10
         },
         {
           "name": "Musicdex",
@@ -1673,12 +1678,12 @@
         },
         {
           "name": "AnimeFillerGuide",
-          "url": "https://animefillerguidance.com",
+          "url": "https://www.animefillerguide.com/",
           "tags": [
             "Filler Guide"
           ],
-          "rank": 4,
-          "status": "offline"
+          "status": "online",
+          "rank": 4
         },
         {
           "name": "AnimeChrono",
@@ -1692,46 +1697,46 @@
         },
         {
           "name": "VN Club",
-          "url": "https://vnclub.net",
+          "url": "https://vnclub.org/",
           "tags": [
             "Visual Novel",
             "Guide",
             "Community"
           ],
-          "rank": 6,
-          "status": "offline"
+          "status": "online",
+          "rank": 6
         },
         {
           "name": "Touhou Wiki",
-          "url": "https://touhou.fandom.com",
+          "url": "https://en.touhouwiki.net",
           "tags": [
             "Touhou",
             "Wiki",
             "Lore"
           ],
-          "rank": 7,
-          "status": "warning"
+          "status": "online",
+          "rank": 7
         },
         {
           "name": "Certain Fansubber's Index",
-          "url": "https://index.fansubbers.org",
+          "url": "https://index.fansubcar.tel/",
           "tags": [
             "Fansub",
             "Index",
             "Archive"
           ],
-          "rank": 8,
-          "status": "offline"
+          "status": "online",
+          "rank": 8
         },
         {
           "name": "RecommendMeAnime",
-          "url": "https://www.r-anime.moe",
+          "url": "https://recommendmeanime.com",
           "tags": [
             "Recommendations",
             "Guide"
           ],
-          "rank": 9,
-          "status": "offline"
+          "status": "online",
+          "rank": 9
         },
         {
           "name": "TheIndex.moe",
@@ -1814,8 +1819,8 @@
             "Release Tracker",
             "Watch Order"
           ],
-          "rank": 5,
-          "status": "offline"
+          "status": "online",
+          "rank": 5
         },
         {
           "name": "uBlock Origin",
@@ -1971,14 +1976,14 @@
         },
         {
           "name": "ANN Forum",
-          "url": "https://animenewsnetwork.com/bbs",
+          "url": "https://www.animenewsnetwork.com/",
           "tags": [
             "Forum",
             "News",
             "Discussion"
           ],
-          "rank": 7,
-          "status": "offline"
+          "status": "online",
+          "rank": 7
         },
         {
           "name": "Animeforums",
@@ -2066,14 +2071,14 @@
         },
         {
           "name": "Kemono",
-          "url": "https://kemono.su",
+          "url": "https://kemono.cr",
           "tags": [
             "Patreon Archive",
             "Fanbox Archive",
             "DDL"
           ],
-          "rank": 7,
-          "status": "offline"
+          "status": "online",
+          "rank": 7
         },
         {
           "name": "booruwf",
@@ -2108,14 +2113,14 @@
         },
         {
           "name": "VTGrid",
-          "url": "https://vtgrid.tv",
+          "url": "https://vt-grid.com/",
           "tags": [
             "VTuber",
             "Multi-stream",
             "Grid"
           ],
-          "rank": 2,
-          "status": "offline"
+          "status": "warning",
+          "rank": 2
         },
         {
           "name": "vTubie",
@@ -2125,8 +2130,8 @@
             "Database",
             "Directory"
           ],
-          "rank": 3,
-          "status": "warning"
+          "status": "online",
+          "rank": 3
         },
         {
           "name": "Hololist",
@@ -2227,14 +2232,14 @@
         },
         {
           "name": "QooApp",
-          "url": "https://qooapp.com",
+          "url": "https://www.qoo-app.com/en",
           "tags": [
             "Mobile Games",
             "JP/KR/CN",
             "APK"
           ],
-          "rank": 5,
-          "status": "offline"
+          "status": "online",
+          "rank": 5
         },
         {
           "name": "SekaiProject",
@@ -2317,15 +2322,15 @@
         },
         {
           "name": "AndroidVisualNovels",
-          "url": "https://androidvn.org",
+          "url": "https://avn2pointzero.wordpress.com/",
           "tags": [
             "DDL",
             "Android",
             "VN",
             "APK"
           ],
-          "rank": 13,
-          "status": "offline"
+          "status": "online",
+          "rank": 13
         }
       ]
     },
@@ -2381,14 +2386,14 @@
         },
         {
           "name": "Guess The Anime Opening",
-          "url": "https://guesstheopening.anime",
+          "url": "https://guesstheopening.com",
           "tags": [
             "Music Quiz",
             "Anime",
             "OP"
           ],
-          "rank": 5,
-          "status": "offline"
+          "status": "online",
+          "rank": 5
         },
         {
           "name": "AnimeGuess.moe",
