@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-21T18:26:07.126Z",
-    "version": "1.0.4"
+    "last_updated": "2026-03-22T01:28:31Z",
+    "version": "1.0.5"
   },
   "categories": [
     {
@@ -829,6 +829,17 @@
           ],
           "status": "online",
           "rank": 14
+        },
+        {
+          "name": "Tsundoku Traduções",
+          "url": "https://tsundoku.com.br",
+          "tags": [
+            "LN",
+            "WN",
+            "Portuguese"
+          ],
+          "rank": 15,
+          "status": "online"
         }
       ]
     },
