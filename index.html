@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
-  /* ═══════════════════ TEMAS ═══════════════════ */
   [data-theme="novo"], :root {
     --bg:#080810; --bg2:#0e0e1a; --bg3:#141422; --bg4:#1a1a2e;
     --border:#1e1e35; --border2:#2a2a4a;
@@ -39,6 +38,7 @@
     --rank1:#fbbf24; --rank2:#c0c0c0; --rank3:#cd7f32;
     --pulse-online:rgba(16,185,129,.5); --pulse-warn:rgba(251,191,36,.4); --pulse-off:rgba(244,63,94,.4);
   }
+
   [data-theme="legado"] {
     --bg:#0f0f13; --bg2:#16161d; --bg3:#1e1e2a; --bg4:#252535;
     --border:#2a2a3a; --border2:#2a2a3a;
@@ -63,6 +63,7 @@
     --rank1:#f59e0b; --rank2:#c0c0c0; --rank3:#cd7f32;
     --pulse-online:rgba(16,185,129,.45); --pulse-warn:rgba(245,158,11,.35); --pulse-off:rgba(239,68,68,.4);
   }
+
   [data-theme="black"] {
     --bg:#000; --bg2:#0a0a0a; --bg3:#111; --bg4:#181818;
     --border:#1a1a1a; --border2:#222;
@@ -86,6 +87,7 @@
     --rank1:#eab308; --rank2:#aaa; --rank3:#888;
     --pulse-online:rgba(34,197,94,.4); --pulse-warn:rgba(234,179,8,.35); --pulse-off:rgba(239,68,68,.4);
   }
+
   [data-theme="white"] {
     --bg:#f5f5f7; --bg2:#fff; --bg3:#f0f0f5; --bg4:#e8e8f0;
     --border:#e0e0ea; --border2:#d0d0e0;
@@ -111,7 +113,6 @@
     --pulse-online:rgba(22,163,74,.35); --pulse-warn:rgba(217,119,6,.3); --pulse-off:rgba(220,38,38,.35);
   }
 
-  /* ═══════════════════ BASE ═══════════════════ */
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--text);
@@ -125,7 +126,6 @@
       linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
     background-size:40px 40px}
 
-  /* ── SAKURA PETALS ── */
   .petals{position:fixed;top:0;left:0;width:100%;height:100%;
     pointer-events:none;z-index:0;overflow:hidden;
     opacity:var(--petals-visible);transition:opacity .5s}
@@ -148,8 +148,7 @@
     90%{opacity:.3}
     100%{transform:translateY(110vh) rotate(720deg) translateX(60px);opacity:0}
   }
-
-  /* ── THEME SWITCHER ── */
+  /* muda tema */
   .theme-switcher{position:fixed;top:.9rem;right:1rem;z-index:200;
     display:flex;gap:.3rem;background:rgba(0,0,0,.4);
     backdrop-filter:blur(12px);border:1px solid var(--border2);
@@ -163,7 +162,6 @@
   [data-theme="white"] .theme-switcher{background:rgba(255,255,255,.8);border-color:var(--border2)}
   [data-theme="black"] .th-btn.active{background:#fff;color:#000}
 
-  /* ── HEADER ── */
   header{position:relative;z-index:10;padding:2.8rem 1.5rem 1.8rem;text-align:center;
     background:var(--header-glow)}
   .header-border{position:absolute;bottom:0;left:0;right:0;height:1px;
@@ -175,7 +173,6 @@
     color:var(--muted2);letter-spacing:.2em;margin-top:.2rem}
   header p{color:var(--muted2);margin-top:.4rem;font-size:.9rem}
 
-  /* ── BADGES / META ── */
   .header-meta{display:flex;justify-content:center;gap:.5rem;
     margin-top:1rem;flex-wrap:wrap;position:relative;z-index:1}
   .badge{background:rgba(128,128,128,.08);border:1px solid var(--border2);
@@ -187,7 +184,6 @@
   [data-theme="white"] .badge{background:rgba(0,0,0,.04)}
   [data-theme="black"] .badge{background:rgba(255,255,255,.04)}
 
-  /* commit badge + popup */
   .badge-commit{cursor:default}
   .commit-popup{position:fixed;
     background:var(--commit-bg);border:1px solid var(--border2);
@@ -204,7 +200,6 @@
   .commit-popup a:hover{text-decoration:underline}
   [data-theme="white"] .commit-popup{box-shadow:0 8px 32px rgba(0,0,0,.12)}
 
-  /* ── SEARCH ── */
   .search-wrap{max-width:640px;margin:1.5rem auto 0;padding:0 1rem;
     position:relative;z-index:10}
   .search-inner{position:relative;isolation:isolate}
@@ -226,11 +221,22 @@
   #search-count{text-align:center;color:var(--muted);font-size:.82rem;
     margin-top:.5rem;min-height:1.2em}
 
-  /* ── FILTER BAR ── */
+  .filter-bar-wrap{position:relative;z-index:10;max-width:1200px;margin:0 auto}
+  .filter-bar-wrap::before,.filter-bar-wrap::after{
+    content:'';position:absolute;top:0;bottom:0;width:36px;
+    pointer-events:none;z-index:2;transition:opacity .2s}
+  .filter-bar-wrap::before{left:0;
+    background:linear-gradient(to right,var(--bg),transparent)}
+  .filter-bar-wrap::after{right:0;
+    background:linear-gradient(to left,var(--bg),transparent)}
   .filter-bar{display:flex;gap:.4rem;padding:.7rem 1rem 1rem;
-    overflow-x:auto;scrollbar-width:none;
-    max-width:1200px;margin:0 auto;position:relative;z-index:10}
-  .filter-bar::-webkit-scrollbar{display:none}
+    overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--border2) transparent;
+    cursor:grab;user-select:none;-webkit-overflow-scrolling:touch}
+  .filter-bar.grabbing{cursor:grabbing}
+  .filter-bar::-webkit-scrollbar{height:4px}
+  .filter-bar::-webkit-scrollbar-track{background:transparent}
+  .filter-bar::-webkit-scrollbar-thumb{background:var(--border2);border-radius:99px}
+  .filter-bar::-webkit-scrollbar-thumb:hover{background:var(--a1)}
   .filter-btn{background:rgba(128,128,128,.07);border:1px solid var(--border2);
     border-radius:99px;padding:.35rem .9rem;font-size:.8rem;color:var(--muted2);
     cursor:pointer;white-space:nowrap;transition:.18s;flex-shrink:0;
@@ -242,12 +248,10 @@
   [data-theme="white"] .filter-btn{background:rgba(0,0,0,.04);color:var(--muted)}
   [data-theme="black"] .filter-btn{background:rgba(255,255,255,.04);color:var(--muted2)}
 
-  /* ── MAIN GRID ── */
   main{max-width:1200px;margin:0 auto;padding:0 1rem 4rem;position:relative;z-index:10}
   .categories-grid{display:grid;
     grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem}
 
-  /* ── CARD ── */
   .category{background:var(--card-bg);border:1px solid var(--border2);
     border-radius:14px;overflow:hidden;transition:.25s;backdrop-filter:blur(4px)}
   .category:hover{border-color:var(--card-hover-border);
@@ -277,7 +281,6 @@
   .item-rank.r2{color:var(--rank2)}
   .item-rank.r3{color:var(--rank3)}
 
-  /* ── STATUS DOTS with pulse ── */
   .item-status{width:7px;height:7px;border-radius:50%;flex-shrink:0;position:relative}
   .item-status::after{content:'';position:absolute;inset:-3px;
     border-radius:50%;animation:statusPulse 2.4s ease-out infinite;opacity:0}
@@ -312,7 +315,6 @@
   #no-results p{font-size:3rem}
   #no-results small{font-size:.9rem;margin-top:.5rem;display:block}
 
-  /* ── FOOTER ── */
   footer{border-top:1px solid var(--border);padding:1.2rem;text-align:center;
     color:var(--muted);font-size:.78rem;display:flex;justify-content:center;
     align-items:center;gap:.8rem;flex-wrap:wrap;position:relative;z-index:10}
@@ -334,7 +336,6 @@
 </head>
 <body data-theme="novo">
 
-<!-- PETALS -->
 <div class="petals" aria-hidden="true">
   <div class="petal"></div><div class="petal"></div><div class="petal"></div>
   <div class="petal"></div><div class="petal"></div><div class="petal"></div>
@@ -342,7 +343,6 @@
   <div class="petal"></div>
 </div>
 
-<!-- THEME SWITCHER -->
 <div class="theme-switcher" role="group" aria-label="Tema visual">
   <button class="th-btn active" data-t="novo"   onclick="setTheme('novo')">Novo</button>
   <button class="th-btn"        data-t="legado" onclick="setTheme('legado')">Legado</button>
@@ -350,7 +350,6 @@
   <button class="th-btn"        data-t="white"  onclick="setTheme('white')">White</button>
 </div>
 
-<!-- COMMIT POPUP (fixed, fora do header) -->
 <div class="commit-popup" id="commit-popup">
   <div id="commit-msg" style="margin-bottom:.4rem;font-weight:700;font-size:.82rem">
     <span style="opacity:.5">⚡ Carregando commit...</span>
@@ -366,7 +365,7 @@
     <span class="title-text">YaIndex</span>
     <span class="title-jp">ヤインデックス — 索引</span>
   </h1>
-  <p>Índice otaku curado &amp; auto-atualizado ✨</p>
+  <p>Índice otaku &amp; auto-atualizado ✨</p>
 
   <div class="header-meta">
     <div class="badge"><span>📦</span><span class="val" id="total-items">—</span><span>recursos</span></div>
@@ -392,7 +391,9 @@
   <div id="search-count"></div>
 </div>
 
-<div class="filter-bar" id="filter-bar"></div>
+<div class="filter-bar-wrap">
+  <div class="filter-bar" id="filter-bar"></div>
+</div>
 
 <main>
   <div id="no-results"><p>🌸</p><small>Nenhum resultado encontrado.</small></div>
@@ -400,11 +401,11 @@
 </main>
 
 <footer>
-  <span>🌸 YaIndex — auto-atualizado via GitHub Actions</span>
+  <span>🌸 YaIndex — SDDS NICOLE</span>
   <a class="footer-link" href="https://github.com/Marcelinemdm/YaIndex"
      target="_blank" rel="noopener">⭐ GitHub</a>
   <a class="footer-link"
-     href="/admin.html"
+     href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Marcelinemdm/YaIndex/teste/admin.html"
      target="_blank" rel="noopener">⚙️ Admin</a>
 </footer>
 
@@ -415,7 +416,6 @@ let allData = null;
 let activeFilter = 'all';
 let searchQuery = '';
 
-/* ── THEME ── */
 function setTheme(t) {
   document.body.setAttribute('data-theme', t);
   localStorage.setItem('yaindex_theme', t);
@@ -424,7 +424,6 @@ function setTheme(t) {
 }
 (function initTheme() { setTheme(localStorage.getItem('yaindex_theme') || 'novo'); })();
 
-/* ── FORMAT DATE ── */
 function fmtDate(raw) {
   if (!raw) return '—';
   try {
@@ -435,7 +434,6 @@ function fmtDate(raw) {
   } catch { return raw; }
 }
 
-/* ── COMMIT — carrega ao iniciar, posiciona popup abaixo do badge ── */
 async function loadCommit() {
   try {
     const res = await fetch(
@@ -457,11 +455,10 @@ async function loadCommit() {
       `${c.commit.author.name} • ${dtStr}`;
     document.getElementById('commit-link').href = c.html_url;
 
-    /* posiciona e exibe popup automaticamente por 5s */
     positionPopup();
     const pop = document.getElementById('commit-popup');
     pop.classList.add('show');
-    setTimeout(() => { if (!pop.matches(':hover')) pop.classList.remove('show'); }, 5000);
+    setTimeout(() => { if (!pop.matches(':hover')) pop.classList.remove('show'); }, 1000);
   } catch(e) {
     document.getElementById('commit-msg').textContent = '⚠️ Não foi possível carregar.';
   }
@@ -477,14 +474,12 @@ function positionPopup() {
   pop.style.left = left + 'px';
 }
 
-/* clique no badge toggle */
 document.getElementById('badge-commit').addEventListener('click', () => {
   const pop = document.getElementById('commit-popup');
   positionPopup();
   pop.classList.toggle('show');
 });
 
-/* fecha ao clicar fora */
 document.addEventListener('click', e => {
   if (!e.target.closest('#badge-commit') && !e.target.closest('#commit-popup'))
     document.getElementById('commit-popup').classList.remove('show');
@@ -492,7 +487,6 @@ document.addEventListener('click', e => {
 window.addEventListener('scroll', () =>
   document.getElementById('commit-popup').classList.remove('show'), { passive: true });
 
-/* ── DATA ── */
 async function loadData() {
   try {
     const res = await fetch(DATA_URL + '?t=' + Date.now());
@@ -628,6 +622,34 @@ document.getElementById('search').addEventListener('input', e => {
 
 loadData();
 setInterval(loadData, 6 * 60 * 60 * 1000);
+
+(function(){
+  const bar = document.getElementById('filter-bar');
+  let isDown = false, startX, scrollLeft;
+  bar.addEventListener('mousedown', e => {
+    isDown = true; bar.classList.add('grabbing');
+    startX = e.pageX - bar.offsetLeft;
+    scrollLeft = bar.scrollLeft;
+  });
+  document.addEventListener('mouseup', () => { isDown = false; bar.classList.remove('grabbing'); });
+  document.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - bar.offsetLeft;
+    bar.scrollLeft = scrollLeft - (x - startX) * 1.4;
+  });
+  
+  let touchStartX, touchScrollLeft;
+  bar.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].pageX;
+    touchScrollLeft = bar.scrollLeft;
+  }, { passive: true });
+  bar.addEventListener('touchmove', e => {
+    const dx = touchStartX - e.touches[0].pageX;
+    bar.scrollLeft = touchScrollLeft + dx;
+  }, { passive: true });
+})();
+
 </script>
 </body>
 </html>
