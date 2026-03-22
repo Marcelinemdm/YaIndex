@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-22T01:28:31Z",
-    "version": "1.0.5"
+    "last_updated": "2026-03-22T06:40:27Z",
+    "version": "1.0.6"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
@@ -365,7 +365,7 @@
             "Hub",
             "Portuguese"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 3
         },
         {
@@ -396,7 +396,7 @@
             "Manga",
             "Curated"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 6
         },
         {
@@ -579,7 +579,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 1
         },
         {
@@ -975,7 +975,7 @@
             "AV1",
             "Efficient Size"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 12
         },
         {
@@ -1720,7 +1720,7 @@
             "Wiki",
             "Lore"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 7
         },
         {
@@ -1825,7 +1825,7 @@
             "Release Tracker",
             "Watch Order"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 5
         },
         {
@@ -2125,7 +2125,7 @@
             "Multi-stream",
             "Grid"
           ],
-          "status": "warning",
+          "status": "offline",
           "rank": 2
         },
         {
@@ -2136,7 +2136,7 @@
             "Database",
             "Directory"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 3
         },
         {
