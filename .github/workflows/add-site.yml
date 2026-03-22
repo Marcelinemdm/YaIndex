@@ -1,0 +1,73 @@
+name: ➕ Adicionar Site (Issue)
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  add-site:
+    # só roda se a issue tiver a label "add-site"
+    if: contains(github.event.issue.labels.*.name, 'add-site')
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Parse issue and add site
+        id: parse
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: python .github/scripts/add_site.py
+
+      - name: Commit and push
+        if: steps.parse.outputs.added == 'true'
+        run: |
+          git config user.name  "YaIndex Bot"
+          git config user.email "bot@yaindex"
+          git add data.json
+          git commit -m "feat: add site from issue #${{ github.event.issue.number }}"
+          git push origin main
+
+      - name: Comment success
+        if: steps.parse.outputs.added == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `✅ Site **${{ steps.parse.outputs.name }}** adicionado à categoria **${{ steps.parse.outputs.category }}**! Obrigado pela contribuição 🌸\n\n> O índice será atualizado em breve pelo auto-update.`
+            });
+            github.rest.issues.update({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed'
+            });
+
+      - name: Comment error
+        if: steps.parse.outputs.added == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `❌ Não consegui processar esta issue.\n\n**Erro:** ${{ steps.parse.outputs.error }}\n\nVerifique se o formato está correto — veja o [README](../blob/main/README.md#como-sugerir-um-site).`
+            });
