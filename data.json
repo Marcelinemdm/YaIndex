@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-22T06:40:27Z",
-    "version": "1.0.6"
+    "last_updated": "2026-03-23T07:00:32Z",
+    "version": "1.0.7"
   },
   "categories": [
     {
@@ -74,7 +74,7 @@
             "1080p"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Kuudere",
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "KickAssAnime",
@@ -396,7 +396,7 @@
             "Manga",
             "Curated"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 6
         },
         {
