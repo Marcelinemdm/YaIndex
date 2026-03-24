@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-24T01:14:34Z",
-    "version": "1.0.7"
+    "last_updated": "2026-03-24T06:54:56Z",
+    "version": "1.0.8"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -355,7 +355,7 @@
             "Fast"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Nexus Toons",
@@ -365,7 +365,7 @@
             "Hub",
             "Portuguese"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 3
         },
         {
@@ -733,7 +733,7 @@
             "Large Library"
           ],
           "rank": 5,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Wuxia Box",
@@ -783,7 +783,7 @@
             "Multi-Lang"
           ],
           "rank": 10,
-          "status": "offline"
+          "status": "warning"
         },
         {
           "name": "Baka-Tsuki",
@@ -1436,7 +1436,7 @@
             "Multi-Lang"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "AnimeThemes",
@@ -1924,7 +1924,7 @@
             "News"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "MyAnimeList Forum",
@@ -2256,7 +2256,7 @@
             "Legal"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "JAST USA",
