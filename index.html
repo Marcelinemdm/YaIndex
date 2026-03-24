@@ -38,7 +38,6 @@
     --rank1:#fbbf24; --rank2:#c0c0c0; --rank3:#cd7f32;
     --pulse-online:rgba(16,185,129,.5); --pulse-warn:rgba(251,191,36,.4); --pulse-off:rgba(244,63,94,.4);
   }
-
   [data-theme="legado"] {
     --bg:#0f0f13; --bg2:#16161d; --bg3:#1e1e2a; --bg4:#252535;
     --border:#2a2a3a; --border2:#2a2a3a;
@@ -63,7 +62,6 @@
     --rank1:#f59e0b; --rank2:#c0c0c0; --rank3:#cd7f32;
     --pulse-online:rgba(16,185,129,.45); --pulse-warn:rgba(245,158,11,.35); --pulse-off:rgba(239,68,68,.4);
   }
-
   [data-theme="black"] {
     --bg:#000; --bg2:#0a0a0a; --bg3:#111; --bg4:#181818;
     --border:#1a1a1a; --border2:#222;
@@ -87,7 +85,6 @@
     --rank1:#eab308; --rank2:#aaa; --rank3:#888;
     --pulse-online:rgba(34,197,94,.4); --pulse-warn:rgba(234,179,8,.35); --pulse-off:rgba(239,68,68,.4);
   }
-
   [data-theme="white"] {
     --bg:#f5f5f7; --bg2:#fff; --bg3:#f0f0f5; --bg4:#e8e8f0;
     --border:#e0e0ea; --border2:#d0d0e0;
@@ -148,18 +145,26 @@
     90%{opacity:.3}
     100%{transform:translateY(110vh) rotate(720deg) translateX(60px);opacity:0}
   }
-  /* muda tema */
-  .theme-switcher{position:fixed;top:.9rem;right:1rem;z-index:200;
+
+  .theme-switcher{position:fixed;z-index:200;
     display:flex;gap:.3rem;background:rgba(0,0,0,.4);
-    backdrop-filter:blur(12px);border:1px solid var(--border2);
-    border-radius:99px;padding:.28rem .4rem}
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border:1px solid var(--border2);
+    border-radius:99px;padding:.28rem .4rem;
+    cursor:grab;touch-action:none;
+    box-shadow:0 4px 20px rgba(0,0,0,.35);
+    transition:box-shadow .15s,border-color .15s}
+  .theme-switcher:active{cursor:grabbing;
+    box-shadow:0 8px 32px rgba(0,0,0,.5)}
+  .theme-switcher.dragging{transition:none;opacity:.92}
   .th-btn{background:none;border:none;cursor:pointer;
     font-size:.7rem;font-weight:800;padding:.2rem .5rem;
     border-radius:99px;color:var(--muted2);transition:.18s;
-    font-family:'Nunito',sans-serif;letter-spacing:.02em}
+    font-family:'Nunito',sans-serif;letter-spacing:.02em;
+    pointer-events:auto}
   .th-btn:hover{color:var(--text)}
   .th-btn.active{background:var(--a1);color:#fff}
-  [data-theme="white"] .theme-switcher{background:rgba(255,255,255,.8);border-color:var(--border2)}
+  [data-theme="white"] .theme-switcher{background:rgba(255,255,255,.88);border-color:var(--border2)}
   [data-theme="black"] .th-btn.active{background:#fff;color:#000}
 
   header{position:relative;z-index:10;padding:2.8rem 1.5rem 1.8rem;text-align:center;
@@ -330,7 +335,6 @@
     .item-tags{display:none}
     .header-meta{gap:.3rem}
     .badge{font-size:.71rem;padding:.24rem .6rem}
-    .theme-switcher{top:auto;bottom:1rem;right:.75rem}
   }
   </style>
 </head>
@@ -343,7 +347,7 @@
   <div class="petal"></div>
 </div>
 
-<div class="theme-switcher" role="group" aria-label="Tema visual">
+<div class="theme-switcher" id="theme-switcher" role="group" aria-label="Tema visual">
   <button class="th-btn active" data-t="novo"   onclick="setTheme('novo')">Novo</button>
   <button class="th-btn"        data-t="legado" onclick="setTheme('legado')">Legado</button>
   <button class="th-btn"        data-t="black"  onclick="setTheme('black')">Black</button>
@@ -375,6 +379,10 @@
       <span>⚡</span><span>Último commit</span>
       <span class="val" id="commit-short" style="font-family:'Noto Sans JP',sans-serif">—</span>
     </div>
+    <a class="badge" href="https://github.com/Marcelinemdm/YaIndex" target="_blank"
+       rel="noopener" style="cursor:pointer">
+      <span>⭐</span><span class="val">GitHub</span>
+    </a>
   </div>
   <div class="header-border"></div>
 </header>
@@ -401,11 +409,11 @@
 </main>
 
 <footer>
-  <span>🌸 YaIndex — SDDS NICOLE</span>
+  <span>🌸 YaIndex — auto-atualizado via GitHub Actions</span>
   <a class="footer-link" href="https://github.com/Marcelinemdm/YaIndex"
      target="_blank" rel="noopener">⭐ GitHub</a>
   <a class="footer-link"
-     href="/admin.html"
+     href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Marcelinemdm/YaIndex/teste/admin.html"
      target="_blank" rel="noopener">⚙️ Admin</a>
 </footer>
 
@@ -458,7 +466,7 @@ async function loadCommit() {
     positionPopup();
     const pop = document.getElementById('commit-popup');
     pop.classList.add('show');
-    setTimeout(() => { if (!pop.matches(':hover')) pop.classList.remove('show'); }, 1000);
+    setTimeout(() => { if (!pop.matches(':hover')) pop.classList.remove('show'); }, 5000);
   } catch(e) {
     document.getElementById('commit-msg').textContent = '⚠️ Não foi possível carregar.';
   }
@@ -623,6 +631,92 @@ document.getElementById('search').addEventListener('input', e => {
 loadData();
 setInterval(loadData, 6 * 60 * 60 * 1000);
 
+(function () {
+  const el = document.getElementById('theme-switcher');
+  const LS_KEY = 'yaindex_switcher_pos';
+  const PAD = 8;
+
+  function clamp(val, min, max) { return Math.max(min, Math.min(max, val)); }
+
+  function applyPos(x, y) {
+    const maxX = window.innerWidth  - el.offsetWidth  - PAD;
+    const maxY = window.innerHeight - el.offsetHeight - PAD;
+    el.style.left = clamp(x, PAD, maxX) + 'px';
+    el.style.top  = clamp(y, PAD, maxY) + 'px';
+    el.style.right  = 'auto';
+    el.style.bottom = 'auto';
+  }
+
+  function savePos() {
+    localStorage.setItem(LS_KEY, JSON.stringify({
+      x: el.getBoundingClientRect().left,
+      y: el.getBoundingClientRect().top
+    }));
+  }
+
+  const saved = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
+  if (saved) {
+    applyPos(saved.x, saved.y);
+  } else {
+    // default: top-right corner
+    el.style.top   = '.9rem';
+    el.style.right = '1rem';
+    el.style.left  = 'auto';
+    el.style.bottom = 'auto';
+  }
+
+  let dragging = false, startX, startY, origX, origY, moved;
+
+  el.addEventListener('mousedown', e => {
+    if (e.target.classList.contains('th-btn')) return;
+    dragging = true; moved = false;
+    startX = e.clientX; startY = e.clientY;
+    const r = el.getBoundingClientRect();
+    origX = r.left; origY = r.top;
+    el.classList.add('dragging');
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    const dx = e.clientX - startX, dy = e.clientY - startY;
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
+    if (moved) applyPos(origX + dx, origY + dy);
+  });
+  document.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    el.classList.remove('dragging');
+    if (moved) savePos();
+  });
+
+  el.addEventListener('touchstart', e => {
+    if (e.target.classList.contains('th-btn')) return;
+    dragging = true; moved = false;
+    startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+    const r = el.getBoundingClientRect();
+    origX = r.left; origY = r.top;
+    el.classList.add('dragging');
+  }, { passive: true });
+  el.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
+    if (moved) { applyPos(origX + dx, origY + dy); e.preventDefault(); }
+  }, { passive: false });
+  el.addEventListener('touchend', () => {
+    if (!dragging) return;
+    dragging = false;
+    el.classList.remove('dragging');
+    if (moved) savePos();
+  });
+
+  window.addEventListener('resize', () => {
+    const r = el.getBoundingClientRect();
+    applyPos(r.left, r.top);
+  }, { passive: true });
+})();
+
 (function(){
   const bar = document.getElementById('filter-bar');
   let isDown = false, startX, scrollLeft;
@@ -638,7 +732,6 @@ setInterval(loadData, 6 * 60 * 60 * 1000);
     const x = e.pageX - bar.offsetLeft;
     bar.scrollLeft = scrollLeft - (x - startX) * 1.4;
   });
-  
   let touchStartX, touchScrollLeft;
   bar.addEventListener('touchstart', e => {
     touchStartX = e.touches[0].pageX;

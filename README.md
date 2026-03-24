@@ -15,7 +15,7 @@ O objetivo é facilitar o acesso a tudo que um fã pode precisar.
 
 ## 🗂️ Categorias
 
-O índice atualmente inclui **214+ recursos organizados em 18 categorias**:
+O índice atualmente inclui **200+ recursos organizados em 18 categorias**:
 
 * 📺 Anime Streaming
 * 🇨🇳 Donghua
