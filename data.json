@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-24T06:54:56Z",
-    "version": "1.0.8"
+    "last_updated": "2026-03-25T06:54:17Z",
+    "version": "1.0.9"
   },
   "categories": [
     {
@@ -21,7 +21,7 @@
             "Multi-Sub"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "animepahe",
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
@@ -221,7 +221,7 @@
             "AniList Sync"
           ],
           "rank": 20,
-          "status": "online"
+          "status": "offline"
         }
       ]
     },
@@ -355,7 +355,7 @@
             "Fast"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Nexus Toons",
@@ -387,7 +387,7 @@
             "Manga"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Atsumaru",
@@ -922,7 +922,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeOut",
