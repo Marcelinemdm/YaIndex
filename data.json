@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-27T06:58:20Z",
-    "version": "1.0.11"
+    "last_updated": "2026-03-28T06:49:25Z",
+    "version": "1.0.12"
   },
   "categories": [
     {
@@ -136,7 +136,7 @@
             "Minimal UI"
           ],
           "rank": 12,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Crunchyroll",
@@ -387,7 +387,7 @@
             "Manga"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Atsumaru",
@@ -2179,7 +2179,7 @@
             "VTuber"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         }
       ]
     },
