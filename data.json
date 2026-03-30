@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-29T06:55:17Z",
-    "version": "1.0.13"
+    "last_updated": "2026-03-30T07:17:53Z",
+    "version": "1.0.14"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -209,7 +209,7 @@
             "1080p"
           ],
           "rank": 19,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AniGO",
@@ -460,7 +460,7 @@
             "Purchase"
           ],
           "rank": 12,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "MangaTaro",
@@ -2052,7 +2052,7 @@
             "Database"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "ARTstreet",
