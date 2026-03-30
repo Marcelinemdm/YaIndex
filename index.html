@@ -37,30 +37,7 @@
     --commit-bg:var(--bg3);
     --rank1:#fbbf24; --rank2:#c0c0c0; --rank3:#cd7f32;
     --pulse-online:rgba(16,185,129,.5); --pulse-warn:rgba(251,191,36,.4); --pulse-off:rgba(244,63,94,.4);
-  }
-  [data-theme="legado"] {
-    --bg:#0f0f13; --bg2:#16161d; --bg3:#1e1e2a; --bg4:#252535;
-    --border:#2a2a3a; --border2:#2a2a3a;
-    --text:#e2e2f0; --text2:#b0b0c8; --muted:#8888aa; --muted2:#8888aa;
-    --a1:#6366f1; --a2:#a78bfa; --a3:#c4b5fd;
-    --a4:#6366f1; --a5:#a78bfa; --a6:#6366f1; --a7:#a78bfa;
-    --green:#10b981; --red:#ef4444; --yellow:#f59e0b;
-    --grad-title:linear-gradient(135deg,#a78bfa,#6366f1,#38bdf8);
-    --grad-btn:linear-gradient(135deg,#6366f1,#a78bfa);
-    --card-bg:#16161d;
-    --card-hover-border:rgba(99,102,241,.4);
-    --card-hover-shadow:0 4px 24px rgba(0,0,0,.4);
-    --header-glow:none;
-    --header-line:linear-gradient(90deg,transparent,#6366f1,#a78bfa,transparent);
-    --search-focus-shadow:0 0 0 3px rgba(99,102,241,.2);
-    --filter-active-bg:#6366f1; --filter-active-border:#6366f1; --filter-active-color:#fff;
-    --tag-bg:rgba(99,102,241,.12); --tag-border:rgba(99,102,241,.25); --tag-color:#a78bfa;
-    --item-hover-bg:var(--bg3); --show-more-hover:var(--bg3);
-    --grid-line:transparent; --petals-visible:0;
-    --badge-hover-border:var(--a1); --badge-hover-color:var(--a2);
-    --commit-bg:var(--bg3);
-    --rank1:#f59e0b; --rank2:#c0c0c0; --rank3:#cd7f32;
-    --pulse-online:rgba(16,185,129,.45); --pulse-warn:rgba(245,158,11,.35); --pulse-off:rgba(239,68,68,.4);
+    --petal1:#ff9fd4; --petal2:transparent;
   }
   [data-theme="black"] {
     --bg:#000; --bg2:#0a0a0a; --bg3:#111; --bg4:#181818;
@@ -79,11 +56,12 @@
     --filter-active-bg:#fff; --filter-active-border:#fff; --filter-active-color:#000;
     --tag-bg:rgba(255,255,255,.06); --tag-border:rgba(255,255,255,.12); --tag-color:#aaa;
     --item-hover-bg:rgba(255,255,255,.04); --show-more-hover:rgba(255,255,255,.04);
-    --grid-line:rgba(255,255,255,.02); --petals-visible:0;
+    --grid-line:rgba(255,255,255,.02); --petals-visible:1;
     --badge-hover-border:#fff; --badge-hover-color:#fff;
     --commit-bg:#111;
     --rank1:#eab308; --rank2:#aaa; --rank3:#888;
     --pulse-online:rgba(34,197,94,.4); --pulse-warn:rgba(234,179,8,.35); --pulse-off:rgba(239,68,68,.4);
+    --petal1:rgba(255,255,255,.7); --petal2:transparent;
   }
   [data-theme="white"] {
     --bg:#f5f5f7; --bg2:#fff; --bg3:#f0f0f5; --bg4:#e8e8f0;
@@ -103,13 +81,13 @@
     --filter-active-border:#6366f1; --filter-active-color:#4f52d9;
     --tag-bg:rgba(99,102,241,.08); --tag-border:rgba(99,102,241,.2); --tag-color:#6366f1;
     --item-hover-bg:rgba(99,102,241,.04); --show-more-hover:rgba(99,102,241,.04);
-    --grid-line:rgba(99,102,241,.03); --petals-visible:0;
+    --grid-line:rgba(99,102,241,.03); --petals-visible:1;
     --badge-hover-border:var(--a1); --badge-hover-color:var(--a2);
     --commit-bg:var(--bg3);
     --rank1:#d97706; --rank2:#777; --rank3:#a16207;
     --pulse-online:rgba(22,163,74,.35); --pulse-warn:rgba(217,119,6,.3); --pulse-off:rgba(220,38,38,.35);
+    --petal1:#c084fc; --petal2:transparent;
   }
-
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--text);
@@ -122,12 +100,11 @@
       linear-gradient(var(--grid-line) 1px,transparent 1px),
       linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
     background-size:40px 40px}
-
   .petals{position:fixed;top:0;left:0;width:100%;height:100%;
     pointer-events:none;z-index:0;overflow:hidden;
     opacity:var(--petals-visible);transition:opacity .5s}
   .petal{position:absolute;top:-20px;width:8px;height:8px;
-    background:radial-gradient(circle,#ff9fd4 30%,transparent 70%);
+    background:radial-gradient(circle,var(--petal1,#ff9fd4) 30%,var(--petal2,transparent) 70%);
     border-radius:50% 0 50% 0;opacity:0;animation:fall linear infinite}
   .petal:nth-child(1){left:5%;animation-duration:12s;animation-delay:0s;width:6px;height:6px}
   .petal:nth-child(2){left:15%;animation-duration:16s;animation-delay:2s}
@@ -339,21 +316,17 @@
   </style>
 </head>
 <body data-theme="novo">
-
 <div class="petals" aria-hidden="true">
   <div class="petal"></div><div class="petal"></div><div class="petal"></div>
   <div class="petal"></div><div class="petal"></div><div class="petal"></div>
   <div class="petal"></div><div class="petal"></div><div class="petal"></div>
   <div class="petal"></div>
 </div>
-
 <div class="theme-switcher" id="theme-switcher" role="group" aria-label="Tema visual">
   <button class="th-btn active" data-t="novo"   onclick="setTheme('novo')">Novo</button>
-  <button class="th-btn"        data-t="legado" onclick="setTheme('legado')">Legado</button>
   <button class="th-btn"        data-t="black"  onclick="setTheme('black')">Black</button>
   <button class="th-btn"        data-t="white"  onclick="setTheme('white')">White</button>
 </div>
-
 <div class="commit-popup" id="commit-popup">
   <div id="commit-msg" style="margin-bottom:.4rem;font-weight:700;font-size:.82rem">
     <span style="opacity:.5">⚡ Carregando commit...</span>
@@ -363,14 +336,12 @@
     Ver no GitHub →
   </a>
 </div>
-
 <header>
   <h1>
     <span class="title-text">YaIndex</span>
     <span class="title-jp">ヤインデックス — 索引</span>
   </h1>
-  <p>Índice otaku &amp; auto-atualizado ✨</p>
-
+  <p>Índice otaku curado &amp; auto-atualizado ✨</p>
   <div class="header-meta">
     <div class="badge"><span>📦</span><span class="val" id="total-items">—</span><span>recursos</span></div>
     <div class="badge"><span>🗂️</span><span class="val" id="total-cats">—</span><span>categorias</span></div>
@@ -386,7 +357,6 @@
   </div>
   <div class="header-border"></div>
 </header>
-
 <div class="search-wrap">
   <div class="search-inner">
     <div class="search-glow"></div>
@@ -398,16 +368,13 @@
   </div>
   <div id="search-count"></div>
 </div>
-
 <div class="filter-bar-wrap">
   <div class="filter-bar" id="filter-bar"></div>
 </div>
-
 <main>
   <div id="no-results"><p>🌸</p><small>Nenhum resultado encontrado.</small></div>
   <div class="categories-grid" id="categories-grid"></div>
 </main>
-
 <footer>
   <span>🌸 YaIndex — auto-atualizado via GitHub Actions</span>
   <a class="footer-link" href="https://github.com/Marcelinemdm/YaIndex"
@@ -416,7 +383,6 @@
      href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Marcelinemdm/YaIndex/teste/admin.html"
      target="_blank" rel="noopener">⚙️ Admin</a>
 </footer>
-
 <script>
 const GITHUB_REPO = 'Marcelinemdm/YaIndex';
 const DATA_URL = './data.json';
@@ -430,7 +396,7 @@ function setTheme(t) {
   document.querySelectorAll('.th-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.t === t));
 }
-(function initTheme() { setTheme(localStorage.getItem('yaindex_theme') || 'novo'); })();
+(function initTheme() { const t = localStorage.getItem('yaindex_theme'); setTheme(t === 'legado' || !t ? 'novo' : t); })();
 
 function fmtDate(raw) {
   if (!raw) return '—';
@@ -500,7 +466,7 @@ async function loadData() {
     const res = await fetch(DATA_URL + '?t=' + Date.now());
     allData = await res.json();
     renderAll();
-    loadCommit(); /* carrega após ter a página montada */
+    loadCommit();
   } catch(e) {
     document.getElementById('categories-grid').innerHTML =
       `<p style="color:var(--red);padding:2rem;grid-column:1/-1">Erro: ${e.message}</p>`;
@@ -519,7 +485,6 @@ function renderAll() {
   const allBtn = mkFilterBtn('✨ Todos', 'all');
   bar.appendChild(allBtn);
   allData.categories.forEach(cat => bar.appendChild(mkFilterBtn(cat.icon + ' ' + cat.label, cat.id)));
-
   renderCategories();
 }
 
@@ -658,7 +623,6 @@ setInterval(loadData, 6 * 60 * 60 * 1000);
   if (saved) {
     applyPos(saved.x, saved.y);
   } else {
-    // default: top-right corner
     el.style.top   = '.9rem';
     el.style.right = '1rem';
     el.style.left  = 'auto';
@@ -668,7 +632,7 @@ setInterval(loadData, 6 * 60 * 60 * 1000);
   let dragging = false, startX, startY, origX, origY, moved;
 
   el.addEventListener('mousedown', e => {
-    if (e.target.classList.contains('th-btn')) return;
+    if (e.target.classList.contains('th-btn')) return; // leave button clicks alone
     dragging = true; moved = false;
     startX = e.clientX; startY = e.clientY;
     const r = el.getBoundingClientRect();
@@ -732,6 +696,7 @@ setInterval(loadData, 6 * 60 * 60 * 1000);
     const x = e.pageX - bar.offsetLeft;
     bar.scrollLeft = scrollLeft - (x - startX) * 1.4;
   });
+  
   let touchStartX, touchScrollLeft;
   bar.addEventListener('touchstart', e => {
     touchStartX = e.touches[0].pageX;
