@@ -380,7 +380,7 @@
   <a class="footer-link" href="https://github.com/Marcelinemdm/YaIndex"
      target="_blank" rel="noopener">⭐ GitHub</a>
   <a class="footer-link"
-     href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/Marcelinemdm/YaIndex/teste/admin.html"
+     href="https://yaindex.seusomelier.com.br/admin"
      target="_blank" rel="noopener">⚙️ Admin</a>
 </footer>
 <script>
@@ -408,33 +408,61 @@ function fmtDate(raw) {
   } catch { return raw; }
 }
 
-async function loadCommit() {
+let _commitLoaded = false;
+
+async function loadCommit(retry = 0) {
+  const msgEl   = document.getElementById('commit-msg');
+  const metaEl  = document.getElementById('commit-meta');
+  const shortEl = document.getElementById('commit-short');
+  const linkEl  = document.getElementById('commit-link');
+
   try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8000);
+
     const res = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/commits?per_page=1`
+      `https://api.github.com/repos/${GITHUB_REPO}/commits?per_page=1`,
+      { headers: { Accept: 'application/vnd.github.v3+json' }, signal: controller.signal }
     );
-    if (!res.ok) throw new Error('API ' + res.status);
+    clearTimeout(timer);
+
+    if (res.status === 403 || res.status === 429) {
+      const reset = res.headers.get('X-RateLimit-Reset');
+      const wait  = reset ? new Date(reset * 1000).toLocaleTimeString('pt-BR') : '—';
+      if (msgEl) msgEl.innerHTML = `⚠️ Rate limit GitHub. Tente após ${wait}.`;
+      return;
+    }
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+
     const data = await res.json();
-    const c = data[0];
+    if (!data || !data[0]) throw new Error('Resposta vazia');
+
+    const c   = data[0];
     const sha = c.sha.slice(0, 7);
     const msg = c.commit.message.split('\n')[0];
     const dt  = new Date(c.commit.author.date);
     const p   = n => String(n).padStart(2, '0');
     const dtStr = `${dt.getFullYear()}/${p(dt.getMonth()+1)}/${p(dt.getDate())} ${p(dt.getHours())}:${p(dt.getMinutes())}`;
 
-    document.getElementById('commit-short').textContent = sha;
-    document.getElementById('commit-msg').innerHTML =
-      `<strong>${sha}</strong> <span style="opacity:.85">${msg}</span>`;
-    document.getElementById('commit-meta').textContent =
-      `${c.commit.author.name} • ${dtStr}`;
-    document.getElementById('commit-link').href = c.html_url;
+    if (shortEl) shortEl.textContent = sha;
+    if (msgEl)   msgEl.innerHTML     = `<strong>${sha}</strong> <span style="opacity:.85">${msg}</span>`;
+    if (metaEl)  metaEl.textContent  = `${c.commit.author.name} • ${dtStr}`;
+    if (linkEl)  linkEl.href         = c.html_url;
+    _commitLoaded = true;
 
     positionPopup();
     const pop = document.getElementById('commit-popup');
     pop.classList.add('show');
     setTimeout(() => { if (!pop.matches(':hover')) pop.classList.remove('show'); }, 5000);
+
   } catch(e) {
-    document.getElementById('commit-msg').textContent = '⚠️ Não foi possível carregar.';
+    if (retry < 2) {
+      if (msgEl) msgEl.innerHTML = `<span style="opacity:.5">↻ Tentando novamente... (${retry + 1}/2)</span>`;
+      setTimeout(() => loadCommit(retry + 1), 3000 * (retry + 1));
+    } else {
+      if (msgEl) msgEl.textContent = '⚠️ Commit não disponível no momento.';
+      console.warn('[YaIndex] loadCommit:', e.message);
+    }
   }
 }
 
@@ -466,7 +494,6 @@ async function loadData() {
     const res = await fetch(DATA_URL + '?t=' + Date.now());
     allData = await res.json();
     renderAll();
-    loadCommit();
   } catch(e) {
     document.getElementById('categories-grid').innerHTML =
       `<p style="color:var(--red);padding:2rem;grid-column:1/-1">Erro: ${e.message}</p>`;
@@ -595,6 +622,8 @@ document.getElementById('search').addEventListener('input', e => {
 
 loadData();
 setInterval(loadData, 6 * 60 * 60 * 1000);
+loadCommit();
+loadCommit();
 
 (function () {
   const el = document.getElementById('theme-switcher');
@@ -632,7 +661,7 @@ setInterval(loadData, 6 * 60 * 60 * 1000);
   let dragging = false, startX, startY, origX, origY, moved;
 
   el.addEventListener('mousedown', e => {
-    if (e.target.classList.contains('th-btn')) return; // leave button clicks alone
+    if (e.target.classList.contains('th-btn')) return;
     dragging = true; moved = false;
     startX = e.clientX; startY = e.clientY;
     const r = el.getBoundingClientRect();
@@ -696,7 +725,6 @@ setInterval(loadData, 6 * 60 * 60 * 1000);
     const x = e.pageX - bar.offsetLeft;
     bar.scrollLeft = scrollLeft - (x - startX) * 1.4;
   });
-  
   let touchStartX, touchScrollLeft;
   bar.addEventListener('touchstart', e => {
     touchStartX = e.touches[0].pageX;
