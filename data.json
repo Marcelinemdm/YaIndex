@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-30T07:17:53Z",
-    "version": "1.0.14"
+    "last_updated": "2026-03-31T07:04:11Z",
+    "version": "1.0.15"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
@@ -209,7 +209,7 @@
             "1080p"
           ],
           "rank": 19,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AniGO",
@@ -1511,7 +1511,7 @@
             "DDL",
             "OST"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 10
         },
         {
@@ -2052,7 +2052,7 @@
             "Database"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "warning"
         },
         {
           "name": "ARTstreet",
@@ -2179,7 +2179,7 @@
             "VTuber"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         }
       ]
     },
