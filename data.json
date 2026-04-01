@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-03-31T07:04:11Z",
-    "version": "1.0.15"
+    "last_updated": "2026-04-01T07:10:33Z",
+    "version": "1.0.16"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -772,7 +772,7 @@
             "CN Novel"
           ],
           "rank": 9,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Ranobes",
@@ -1511,7 +1511,7 @@
             "DDL",
             "OST"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 10
         },
         {
@@ -2179,7 +2179,7 @@
             "VTuber"
           ],
           "rank": 7,
-          "status": "offline"
+          "status": "online"
         }
       ]
     },
