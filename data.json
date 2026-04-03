@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-02T07:02:43Z",
-    "version": "1.0.17"
+    "last_updated": "2026-04-03T06:59:16Z",
+    "version": "1.0.18"
   },
   "categories": [
     {
@@ -641,7 +641,7 @@
             "Manhwa"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Manhwaz",
@@ -1275,7 +1275,7 @@
             "Scanlation Tracker"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AniDB",
@@ -1882,7 +1882,7 @@
             "Linux"
           ],
           "rank": 10,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Komga",
