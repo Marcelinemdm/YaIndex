@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-06T07:19:39Z",
-    "version": "1.0.21"
+    "last_updated": "2026-04-07T07:05:59Z",
+    "version": "1.0.22"
   },
   "categories": [
     {
@@ -470,7 +470,7 @@
             "Raw"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaCloud",
@@ -660,7 +660,7 @@
             "Manhua"
           ],
           "rank": 9,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Toonily",
@@ -2301,7 +2301,7 @@
             "Repack"
           ],
           "rank": 10,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CPG Repacks",
