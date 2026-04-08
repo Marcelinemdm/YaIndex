@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-07T07:05:59Z",
-    "version": "1.0.22"
+    "last_updated": "2026-04-08T07:08:38Z",
+    "version": "1.0.23"
   },
   "categories": [
     {
@@ -156,7 +156,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 14
         },
         {
@@ -189,7 +189,7 @@
             "Dub"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Senshi",
@@ -470,7 +470,7 @@
             "Raw"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "MangaCloud",
@@ -660,7 +660,7 @@
             "Manhua"
           ],
           "rank": 9,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Toonily",
@@ -2301,7 +2301,7 @@
             "Repack"
           ],
           "rank": 10,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CPG Repacks",
