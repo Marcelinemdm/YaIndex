@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-08T07:08:38Z",
-    "version": "1.0.23"
+    "last_updated": "2026-04-09T07:12:35Z",
+    "version": "1.0.24"
   },
   "categories": [
     {
@@ -156,7 +156,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 14
         },
         {
@@ -189,7 +189,7 @@
             "Dub"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Senshi",
@@ -249,7 +249,7 @@
             "Multi-Sub"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "DonghuaStream",
@@ -355,7 +355,7 @@
             "Fast"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Nexus Toons",
@@ -579,7 +579,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 1
         },
         {
