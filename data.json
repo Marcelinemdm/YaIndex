@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-09T07:12:35Z",
-    "version": "1.0.24"
+    "last_updated": "2026-04-10T07:17:13Z",
+    "version": "1.0.25"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -249,7 +249,7 @@
             "Multi-Sub"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "DonghuaStream",
@@ -355,7 +355,7 @@
             "Fast"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Nexus Toons",
@@ -1543,7 +1543,7 @@
             "Vocaloid"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Osanime",
@@ -2488,7 +2488,7 @@
             "No Logs"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         }
       ]
     }
