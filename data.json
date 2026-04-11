@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-10T07:17:13Z",
-    "version": "1.0.25"
+    "last_updated": "2026-04-11T06:52:34Z",
+    "version": "1.0.26"
   },
   "categories": [
     {
@@ -1491,7 +1491,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "OkamimiOST",
@@ -1543,7 +1543,7 @@
             "Vocaloid"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Osanime",
@@ -2488,7 +2488,7 @@
             "No Logs"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         }
       ]
     }
