@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-11T06:52:34Z",
-    "version": "1.0.26"
+    "last_updated": "2026-04-12T07:04:59Z",
+    "version": "1.0.27"
   },
   "categories": [
     {
@@ -1491,7 +1491,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "OkamimiOST",
