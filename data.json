@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-13T07:50:31Z",
-    "version": "1.0.28"
+    "last_updated": "2026-04-14T07:20:07Z",
+    "version": "1.0.29"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
