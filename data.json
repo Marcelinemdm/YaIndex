@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-14T07:20:07Z",
-    "version": "1.0.29"
+    "last_updated": "2026-04-15T07:20:29Z",
+    "version": "1.0.30"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -436,7 +436,7 @@
             "Hub",
             "Manga"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 10
         },
         {
@@ -753,7 +753,7 @@
             "Fast"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "WuxiaClick",
