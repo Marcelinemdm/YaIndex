@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-19T07:08:47Z",
-    "version": "1.0.34"
+    "last_updated": "2026-04-20T07:53:35Z",
+    "version": "1.0.35"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
@@ -64,7 +64,7 @@
             "Dub"
           ],
           "rank": 5,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "AniZone",
@@ -470,7 +470,7 @@
             "Raw"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaCloud",
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
