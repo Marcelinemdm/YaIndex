@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP SeuSomelier</title>
+    <style>
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #ERROR {
+            max-width: 90%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 24px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+            animation: pulsar-sombra 2s infinite;
+        }
+
+        @keyframes pulsar-sombra {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+
+                box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+
+        .btn-voltar:hover {
+            opacity: 0.9;
+            background-color: #333;
+            animation-play-state: paused;
+        }
+
+        @media (max-height: 500px) {
+            #ERROR { max-height: 50vh; }
+            .btn-voltar { margin-top: 10px; padding: 8px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img id="ERROR" src="img/nada-para-ver-aqui.jpg" alt="Nada para ver aqui">
+        
+        <a href="https://y2k.seusomelier.com.br/" class="btn-voltar">ME APERTE 🥺🥺🥺</a>
+    </div>
+
+</body>
+</html>
