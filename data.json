@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-21T07:23:46Z",
-    "version": "1.0.36"
+    "last_updated": "2026-04-22T07:21:51Z",
+    "version": "1.0.37"
   },
   "categories": [
     {
@@ -470,7 +470,7 @@
             "Raw"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "MangaCloud",
@@ -579,7 +579,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 1
         },
         {
@@ -753,7 +753,7 @@
             "Fast"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "WuxiaClick",
