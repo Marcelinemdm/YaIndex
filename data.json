@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-22T07:21:51Z",
-    "version": "1.0.37"
+    "last_updated": "2026-04-23T07:24:33Z",
+    "version": "1.0.38"
   },
   "categories": [
     {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "KickAssAnime",
@@ -579,7 +579,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 1
         },
         {
@@ -753,7 +753,7 @@
             "Fast"
           ],
           "rank": 7,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "WuxiaClick",
