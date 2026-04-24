@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-23T07:24:33Z",
-    "version": "1.0.38"
+    "last_updated": "2026-04-24T07:50:24Z",
+    "version": "1.0.39"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -922,7 +922,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeOut",
@@ -1286,7 +1286,7 @@
             "Detailed"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Visual Novel DB",
@@ -1511,7 +1511,7 @@
             "DDL",
             "OST"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 10
         },
         {
@@ -1754,7 +1754,7 @@
             "Libraries"
           ],
           "rank": 10,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "EverythingMoe",
@@ -1955,7 +1955,7 @@
             "Technical"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Anime-Sharing",
