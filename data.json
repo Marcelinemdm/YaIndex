@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-25T07:03:49Z",
-    "version": "1.0.40"
+    "last_updated": "2026-04-26T07:18:04Z",
+    "version": "1.0.41"
   },
   "categories": [
     {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "KickAssAnime",
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
@@ -1754,7 +1754,7 @@
             "Libraries"
           ],
           "rank": 10,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "EverythingMoe",
@@ -1945,7 +1945,7 @@
             "Community"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AniDB Forum",
@@ -2388,7 +2388,7 @@
             "Daily"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Guess The Anime Opening",
