@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-26T07:18:04Z",
-    "version": "1.0.41"
+    "last_updated": "2026-04-27T08:07:57Z",
+    "version": "1.0.42"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -827,7 +827,7 @@
             "Tool",
             "LN"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 14
         },
         {
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1286,7 +1286,7 @@
             "Detailed"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Visual Novel DB",
@@ -1945,7 +1945,7 @@
             "Community"
           ],
           "rank": 3,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AniDB Forum",
@@ -1955,7 +1955,7 @@
             "Technical"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Anime-Sharing",
@@ -2388,7 +2388,7 @@
             "Daily"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Guess The Anime Opening",
