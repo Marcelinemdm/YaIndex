@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-28T08:10:01Z",
-    "version": "1.0.43"
+    "last_updated": "2026-04-29T08:03:06Z",
+    "version": "1.0.44"
   },
   "categories": [
     {
@@ -743,7 +743,7 @@
             "WN"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "VyNovel",
@@ -827,7 +827,7 @@
             "Tool",
             "LN"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 14
         },
         {
@@ -922,7 +922,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeOut",
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1945,7 +1945,7 @@
             "Community"
           ],
           "rank": 3,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AniDB Forum",
@@ -2290,7 +2290,7 @@
             "Legal"
           ],
           "rank": 9,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "BetterRepack",
@@ -2465,7 +2465,7 @@
             "No Logs"
           ],
           "rank": 3,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Mullvad",
