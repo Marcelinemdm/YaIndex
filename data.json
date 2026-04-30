@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-29T08:03:06Z",
-    "version": "1.0.44"
+    "last_updated": "2026-04-30T08:07:06Z",
+    "version": "1.0.45"
   },
   "categories": [
     {
@@ -743,7 +743,7 @@
             "WN"
           ],
           "rank": 6,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "VyNovel",
@@ -1511,7 +1511,7 @@
             "DDL",
             "OST"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 10
         },
         {
@@ -2465,7 +2465,7 @@
             "No Logs"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Mullvad",
