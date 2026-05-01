@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-04-30T08:07:06Z",
-    "version": "1.0.45"
+    "last_updated": "2026-05-01T08:03:36Z",
+    "version": "1.0.46"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -743,7 +743,7 @@
             "WN"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "VyNovel",
@@ -987,7 +987,7 @@
             "Large Library"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "AnimeToki",
