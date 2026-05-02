@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-01T08:03:36Z",
-    "version": "1.0.46"
+    "last_updated": "2026-05-02T07:21:26Z",
+    "version": "1.0.47"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
