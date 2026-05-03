@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-02T07:21:26Z",
-    "version": "1.0.47"
+    "last_updated": "2026-05-03T07:49:55Z",
+    "version": "1.0.48"
   },
   "categories": [
     {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "KickAssAnime",
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1988,7 +1988,7 @@
             "News",
             "Discussion"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 7
         },
         {
