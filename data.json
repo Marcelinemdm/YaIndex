@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-04T08:19:41Z",
-    "version": "1.0.49"
+    "last_updated": "2026-05-05T07:56:33Z",
+    "version": "1.0.50"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -987,7 +987,7 @@
             "Large Library"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeToki",
