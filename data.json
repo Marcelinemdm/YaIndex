@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-06T08:10:48Z",
-    "version": "1.0.51"
+    "last_updated": "2026-05-07T08:19:54Z",
+    "version": "1.0.52"
   },
   "categories": [
     {
@@ -156,7 +156,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 14
         },
         {
@@ -817,7 +817,7 @@
             "Fan TL"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "LnCrawler",
@@ -2030,7 +2030,7 @@
             "Viewer"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Safebooru",
@@ -2465,7 +2465,7 @@
             "No Logs"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Mullvad",
