@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-07T08:19:54Z",
-    "version": "1.0.52"
+    "last_updated": "2026-05-08T07:18:22Z",
+    "version": "1.0.53"
   },
   "categories": [
     {
@@ -156,7 +156,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "warning",
+          "status": "offline",
           "rank": 14
         },
         {
@@ -562,7 +562,7 @@
             "Hub"
           ],
           "rank": 22,
-          "status": "online"
+          "status": "offline"
         }
       ]
     },
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
@@ -2030,7 +2030,7 @@
             "Viewer"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Safebooru",
