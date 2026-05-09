@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-08T07:18:22Z",
-    "version": "1.0.53"
+    "last_updated": "2026-05-09T07:45:18Z",
+    "version": "1.0.54"
   },
   "categories": [
     {
@@ -478,7 +478,7 @@
           "tags": [
             "Manga"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 14
         },
         {
@@ -509,7 +509,7 @@
             "Manga"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AllManga",
@@ -660,7 +660,7 @@
             "Manhua"
           ],
           "rank": 9,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Toonily",
@@ -817,7 +817,7 @@
             "Fan TL"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "LnCrawler",
@@ -1470,7 +1470,7 @@
             "Live"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "R/a/dio",
@@ -1480,7 +1480,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Sitting on Clouds",
