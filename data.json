@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-10T07:58:49Z",
-    "version": "1.0.55"
+    "last_updated": "2026-05-11T09:26:41Z",
+    "version": "1.0.56"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -74,7 +74,7 @@
             "1080p"
           ],
           "rank": 6,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Kuudere",
@@ -108,7 +108,7 @@
             "MAL Sync"
           ],
           "rank": 9,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Anikoto",
@@ -156,7 +156,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "offline",
+          "status": "warning",
           "rank": 14
         },
         {
@@ -753,7 +753,7 @@
             "Fast"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "WuxiaClick",
@@ -975,7 +975,7 @@
             "AV1",
             "Efficient Size"
           ],
-          "status": "warning",
+          "status": "offline",
           "rank": 12
         },
         {
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1491,7 +1491,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "OkamimiOST",
@@ -2000,7 +2000,7 @@
             "Community"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         }
       ]
     },
