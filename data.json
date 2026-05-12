@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-11T09:26:41Z",
-    "version": "1.0.56"
+    "last_updated": "2026-05-12T08:28:18Z",
+    "version": "1.0.57"
   },
   "categories": [
     {
@@ -21,7 +21,7 @@
             "Multi-Sub"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "animepahe",
@@ -221,7 +221,7 @@
             "AniList Sync"
           ],
           "rank": 20,
-          "status": "online"
+          "status": "offline"
         }
       ]
     },
@@ -590,7 +590,7 @@
             "Webtoon"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Projectsuki",
@@ -975,7 +975,7 @@
             "AV1",
             "Efficient Size"
           ],
-          "status": "offline",
+          "status": "warning",
           "rank": 12
         },
         {
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
@@ -1511,7 +1511,7 @@
             "DDL",
             "OST"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 10
         },
         {
@@ -1533,7 +1533,7 @@
             "Game OST"
           ],
           "rank": 12,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "MikuDB",
