@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-12T08:28:18Z",
-    "version": "1.0.57"
+    "last_updated": "2026-05-13T08:35:27Z",
+    "version": "1.0.58"
   },
   "categories": [
     {
@@ -21,7 +21,7 @@
             "Multi-Sub"
           ],
           "rank": 1,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "animepahe",
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
@@ -221,7 +221,7 @@
             "AniList Sync"
           ],
           "rank": 20,
-          "status": "offline"
+          "status": "online"
         }
       ]
     },
@@ -579,7 +579,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 1
         },
         {
@@ -660,7 +660,7 @@
             "Manhua"
           ],
           "rank": 9,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Toonily",
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1533,7 +1533,7 @@
             "Game OST"
           ],
           "rank": 12,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "MikuDB",
@@ -2465,7 +2465,7 @@
             "No Logs"
           ],
           "rank": 3,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Mullvad",
