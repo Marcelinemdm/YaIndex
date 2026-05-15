@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-14T08:28:56Z",
-    "version": "1.0.59"
+    "last_updated": "2026-05-15T08:40:19Z",
+    "version": "1.0.60"
   },
   "categories": [
     {
@@ -478,7 +478,7 @@
           "tags": [
             "Manga"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 14
         },
         {
@@ -817,7 +817,7 @@
             "Fan TL"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "LnCrawler",
