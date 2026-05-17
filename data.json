@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-16T07:52:04Z",
-    "version": "1.0.61"
+    "last_updated": "2026-05-17T08:11:14Z",
+    "version": "1.0.62"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
@@ -297,7 +297,7 @@
             "Curated"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Anime Cube",
@@ -478,7 +478,7 @@
           "tags": [
             "Manga"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 14
         },
         {
