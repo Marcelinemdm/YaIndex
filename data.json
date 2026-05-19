@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-18T09:43:16Z",
-    "version": "1.0.63"
+    "last_updated": "2026-05-19T09:28:13Z",
+    "version": "1.0.64"
   },
   "categories": [
     {
@@ -579,7 +579,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 1
         },
         {
@@ -817,7 +817,7 @@
             "Fan TL"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "LnCrawler",
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -1491,7 +1491,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "OkamimiOST",
