@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-21T08:59:04Z",
-    "version": "1.0.66"
+    "last_updated": "2026-05-22T08:50:44Z",
+    "version": "1.0.67"
   },
   "categories": [
     {
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
