@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-22T08:50:44Z",
-    "version": "1.0.67"
+    "last_updated": "2026-05-23T08:07:42Z",
+    "version": "1.0.68"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "offline",
+          "status": "online",
           "note": "Main brand down"
         },
         {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "KickAssAnime",
@@ -530,7 +530,7 @@
             "Fast UI"
           ],
           "rank": 19,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "MangaDex",
@@ -761,7 +761,7 @@
           "tags": [
             "CN Novel"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 8
         },
         {
