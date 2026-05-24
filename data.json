@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-23T08:07:42Z",
-    "version": "1.0.68"
+    "last_updated": "2026-05-24T08:19:19Z",
+    "version": "1.0.69"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
             "HLS"
           ],
           "rank": 3,
-          "status": "online",
+          "status": "offline",
           "note": "Main brand down"
         },
         {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "KickAssAnime",
@@ -530,7 +530,7 @@
             "Fast UI"
           ],
           "rank": 19,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaDex",
@@ -1048,7 +1048,7 @@
             "Manga"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Aniyomi",
