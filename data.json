@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-24T08:19:19Z",
-    "version": "1.0.69"
+    "last_updated": "2026-05-25T09:51:48Z",
+    "version": "1.0.70"
   },
   "categories": [
     {
@@ -530,7 +530,7 @@
             "Fast UI"
           ],
           "rank": 19,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "MangaDex",
@@ -922,7 +922,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeOut",
@@ -1048,7 +1048,7 @@
             "Manga"
           ],
           "rank": 3,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Aniyomi",
@@ -1533,7 +1533,7 @@
             "Game OST"
           ],
           "rank": 12,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "MikuDB",
