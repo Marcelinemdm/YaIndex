@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-25T09:51:48Z",
-    "version": "1.0.70"
+    "last_updated": "2026-05-26T09:37:59Z",
+    "version": "1.0.71"
   },
   "categories": [
     {
@@ -530,7 +530,7 @@
             "Fast UI"
           ],
           "rank": 19,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaDex",
@@ -579,7 +579,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 1
         },
         {
@@ -761,7 +761,7 @@
           "tags": [
             "CN Novel"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 8
         },
         {
