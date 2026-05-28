@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-27T09:31:25Z",
-    "version": "1.0.72"
+    "last_updated": "2026-05-28T09:48:28Z",
+    "version": "1.0.73"
   },
   "categories": [
     {
@@ -470,7 +470,7 @@
             "Raw"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaCloud",
@@ -530,7 +530,7 @@
             "Fast UI"
           ],
           "rank": 19,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaDex",
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1491,7 +1491,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "OkamimiOST",
@@ -2030,7 +2030,7 @@
             "Viewer"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Safebooru",
@@ -2290,7 +2290,7 @@
             "Legal"
           ],
           "rank": 9,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "BetterRepack",
