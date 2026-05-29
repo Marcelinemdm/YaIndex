@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-28T09:48:28Z",
-    "version": "1.0.73"
+    "last_updated": "2026-05-29T09:38:33Z",
+    "version": "1.0.74"
   },
   "categories": [
     {
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
@@ -1491,7 +1491,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "OkamimiOST",
