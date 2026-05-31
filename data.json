@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-05-30T08:18:16Z",
-    "version": "1.0.75"
+    "last_updated": "2026-05-31T08:35:36Z",
+    "version": "1.0.76"
   },
   "categories": [
     {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "KickAssAnime",
@@ -189,7 +189,7 @@
             "Dub"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Senshi",
@@ -286,7 +286,7 @@
             "Donghua",
             "DDL"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 6
         },
         {
@@ -670,7 +670,7 @@
             "Adult"
           ],
           "rank": 10,
-          "status": "offline"
+          "status": "online"
         }
       ]
     },
@@ -690,7 +690,7 @@
             "WN"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "NovelFire",
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -922,7 +922,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeOut",
