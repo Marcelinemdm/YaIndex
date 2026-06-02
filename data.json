@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-01T11:12:12Z",
-    "version": "1.0.77"
+    "last_updated": "2026-06-02T10:07:22Z",
+    "version": "1.0.78"
   },
   "categories": [
     {
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
@@ -1543,7 +1543,7 @@
             "Vocaloid"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Osanime",
@@ -1699,7 +1699,7 @@
             "Guide"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "VN Club",
