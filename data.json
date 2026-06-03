@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-02T10:07:22Z",
-    "version": "1.0.78"
+    "last_updated": "2026-06-03T10:44:48Z",
+    "version": "1.0.79"
   },
   "categories": [
     {
@@ -156,7 +156,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 14
         },
         {
@@ -343,7 +343,7 @@
             "Manga",
             "Clean UI"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 1
         },
         {
@@ -530,7 +530,7 @@
             "Fast UI"
           ],
           "rank": 19,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "MangaDex",
@@ -579,7 +579,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 1
         },
         {
@@ -761,7 +761,7 @@
           "tags": [
             "CN Novel"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 8
         },
         {
@@ -805,7 +805,7 @@
             "Books",
             "LN"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 12
         },
         {
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1543,7 +1543,7 @@
             "Vocaloid"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Osanime",
