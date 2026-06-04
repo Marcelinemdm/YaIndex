@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-03T10:44:48Z",
-    "version": "1.0.79"
+    "last_updated": "2026-06-04T09:44:39Z",
+    "version": "1.0.80"
   },
   "categories": [
     {
@@ -343,7 +343,7 @@
             "Manga",
             "Clean UI"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 1
         },
         {
@@ -761,7 +761,7 @@
           "tags": [
             "CN Novel"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 8
         },
         {
@@ -805,7 +805,7 @@
             "Books",
             "LN"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 12
         },
         {
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -2301,7 +2301,7 @@
             "Repack"
           ],
           "rank": 10,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CPG Repacks",
