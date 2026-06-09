@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-08T10:20:03Z",
-    "version": "1.0.84"
+    "last_updated": "2026-06-09T09:26:18Z",
+    "version": "1.0.85"
   },
   "categories": [
     {
@@ -530,7 +530,7 @@
             "Fast UI"
           ],
           "rank": 19,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaDex",
@@ -1185,7 +1185,7 @@
             "Torrent integrated"
           ],
           "rank": 15,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Shiru",
