@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-09T09:26:18Z",
-    "version": "1.0.85"
+    "last_updated": "2026-06-10T09:41:53Z",
+    "version": "1.0.86"
   },
   "categories": [
     {
@@ -690,7 +690,7 @@
             "WN"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "NovelFire",
@@ -761,7 +761,7 @@
           "tags": [
             "CN Novel"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 8
         },
         {
@@ -1185,7 +1185,7 @@
             "Torrent integrated"
           ],
           "rank": 15,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Shiru",
@@ -1533,7 +1533,7 @@
             "Game OST"
           ],
           "rank": 12,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "MikuDB",
