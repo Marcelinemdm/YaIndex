@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-12T09:58:20Z",
-    "version": "1.0.88"
+    "last_updated": "2026-06-13T08:47:50Z",
+    "version": "1.0.89"
   },
   "categories": [
     {
@@ -922,7 +922,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "AnimeOut",
@@ -1553,7 +1553,7 @@
             "Anime OST"
           ],
           "rank": 14,
-          "status": "offline"
+          "status": "online"
         }
       ]
     },
@@ -1988,7 +1988,7 @@
             "News",
             "Discussion"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 7
         },
         {
