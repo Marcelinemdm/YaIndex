@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-13T08:47:50Z",
-    "version": "1.0.89"
+    "last_updated": "2026-06-14T09:19:52Z",
+    "version": "1.0.90"
   },
   "categories": [
     {
@@ -156,7 +156,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 14
         },
         {
@@ -1988,7 +1988,7 @@
             "News",
             "Discussion"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 7
         },
         {
