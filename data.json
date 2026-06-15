@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-14T09:19:52Z",
-    "version": "1.0.90"
+    "last_updated": "2026-06-15T11:48:13Z",
+    "version": "1.0.91"
   },
   "categories": [
     {
@@ -343,7 +343,7 @@
             "Manga",
             "Clean UI"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 1
         },
         {
@@ -387,7 +387,7 @@
             "Manga"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Atsumaru",
@@ -530,7 +530,7 @@
             "Fast UI"
           ],
           "rank": 19,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaDex",
@@ -542,7 +542,7 @@
             "API"
           ],
           "rank": 20,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaHub",
@@ -817,7 +817,7 @@
             "Fan TL"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "LnCrawler",
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -1553,7 +1553,7 @@
             "Anime OST"
           ],
           "rank": 14,
-          "status": "online"
+          "status": "warning"
         }
       ]
     },
