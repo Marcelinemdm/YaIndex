@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-16T10:56:33Z",
-    "version": "1.0.92"
+    "last_updated": "2026-06-17T10:27:52Z",
+    "version": "1.0.93"
   },
   "categories": [
     {
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -2440,7 +2440,7 @@
             "No Logs"
           ],
           "rank": 1,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "ProtonVPN",
