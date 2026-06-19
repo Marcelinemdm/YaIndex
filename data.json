@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-18T10:07:45Z",
-    "version": "1.0.94"
+    "last_updated": "2026-06-19T10:14:22Z",
+    "version": "1.0.95"
   },
   "categories": [
     {
@@ -387,7 +387,7 @@
             "Manga"
           ],
           "rank": 5,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Atsumaru",
@@ -902,7 +902,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "SeaDex",
