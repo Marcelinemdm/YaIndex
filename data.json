@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-20T08:42:49Z",
-    "version": "1.0.96"
+    "last_updated": "2026-06-21T09:38:01Z",
+    "version": "1.0.97"
   },
   "categories": [
     {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "KickAssAnime",
@@ -1978,7 +1978,7 @@
             "Community"
           ],
           "rank": 6,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "ANN Forum",
