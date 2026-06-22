@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-21T09:38:01Z",
-    "version": "1.0.97"
+    "last_updated": "2026-06-22T11:37:17Z",
+    "version": "1.0.98"
   },
   "categories": [
     {
@@ -427,7 +427,7 @@
             "Fast"
           ],
           "rank": 9,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "WeebDex",
