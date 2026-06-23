@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-22T11:37:17Z",
-    "version": "1.0.98"
+    "last_updated": "2026-06-23T09:24:18Z",
+    "version": "1.0.99"
   },
   "categories": [
     {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "KickAssAnime",
@@ -427,7 +427,7 @@
             "Fast"
           ],
           "rank": 9,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "WeebDex",
@@ -761,7 +761,7 @@
           "tags": [
             "CN Novel"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 8
         },
         {
@@ -1511,7 +1511,7 @@
             "DDL",
             "OST"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 10
         },
         {
