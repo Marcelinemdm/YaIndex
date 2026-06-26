@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-25T08:49:24Z",
-    "version": "1.0.101"
+    "last_updated": "2026-06-26T08:52:02Z",
+    "version": "1.0.102"
   },
   "categories": [
     {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "KickAssAnime",
@@ -1670,7 +1670,7 @@
             "Vocabulary"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeFillerList",
@@ -1945,7 +1945,7 @@
             "Community"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AniDB Forum",
