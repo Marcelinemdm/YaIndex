@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-26T08:52:02Z",
-    "version": "1.0.102"
+    "last_updated": "2026-06-27T08:27:32Z",
+    "version": "1.0.103"
   },
   "categories": [
     {
@@ -1945,7 +1945,7 @@
             "Community"
           ],
           "rank": 3,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AniDB Forum",
