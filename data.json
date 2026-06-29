@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-28T08:41:33Z",
-    "version": "1.0.104"
+    "last_updated": "2026-06-29T10:25:20Z",
+    "version": "1.0.105"
   },
   "categories": [
     {
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
