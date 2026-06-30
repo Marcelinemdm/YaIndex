@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-29T10:25:20Z",
-    "version": "1.0.105"
+    "last_updated": "2026-06-30T08:58:13Z",
+    "version": "1.0.106"
   },
   "categories": [
     {
@@ -1253,7 +1253,7 @@
             "API"
           ],
           "rank": 2,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "ComicK",
@@ -1945,7 +1945,7 @@
             "Community"
           ],
           "rank": 3,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "AniDB Forum",
