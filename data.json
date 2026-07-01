@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-06-30T08:58:13Z",
-    "version": "1.0.106"
+    "last_updated": "2026-07-01T09:31:34Z",
+    "version": "1.0.107"
   },
   "categories": [
     {
@@ -690,7 +690,7 @@
             "WN"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "NovelFire",
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -902,7 +902,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "SeaDex",
@@ -2030,7 +2030,7 @@
             "Viewer"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Safebooru",
