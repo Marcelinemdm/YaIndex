@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-01T09:31:34Z",
-    "version": "1.0.107"
+    "last_updated": "2026-07-02T08:43:14Z",
+    "version": "1.0.108"
   },
   "categories": [
     {
@@ -85,7 +85,7 @@
             "No Ads"
           ],
           "rank": 7,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "KickAssAnime",
@@ -136,7 +136,7 @@
             "Minimal UI"
           ],
           "rank": 12,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Crunchyroll",
@@ -690,7 +690,7 @@
             "WN"
           ],
           "rank": 1,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "NovelFire",
@@ -902,7 +902,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "SeaDex",
@@ -1978,7 +1978,7 @@
             "Community"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "ANN Forum",
