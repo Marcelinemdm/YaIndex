@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-02T08:43:14Z",
-    "version": "1.0.108"
+    "last_updated": "2026-07-03T08:50:52Z",
+    "version": "1.0.109"
   },
   "categories": [
     {
@@ -690,7 +690,7 @@
             "WN"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "NovelFire",
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
@@ -1511,7 +1511,7 @@
             "DDL",
             "OST"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 10
         },
         {
@@ -1978,7 +1978,7 @@
             "Community"
           ],
           "rank": 6,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "ANN Forum",
