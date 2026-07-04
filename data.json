@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-03T08:50:52Z",
-    "version": "1.0.109"
+    "last_updated": "2026-07-04T08:26:06Z",
+    "version": "1.0.110"
   },
   "categories": [
     {
@@ -355,7 +355,7 @@
             "Fast"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Nexus Toons",
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -1209,7 +1209,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
@@ -1511,7 +1511,7 @@
             "DDL",
             "OST"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 10
         },
         {
@@ -1978,7 +1978,7 @@
             "Community"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "ANN Forum",
