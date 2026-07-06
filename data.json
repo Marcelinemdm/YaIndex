@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-05T08:42:26Z",
-    "version": "1.0.111"
+    "last_updated": "2026-07-06T09:58:37Z",
+    "version": "1.0.112"
   },
   "categories": [
     {
@@ -387,7 +387,7 @@
             "Manga"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Atsumaru",
@@ -551,7 +551,7 @@
             "Manga"
           ],
           "rank": 21,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Dynasty Reader",
@@ -987,7 +987,7 @@
             "Large Library"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeToki",
