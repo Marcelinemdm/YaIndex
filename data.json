@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-07T09:26:23Z",
-    "version": "1.0.113"
+    "last_updated": "2026-07-08T08:10:26Z",
+    "version": "1.0.114"
   },
   "categories": [
     {
@@ -108,7 +108,7 @@
             "MAL Sync"
           ],
           "rank": 9,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Anikoto",
