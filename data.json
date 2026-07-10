@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-09T09:33:15Z",
-    "version": "1.0.115"
+    "last_updated": "2026-07-10T09:20:39Z",
+    "version": "1.0.116"
   },
   "categories": [
     {
@@ -54,7 +54,7 @@
             "Database"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeYY",
@@ -520,7 +520,7 @@
             "Large Library"
           ],
           "rank": 18,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaBuddy",
@@ -733,7 +733,7 @@
             "Large Library"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Wuxia Box",
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -1007,7 +1007,7 @@
             "Manga",
             "Backup"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 15
         }
       ]
@@ -1491,7 +1491,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "OkamimiOST",
@@ -2179,7 +2179,7 @@
             "VTuber"
           ],
           "rank": 7,
-          "status": "offline"
+          "status": "online"
         }
       ]
     },
