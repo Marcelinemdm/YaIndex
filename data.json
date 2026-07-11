@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-10T09:20:39Z",
-    "version": "1.0.116"
+    "last_updated": "2026-07-11T07:41:56Z",
+    "version": "1.0.117"
   },
   "categories": [
     {
@@ -733,7 +733,7 @@
             "Large Library"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Wuxia Box",
@@ -805,7 +805,7 @@
             "Books",
             "LN"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 12
         },
         {
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
@@ -1007,7 +1007,7 @@
             "Manga",
             "Backup"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 15
         }
       ]
@@ -2179,7 +2179,7 @@
             "VTuber"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "warning"
         }
       ]
     },
