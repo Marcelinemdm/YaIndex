@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-11T07:41:56Z",
-    "version": "1.0.117"
+    "last_updated": "2026-07-12T08:02:21Z",
+    "version": "1.0.118"
   },
   "categories": [
     {
@@ -690,7 +690,7 @@
             "WN"
           ],
           "rank": 1,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "NovelFire",
@@ -805,7 +805,7 @@
             "Books",
             "LN"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 12
         },
         {
@@ -902,7 +902,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "SeaDex",
@@ -1491,7 +1491,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "OkamimiOST",
@@ -1825,7 +1825,7 @@
             "Release Tracker",
             "Watch Order"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 5
         },
         {
