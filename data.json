@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-12T08:02:21Z",
-    "version": "1.0.118"
+    "last_updated": "2026-07-13T08:52:19Z",
+    "version": "1.0.119"
   },
   "categories": [
     {
@@ -891,7 +891,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -902,7 +902,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "SeaDex",
@@ -1543,7 +1543,7 @@
             "Vocaloid"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Osanime",
