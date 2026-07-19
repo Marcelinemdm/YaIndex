@@ -11,11 +11,15 @@ Aqui você encontra sites, ferramentas e comunidades para **assistir, ler, ouvir
 
 O objetivo é facilitar o acesso a tudo que um fã pode precisar.
 
+O catálogo pode receber contribuições automatizadas; por isso, a presença de um site não representa aprovação, curadoria manual, garantia de segurança ou controle.
+
+
+
 ---
 
 ## 🗂️ Categorias
 
-O índice atualmente inclui **200+ recursos organizados em 18 categorias**:
+O índice atualmente inclui **100+ recursos organizados em categorias**:
 
 * 📺 Anime Streaming
 * 🇨🇳 Donghua
@@ -59,6 +63,7 @@ O GitHub Actions processa automaticamente, adiciona ao `data.json` e fecha a iss
 }
 ```
 
+
 ### Campos
 
 | Campo | Obrigatório | Descrição |
@@ -68,6 +73,7 @@ O GitHub Actions processa automaticamente, adiciona ao `data.json` e fecha a iss
 | `category` | ✅ | ID da categoria (ver lista abaixo) |
 | `tags` | — | Lista de tags para busca (até 3 recomendado) |
 | `status` | — | `online` (padrão), `warning` ou `offline` |
+
 
 ### IDs de categorias disponíveis
 
@@ -121,14 +127,6 @@ O índice é atualizado automaticamente via **GitHub Actions** (`.github/workflo
 - Issues com label `add-site` são processadas imediatamente
 
 ---
-
-## 🛠️ Rodando localmente
-
-```bash
-git clone https://github.com/Marcelinemdm/YaIndex
-cd YaIndex
-python update.py   # verifica status de todos os sites
-```
 
 ## ⭐ Apoie o projeto
 

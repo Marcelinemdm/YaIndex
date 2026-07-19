@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "YaIndex",
-    "description": "Índice otaku atualizado de +200 recursos: anime, manga, novels, games, música e mais",
-    "last_updated": "2026-07-18T07:29:01Z",
-    "version": "1.0.124"
+    "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
+    "last_updated": "2026-07-19T02:54:24Z",
+    "version": "1.0.126"
   },
   "categories": [
     {
@@ -13,17 +13,6 @@
       "color": "#6366f1",
       "items": [
         {
-          "name": "AnimeKai",
-          "url": "https://animekai.to",
-          "tags": [
-            "No Ads",
-            "DL",
-            "Multi-Sub"
-          ],
-          "rank": 1,
-          "status": "offline"
-        },
-        {
           "name": "animepahe",
           "url": "https://animepahe.si/",
           "tags": [
@@ -32,19 +21,7 @@
             "480p-1080p"
           ],
           "status": "offline",
-          "rank": 2
-        },
-        {
-          "name": "HiAnime",
-          "url": "https://hianime.to",
-          "tags": [
-            "Multi-Sub",
-            "Multi-Dub",
-            "HLS"
-          ],
-          "rank": 3,
-          "status": "offline",
-          "note": "Main brand down"
+          "rank": 1
         },
         {
           "name": "AllManga Anime",
@@ -53,18 +30,8 @@
             "Multi-Sub",
             "Database"
           ],
-          "rank": 4,
+          "rank": 2,
           "status": "online"
-        },
-        {
-          "name": "AnimeYY",
-          "url": "https://animeyy.com",
-          "tags": [
-            "Sub",
-            "Dub"
-          ],
-          "rank": 5,
-          "status": "offline"
         },
         {
           "name": "AniZone",
@@ -73,18 +40,7 @@
             "No Ads",
             "1080p"
           ],
-          "rank": 6,
-          "status": "online"
-        },
-        {
-          "name": "Kuudere",
-          "url": "https://kuudere.to",
-          "tags": [
-            "Sub",
-            "Dub",
-            "No Ads"
-          ],
-          "rank": 7,
+          "rank": 3,
           "status": "online"
         },
         {
@@ -96,7 +52,7 @@
             "Fast CDN"
           ],
           "status": "online",
-          "rank": 8
+          "rank": 4
         },
         {
           "name": "Anime Nexus",
@@ -107,26 +63,8 @@
             "AniList Sync",
             "MAL Sync"
           ],
-          "rank": 9,
+          "rank": 5,
           "status": "online"
-        },
-        {
-          "name": "Anikoto",
-          "url": "https://anikoto.cz/",
-          "tags": [
-            "Multi-Lang"
-          ],
-          "status": "online",
-          "rank": 10
-        },
-        {
-          "name": "Animetsu",
-          "url": "https://animetsu.net/",
-          "tags": [
-            "Multi-Lang"
-          ],
-          "status": "online",
-          "rank": 11
         },
         {
           "name": "Miruro",
@@ -135,20 +73,8 @@
             "Multi-Lang",
             "Minimal UI"
           ],
-          "rank": 12,
+          "rank": 6,
           "status": "warning"
-        },
-        {
-          "name": "Crunchyroll",
-          "url": "https://crunchyroll.com",
-          "tags": [
-            "Legal",
-            "Sub",
-            "Dub",
-            "Premium"
-          ],
-          "rank": 13,
-          "status": "online"
         },
         {
           "name": "AnimeStream",
@@ -157,29 +83,7 @@
             "Sub"
           ],
           "status": "warning",
-          "rank": 14
-        },
-        {
-          "name": "Bilibili",
-          "url": "https://bilibili.tv",
-          "tags": [
-            "Legal",
-            "Sub",
-            "Asian Focus"
-          ],
-          "rank": 15,
-          "status": "online"
-        },
-        {
-          "name": "YouTube",
-          "url": "https://youtube.com",
-          "tags": [
-            "Legal",
-            "Free",
-            "Official Channels"
-          ],
-          "rank": 16,
-          "status": "online"
+          "rank": 7
         },
         {
           "name": "AniHQ",
@@ -188,39 +92,7 @@
             "Sub",
             "Dub"
           ],
-          "rank": 17,
-          "status": "offline"
-        },
-        {
-          "name": "Senshi",
-          "url": "https://senshi.live/",
-          "tags": [
-            "No Ads",
-            "Sub"
-          ],
-          "status": "online",
-          "rank": 18
-        },
-        {
-          "name": "AnimeOnsen",
-          "url": "https://animeonsen.xyz",
-          "tags": [
-            "No Ads",
-            "1080p"
-          ],
-          "rank": 19,
-          "status": "online"
-        },
-        {
-          "name": "AniGO",
-          "url": "https://anigo.to",
-          "tags": [
-            "No Ads",
-            "No Account",
-            "Fast",
-            "AniList Sync"
-          ],
-          "rank": 20,
+          "rank": 8,
           "status": "offline"
         }
       ]
@@ -358,35 +230,13 @@
           "status": "online"
         },
         {
-          "name": "Nexus Toons",
-          "url": "https://nexustoons.com/",
-          "tags": [
-            "Manga",
-            "Hub",
-            "Portuguese"
-          ],
-          "status": "warning",
-          "rank": 3
-        },
-        {
-          "name": "Yomu",
-          "url": "https://yomu.com.br/",
-          "tags": [
-            "Manga",
-            "Hub",
-            "Fast"
-          ],
-          "status": "online",
-          "rank": 4
-        },
-        {
           "name": "Mangaball",
           "url": "https://mangaball.net",
           "tags": [
             "Hub",
             "Manga"
           ],
-          "rank": 5,
+          "rank": 3,
           "status": "online"
         },
         {
@@ -397,7 +247,7 @@
             "Curated"
           ],
           "status": "online",
-          "rank": 6
+          "rank": 4
         },
         {
           "name": "Weeb Central",
@@ -406,61 +256,8 @@
             "Manga",
             "No Ads"
           ],
-          "rank": 7,
+          "rank": 5,
           "status": "online"
-        },
-        {
-          "name": "Mangago",
-          "url": "https://mangago.me",
-          "tags": [
-            "Manga",
-            "Community"
-          ],
-          "rank": 8,
-          "status": "online"
-        },
-        {
-          "name": "VyManga",
-          "url": "https://vymanga.net",
-          "tags": [
-            "Manga",
-            "Fast"
-          ],
-          "rank": 9,
-          "status": "online"
-        },
-        {
-          "name": "WeebDex",
-          "url": "https://weebdex.org",
-          "tags": [
-            "Hub",
-            "Manga"
-          ],
-          "status": "offline",
-          "rank": 10
-        },
-        {
-          "name": "Bookwalker",
-          "url": "https://bookwalker.jp",
-          "tags": [
-            "Legal",
-            "Manga",
-            "Novels",
-            "Purchase"
-          ],
-          "rank": 11,
-          "status": "online"
-        },
-        {
-          "name": "Rakuten Kobo",
-          "url": "https://kobo.com",
-          "tags": [
-            "Legal",
-            "Manga",
-            "Purchase"
-          ],
-          "rank": 12,
-          "status": "warning"
         },
         {
           "name": "MangaTaro",
@@ -469,17 +266,8 @@
             "Manga",
             "Raw"
           ],
-          "rank": 13,
+          "rank": 6,
           "status": "offline"
-        },
-        {
-          "name": "MangaCloud",
-          "url": "https://mangacloud.org/",
-          "tags": [
-            "Manga"
-          ],
-          "status": "online",
-          "rank": 14
         },
         {
           "name": "MangaKatana",
@@ -488,61 +276,8 @@
             "Manga",
             "Large Library"
           ],
-          "rank": 15,
+          "rank": 7,
           "status": "online"
-        },
-        {
-          "name": "Cubari Proxy",
-          "url": "https://cubari.moe",
-          "tags": [
-            "Proxy",
-            "Multi-Lang"
-          ],
-          "rank": 16,
-          "status": "online"
-        },
-        {
-          "name": "KaliScan",
-          "url": "https://kaliscan.com",
-          "tags": [
-            "Scanlation",
-            "Manga"
-          ],
-          "rank": 17,
-          "status": "online"
-        },
-        {
-          "name": "AllManga",
-          "url": "https://allmanga.to",
-          "tags": [
-            "Manga",
-            "Manhwa",
-            "Large Library"
-          ],
-          "rank": 18,
-          "status": "online"
-        },
-        {
-          "name": "MangaBuddy",
-          "url": "https://mangabuddy.com",
-          "tags": [
-            "Manga",
-            "Fast UI"
-          ],
-          "rank": 19,
-          "status": "offline"
-        },
-        {
-          "name": "MangaDex",
-          "url": "https://mangadex.org",
-          "tags": [
-            "Hub",
-            "Scanlation",
-            "Multi-Lang",
-            "API"
-          ],
-          "rank": 20,
-          "status": "offline"
         },
         {
           "name": "MangaHub",
@@ -550,18 +285,7 @@
           "tags": [
             "Manga"
           ],
-          "rank": 21,
-          "status": "online"
-        },
-        {
-          "name": "Dynasty Reader",
-          "url": "https://dynasty-scans.com",
-          "tags": [
-            "Yuri",
-            "Manga",
-            "Hub"
-          ],
-          "rank": 22,
+          "rank": 8,
           "status": "online"
         }
       ]
@@ -693,88 +417,6 @@
           "status": "online"
         },
         {
-          "name": "NovelFire",
-          "url": "https://novelfire.net",
-          "tags": [
-            "LN",
-            "WN",
-            "Fast"
-          ],
-          "rank": 2,
-          "status": "warning"
-        },
-        {
-          "name": "Bookwalker",
-          "url": "https://bookwalker.jp",
-          "tags": [
-            "Legal",
-            "LN",
-            "Purchase"
-          ],
-          "rank": 3,
-          "status": "online"
-        },
-        {
-          "name": "J-Novel Club",
-          "url": "https://j-novel.club",
-          "tags": [
-            "Legal",
-            "LN",
-            "Premium"
-          ],
-          "rank": 4,
-          "status": "online"
-        },
-        {
-          "name": "LightNovelWorld",
-          "url": "https://lightnovelworld.co",
-          "tags": [
-            "LN",
-            "Large Library"
-          ],
-          "rank": 5,
-          "status": "online"
-        },
-        {
-          "name": "Wuxia Box",
-          "url": "https://wuxiabox.com",
-          "tags": [
-            "CN Novel",
-            "WN"
-          ],
-          "rank": 6,
-          "status": "online"
-        },
-        {
-          "name": "VyNovel",
-          "url": "https://vynovel.com",
-          "tags": [
-            "LN",
-            "Fast"
-          ],
-          "rank": 7,
-          "status": "offline"
-        },
-        {
-          "name": "WuxiaClick",
-          "url": "https://wuxiaclick.life",
-          "tags": [
-            "CN Novel"
-          ],
-          "status": "online",
-          "rank": 8
-        },
-        {
-          "name": "FreeWebNovel",
-          "url": "https://freewebnovel.com",
-          "tags": [
-            "WN",
-            "CN Novel"
-          ],
-          "rank": 9,
-          "status": "online"
-        },
-        {
           "name": "Ranobes",
           "url": "https://ranobes.top",
           "tags": [
@@ -782,7 +424,7 @@
             "WN",
             "Multi-Lang"
           ],
-          "rank": 10,
+          "rank": 2,
           "status": "warning"
         },
         {
@@ -793,52 +435,7 @@
             "Fan Translation",
             "Archive"
           ],
-          "rank": 11,
-          "status": "online"
-        },
-        {
-          "name": "Anna's Archive",
-          "url": "https://annas-archive.gl",
-          "tags": [
-            "DDL",
-            "Library",
-            "Books",
-            "LN"
-          ],
-          "status": "online",
-          "rank": 12
-        },
-        {
-          "name": "Chrysanthemum Garden",
-          "url": "https://chrysanthemumgarden.com",
-          "tags": [
-            "BL",
-            "CN Novel",
-            "Fan TL"
-          ],
-          "rank": 13,
-          "status": "online"
-        },
-        {
-          "name": "LnCrawler",
-          "url": "https://lncrawler.monster/",
-          "tags": [
-            "Aggregator",
-            "Tool",
-            "LN"
-          ],
-          "status": "online",
-          "rank": 14
-        },
-        {
-          "name": "Tsundoku Traduções",
-          "url": "https://tsundoku.com.br",
-          "tags": [
-            "LN",
-            "WN",
-            "Portuguese"
-          ],
-          "rank": 15,
+          "rank": 3,
           "status": "online"
         }
       ]
@@ -1310,17 +907,6 @@
           "status": "online"
         },
         {
-          "name": "VocaDB",
-          "url": "https://vocadb.net",
-          "tags": [
-            "Vocaloid",
-            "Music",
-            "Database"
-          ],
-          "rank": 8,
-          "status": "online"
-        },
-        {
           "name": "SIMKL",
           "url": "https://simkl.com",
           "tags": [
@@ -1329,7 +915,7 @@
             "Drama",
             "Multi-Platform"
           ],
-          "rank": 9,
+          "rank": 8,
           "status": "online"
         },
         {
@@ -1340,7 +926,7 @@
             "Tracker",
             "Database"
           ],
-          "rank": 10,
+          "rank": 9,
           "status": "online"
         },
         {
@@ -1351,7 +937,7 @@
             "Manga",
             "Rec Engine"
           ],
-          "rank": 11,
+          "rank": 10,
           "status": "online"
         },
         {
@@ -1363,19 +949,8 @@
             "Manga",
             "API"
           ],
-          "rank": 12,
+          "rank": 11,
           "status": "online"
-        },
-        {
-          "name": "VGMdb",
-          "url": "https://vgmdb.net",
-          "tags": [
-            "Music",
-            "Games",
-            "Database"
-          ],
-          "rank": 13,
-          "status": "warning"
         },
         {
           "name": "MangaBaka",
@@ -1385,7 +960,7 @@
             "Database"
           ],
           "status": "online",
-          "rank": 14
+          "rank": 12
         },
         {
           "name": "Kenmei",
@@ -1395,7 +970,7 @@
             "Tracker",
             "Multi-Source"
           ],
-          "rank": 15,
+          "rank": 13,
           "status": "online"
         }
       ]
@@ -1606,40 +1181,6 @@
           ],
           "rank": 4,
           "status": "online"
-        },
-        {
-          "name": "Upcoming Dubbed Anime",
-          "url": "https://www.dubsub.info",
-          "tags": [
-            "Dub",
-            "Release",
-            "Schedule"
-          ],
-          "rank": 5,
-          "status": "offline"
-        },
-        {
-          "name": "LNRelease",
-          "url": "https://lnrelease.github.io",
-          "tags": [
-            "LN",
-            "Release",
-            "Schedule",
-            "EN"
-          ],
-          "rank": 6,
-          "status": "online"
-        },
-        {
-          "name": "Otaku Calendar",
-          "url": "https://otakucalendar.com",
-          "tags": [
-            "Events",
-            "Release",
-            "Merch"
-          ],
-          "rank": 7,
-          "status": "online"
         }
       ]
     },
@@ -1724,17 +1265,6 @@
           "rank": 7
         },
         {
-          "name": "Certain Fansubber's Index",
-          "url": "https://index.fansubcar.tel/",
-          "tags": [
-            "Fansub",
-            "Index",
-            "Archive"
-          ],
-          "status": "online",
-          "rank": 8
-        },
-        {
           "name": "RecommendMeAnime",
           "url": "https://recommendmeanime.com",
           "tags": [
@@ -1742,7 +1272,7 @@
             "Guide"
           ],
           "status": "online",
-          "rank": 9
+          "rank": 8
         },
         {
           "name": "TheIndex.moe",
@@ -1753,7 +1283,7 @@
             "Database",
             "Libraries"
           ],
-          "rank": 10,
+          "rank": 9,
           "status": "online"
         },
         {
@@ -1765,7 +1295,7 @@
             "Ranked",
             "All-in-one"
           ],
-          "rank": 11,
+          "rank": 10,
           "status": "online"
         }
       ]
