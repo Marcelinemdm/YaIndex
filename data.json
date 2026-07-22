@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-07-21T08:10:18Z",
-    "version": "1.0.129"
+    "last_updated": "2026-07-22T08:10:33Z",
+    "version": "1.0.130"
   },
   "categories": [
     {
@@ -346,7 +346,7 @@
             "Comics"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Toomics",
