@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-07-26T08:10:34Z",
-    "version": "1.0.134"
+    "last_updated": "2026-07-27T09:33:57Z",
+    "version": "1.0.135"
   },
   "categories": [
     {
@@ -414,7 +414,7 @@
             "WN"
           ],
           "rank": 1,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Ranobes",
@@ -1211,7 +1211,7 @@
             "Vocabulary"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeFillerList",
