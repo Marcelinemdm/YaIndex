@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-07-27T09:33:57Z",
-    "version": "1.0.135"
+    "last_updated": "2026-07-28T08:17:54Z",
+    "version": "1.0.136"
   },
   "categories": [
     {
@@ -1211,7 +1211,7 @@
             "Vocabulary"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeFillerList",
