@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-07-28T08:17:54Z",
-    "version": "1.0.136"
+    "last_updated": "2026-07-29T08:23:49Z",
+    "version": "1.0.137"
   },
   "categories": [
     {
@@ -215,7 +215,7 @@
             "Manga",
             "Clean UI"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 1
         },
         {
@@ -488,7 +488,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
@@ -806,7 +806,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1752,7 +1752,7 @@
             "Purchase"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Anime-Sharing",
