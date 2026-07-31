@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-07-30T08:09:26Z",
-    "version": "1.0.138"
+    "last_updated": "2026-07-31T08:36:42Z",
+    "version": "1.0.139"
   },
   "categories": [
     {
@@ -215,7 +215,7 @@
             "Manga",
             "Clean UI"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 1
         },
         {
@@ -227,7 +227,7 @@
             "Fast"
           ],
           "rank": 2,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Mangaball",
@@ -488,7 +488,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
@@ -1034,7 +1034,7 @@
             "Music Quiz"
           ],
           "rank": 5,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "listen.moe",
@@ -1211,7 +1211,7 @@
             "Vocabulary"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeFillerList",
@@ -1325,7 +1325,7 @@
             "Source Finder"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Trace.moe",
