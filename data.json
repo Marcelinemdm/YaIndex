@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-02T08:07:43Z",
-    "version": "1.0.141"
+    "last_updated": "2026-08-03T09:26:39Z",
+    "version": "1.0.142"
   },
   "categories": [
     {
@@ -374,7 +374,7 @@
             "Manhwa"
           ],
           "rank": 8,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "MangaGG",
@@ -488,7 +488,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
@@ -904,7 +904,7 @@
             "Database"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "SIMKL",
