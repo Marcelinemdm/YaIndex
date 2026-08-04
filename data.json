@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-03T09:26:39Z",
-    "version": "1.0.142"
+    "last_updated": "2026-08-04T08:23:23Z",
+    "version": "1.0.143"
   },
   "categories": [
     {
@@ -374,7 +374,7 @@
             "Manhwa"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "MangaGG",
@@ -904,7 +904,7 @@
             "Database"
           ],
           "rank": 7,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "SIMKL",
@@ -1066,7 +1066,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "OkamimiOST",
@@ -1211,7 +1211,7 @@
             "Vocabulary"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeFillerList",
