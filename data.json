@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-04T08:23:23Z",
-    "version": "1.0.143"
+    "last_updated": "2026-08-05T08:21:07Z",
+    "version": "1.0.144"
   },
   "categories": [
     {
@@ -414,7 +414,7 @@
             "WN"
           ],
           "rank": 1,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Ranobes",
@@ -488,7 +488,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -499,7 +499,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "SeaDex",
@@ -1066,7 +1066,7 @@
             "Game"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "OkamimiOST",
