@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-06T08:18:06Z",
-    "version": "1.0.145"
+    "last_updated": "2026-08-07T07:01:11Z",
+    "version": "1.0.146"
   },
   "categories": [
     {
@@ -374,7 +374,7 @@
             "Manhwa"
           ],
           "rank": 8,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "MangaGG",
@@ -1435,7 +1435,7 @@
             "Multi-Lang"
           ],
           "rank": 12,
-          "status": "online"
+          "status": "offline"
         }
       ]
     },
