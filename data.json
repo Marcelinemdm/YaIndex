@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-07T07:01:11Z",
-    "version": "1.0.146"
+    "last_updated": "2026-08-08T06:36:27Z",
+    "version": "1.0.147"
   },
   "categories": [
     {
@@ -499,7 +499,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "SeaDex",
@@ -1435,7 +1435,7 @@
             "Multi-Lang"
           ],
           "rank": 12,
-          "status": "offline"
+          "status": "online"
         }
       ]
     },
