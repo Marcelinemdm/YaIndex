@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-14T07:11:21Z",
-    "version": "1.0.153"
+    "last_updated": "2026-08-15T06:22:19Z",
+    "version": "1.0.154"
   },
   "categories": [
     {
@@ -31,7 +31,7 @@
             "Database"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AniZone",
@@ -215,7 +215,7 @@
             "Manga",
             "Clean UI"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 1
         },
         {
@@ -227,7 +227,7 @@
             "Fast"
           ],
           "rank": 2,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Mangaball",
@@ -303,7 +303,7 @@
             "Manhwa",
             "No Ads"
           ],
-          "status": "warning",
+          "status": "offline",
           "rank": 1
         },
         {
@@ -488,7 +488,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -509,7 +509,7 @@
             "Torrent"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "TokyoInsider",
@@ -1211,7 +1211,7 @@
             "Vocabulary"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeFillerList",
@@ -1284,7 +1284,7 @@
             "Libraries"
           ],
           "rank": 9,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "EverythingMoe",
