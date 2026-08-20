@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-19T06:28:31Z",
-    "version": "1.0.158"
+    "last_updated": "2026-08-20T06:29:54Z",
+    "version": "1.0.159"
   },
   "categories": [
     {
@@ -237,7 +237,7 @@
             "Manga"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Atsumaru",
