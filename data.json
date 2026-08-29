@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-28T17:56:15Z",
-    "version": "1.0.167"
+    "last_updated": "2026-08-29T12:00:51Z",
+    "version": "1.0.168"
   },
   "categories": [
     {
@@ -227,7 +227,7 @@
             "Fast"
           ],
           "rank": 2,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Mangaball",
@@ -488,7 +488,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
@@ -519,7 +519,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeOut",
@@ -1118,7 +1118,7 @@
             "Vocaloid"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Osanime",
@@ -1786,7 +1786,7 @@
             "Legal"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "JAST USA",
