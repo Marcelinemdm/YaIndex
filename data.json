@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-29T12:00:51Z",
-    "version": "1.0.168"
+    "last_updated": "2026-08-30T10:57:27Z",
+    "version": "1.0.169"
   },
   "categories": [
     {
@@ -488,7 +488,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "CDJapan",
@@ -519,7 +519,7 @@
             "Anime"
           ],
           "rank": 7,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeOut",
@@ -561,7 +561,7 @@
             "Torrent",
             "Anime"
           ],
-          "status": "online",
+          "status": "offline",
           "rank": 11
         },
         {
@@ -806,7 +806,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
@@ -1118,7 +1118,7 @@
             "Vocaloid"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Osanime",
@@ -1128,7 +1128,7 @@
             "Anime OST"
           ],
           "rank": 14,
-          "status": "warning"
+          "status": "online"
         }
       ]
     },
