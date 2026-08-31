@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-08-30T10:57:27Z",
-    "version": "1.0.169"
+    "last_updated": "2026-08-31T12:15:36Z",
+    "version": "1.0.170"
   },
   "categories": [
     {
@@ -488,7 +488,7 @@
             "JP Content"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "CDJapan",
@@ -561,7 +561,7 @@
             "Torrent",
             "Anime"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 11
         },
         {
@@ -806,7 +806,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Awery",
@@ -1108,7 +1108,7 @@
             "Game OST"
           ],
           "rank": 12,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "MikuDB",
@@ -1118,7 +1118,7 @@
             "Vocaloid"
           ],
           "rank": 13,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "Osanime",
@@ -1786,7 +1786,7 @@
             "Legal"
           ],
           "rank": 6,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "JAST USA",
