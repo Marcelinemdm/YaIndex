@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-09-01T10:50:55Z",
-    "version": "1.0.171"
+    "last_updated": "2026-09-02T10:15:49Z",
+    "version": "1.0.172"
   },
   "categories": [
     {
@@ -883,7 +883,7 @@
             "Detailed"
           ],
           "rank": 5,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Visual Novel DB",
@@ -1485,7 +1485,7 @@
             "Technical"
           ],
           "rank": 4,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "Anime-Sharing",
@@ -1655,7 +1655,7 @@
             "Multi-stream",
             "Grid"
           ],
-          "status": "offline",
+          "status": "online",
           "rank": 2
         },
         {
