@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-09-03T10:26:28Z",
-    "version": "1.0.173"
+    "last_updated": "2026-09-04T10:13:58Z",
+    "version": "1.0.174"
   },
   "categories": [
     {
@@ -584,7 +584,7 @@
             "Large Library"
           ],
           "rank": 13,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AnimeToki",
@@ -883,7 +883,7 @@
             "Detailed"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Visual Novel DB",
@@ -1211,7 +1211,7 @@
             "Vocabulary"
           ],
           "rank": 2,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "AnimeFillerList",
@@ -1485,7 +1485,7 @@
             "Technical"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "Anime-Sharing",
@@ -1698,7 +1698,7 @@
             "VTuber"
           ],
           "rank": 6,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "ASMR Archive",
