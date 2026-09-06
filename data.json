@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-09-05T09:42:34Z",
-    "version": "1.0.175"
+    "last_updated": "2026-09-06T09:58:10Z",
+    "version": "1.0.176"
   },
   "categories": [
     {
@@ -499,7 +499,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "SeaDex",
@@ -806,7 +806,7 @@
             "Android"
           ],
           "rank": 17,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "Awery",
@@ -872,7 +872,7 @@
             "Scanlation Tracker"
           ],
           "rank": 4,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AniDB",
@@ -1346,7 +1346,7 @@
             "Imgur"
           ],
           "rank": 4,
-          "status": "offline"
+          "status": "online"
         },
         {
           "name": "due.moe",
