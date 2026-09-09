@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-09-08T10:19:51Z",
-    "version": "1.0.178"
+    "last_updated": "2026-09-09T10:28:12Z",
+    "version": "1.0.179"
   },
   "categories": [
     {
@@ -872,7 +872,7 @@
             "Scanlation Tracker"
           ],
           "rank": 4,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "AniDB",
@@ -1475,7 +1475,7 @@
             "Community"
           ],
           "rank": 3,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "AniDB Forum",
