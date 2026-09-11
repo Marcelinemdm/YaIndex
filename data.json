@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-09-10T10:18:22Z",
-    "version": "1.0.180"
+    "last_updated": "2026-09-11T10:18:06Z",
+    "version": "1.0.181"
   },
   "categories": [
     {
@@ -82,7 +82,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "warning",
+          "status": "online",
           "rank": 7
         },
         {
@@ -818,7 +818,7 @@
             "Manga"
           ],
           "rank": 18,
-          "status": "offline"
+          "status": "online"
         }
       ]
     },
@@ -1786,7 +1786,7 @@
             "Legal"
           ],
           "rank": 6,
-          "status": "online"
+          "status": "warning"
         },
         {
           "name": "JAST USA",
