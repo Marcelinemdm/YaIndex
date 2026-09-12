@@ -2,8 +2,8 @@
   "meta": {
     "title": "YaIndex",
     "description": "Índice otaku atualizado de +100 recursos anime, manga, novels, games, música e mais.",
-    "last_updated": "2026-09-11T10:18:06Z",
-    "version": "1.0.181"
+    "last_updated": "2026-09-12T09:50:44Z",
+    "version": "1.0.182"
   },
   "categories": [
     {
@@ -82,7 +82,7 @@
           "tags": [
             "Sub"
           ],
-          "status": "online",
+          "status": "warning",
           "rank": 7
         },
         {
@@ -499,7 +499,7 @@
             "JP Import"
           ],
           "rank": 5,
-          "status": "online"
+          "status": "offline"
         },
         {
           "name": "SeaDex",
@@ -1786,7 +1786,7 @@
             "Legal"
           ],
           "rank": 6,
-          "status": "warning"
+          "status": "online"
         },
         {
           "name": "JAST USA",
